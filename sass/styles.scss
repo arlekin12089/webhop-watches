@@ -1,0 +1,42 @@
+// Variables
+// --------------------
+@import 'variables/colors';
+@import 'variables/typography';
+
+// Mixins
+// --------------------
+@import 'mixins/mixins';
+
+
+// Reset and base files
+// --------------------
+@import 'base/reset';
+@import 'base/base';
+@import 'base/font';
+
+
+// Objects
+// --------------------
+@import "objects/btn";
+@import "objects/headings";
+@import "objects/links";
+
+// Layouts
+// --------------------
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/home";
+@import "layouts/login";
+@import "layouts/order";
+@import "layouts/product-list";
+@import "layouts/product";
+@import "layouts/registration";
+@import "layouts/shopping-cart";
+
+// Components
+// --------------------
+@import "components/custom-checkbox";
+@import "components/custom-input";
+@import "components/error-message";
+@import "components/successful-message";
+
