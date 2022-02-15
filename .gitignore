@@ -4,3 +4,5 @@
 
 .sass-cache/
 *.css.map
+/sass/styles.css
+/sass/styles.css.map
