@@ -48,11 +48,18 @@
 
     &__description {
     	margin-top: 20px;
-    	text-align: center;
 
     	.name {
     		margin-bottom: 20px;
     	}
+
+		.brand {
+			@include font-size(18);
+			letter-spacing: 0.1rem;
+			margin-bottom: 20px;
+			text-transform: uppercase;
+			font-weight: 600;
+		}
 
     	.price {
     		font-weight: 600;
