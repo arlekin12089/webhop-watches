@@ -1,0 +1,20 @@
+.main {
+	padding-top: 40px;
+}
+
+.products-list {
+	@include flexBox(row, center, center);
+	width: 100%;
+}
+
+.product {
+	width: calc(35% - 1.5rem);
+	margin: 0 10px 20px;
+	display: inline-block;
+	position: relative;
+
+	&__photo {
+		background: $light-white;
+		padding: 20px;
+	}
+}

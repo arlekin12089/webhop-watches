@@ -1,0 +1,8 @@
+h1{
+	@include font-size(40);
+	line-height: 50px;
+	@include breakpoint(small-max) {
+        @include font-size(72);
+		line-height: 72px;
+    }
+}
