@@ -22,4 +22,21 @@
       color: $yellow;
     }
   }
+&--white {
+	border-radius: 0;
+	background-color: $white;
+	border: 1px solid $black;
+
+	&:hover {
+		background-color: $black;
+		color: $white;
+	}
+}
+}
+
+button {
+	border: none;
+	background: none;
+	cursor: pointer;
+	outline: none;
 }

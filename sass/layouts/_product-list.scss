@@ -1,20 +1,139 @@
-.main {
-	padding-top: 40px;
+.products__wrap {
+	@include flexBox(column, flex-start, space-between);
+	padding: 20px;
+
+	@include breakpoint(small-max) {
+		@include flexBox(row, flex-start, space-between);
+	}
 }
 
 .products-list {
-	@include flexBox(row, center, center);
-	width: 100%;
+  @include flexBox(column, center, center);
+  padding: 0 20px;
+  width: 100%;
+
+  @include breakpoint(small-max) {
+    @include flexBox(row, center, center);
+  }
 }
 
 .product {
-	width: calc(35% - 1.5rem);
-	margin: 0 10px 20px;
-	display: inline-block;
-	position: relative;
+  width: 100%;
+  margin: 0 10px 40px;
+  display: inline-block;
 
-	&__photo {
-		background: $light-white;
-		padding: 20px;
-	}
+  @include breakpoint(small-max) {
+    width: calc(35% - 1.5rem);
+    margin: 0 10px 20px;
+  }
+
+  &__photo {
+  	background: $light-white;
+  	padding: 20px;
+    position: relative;
+    }
+
+    .addToCard {
+    	display: inline-block;
+    	width: 30px;
+    	height: 30px;
+    	right: 10px;
+    	position: absolute;
+    	bottom: 10px;
+    }
+
+    &__link {
+    	display: block;
+    }
+
+    &__description {
+    	margin-top: 20px;
+    	text-align: center;
+
+    	.name {
+    		margin-bottom: 20px;
+    	}
+
+    	.price {
+    		font-weight: 600;
+    		@include font-size(20);
+    	}
+    }
+    }
+
+    .filter {
+    	width: 100%;
+    	display: none;
+
+    	&.open {
+    		display: block;
+    	}
+
+    	&-mobile {
+    		@include flexBox(column, center, center);
+    		margin-bottom: 30px;
+    		width: 100%;
+
+    		@include breakpoint(small-max) {
+    			display: none;
+    		}
+    	}
+
+    	@include breakpoint(small-max) {
+    		width: 30%;
+    		display: block;
+    	}
+
+    	#all_watches {
+    		margin-bottom: 20px;
+    		display: block;
+    	}
+
+    	&__option {
+    		padding: 20px 0;
+    		border-top: 1px solid $grey;
+    	}
+
+    	&__search {
+    		display: flex;
+    		margin-bottom: 80px;
+    	}
+
+    	&__list {
+    		div {
+    			margin: 15px 0;
+    			padding-left: 30px;
+    		}
+
+    		li {
+    			display: flex;
+    			align-items: center;
+    			position: relative;
+    		}
+    	}
+
+    	input[type="text"] {
+    		width: 100%;
+    	}
+
+    	input[type="checkbox"] {
+    		position: absolute;
+    		width: 17px;
+    		height: 17px;
+    		cursor: pointer;
+    		border: 1px solid $grey;
+    		cursor: pointer;
+    	}
+
+    	.fa {
+    		@include font-size(18);
+    		margin-right: 10px;
+}
+}
+
+#products-amount {
+	display: flex;
+	justify-content: flex-end;
+	opacity: 0;
+	margin: 20px 10px;
 }
