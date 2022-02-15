@@ -17,57 +17,7 @@
   <title>Logga in</title>
 </head>
 <body>
-  <header class="header">
-		<div class="container">
-			<div class="header__inner">
-				<div class="header__logo">
-					<a href="/">
-						<img src="sass/img/FENDTime.svg" alt="FEND Time" />
-					</a>
-				</div>
-				<button class="menu-toggle">
-					<span></span>
-				</button>
-				<div class="header__nav" id="nav">
-					<nav>
-						<ul>
-							<li>
-								<a href="" class="nav-link active">Herr</a>
-							</li>
-							<li>
-								<a href="" class="nav-link">Dam</a>
-							</li>
-							<li>
-								<a href="" class="nav-link">Barn</a>
-							</li>
-							<li>
-								<a href="" class="nav-link">Alla</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<div class="header__search">
-					<input type="text">
-					<button type="button">
-						<i class="fa fa-search"></i>
-					</button>
-				</div>
-				<div class="header__widgets">
-					<div class="header__user">
-						<a href="">
-							<i class="fa fa-user"></i>
-						</a>
-					</div>
-					<div class="header__card">
-						<a href="">
-							<i class="fa fa-shopping-cart"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</header>
+ 
 
 <!--Formuläret-->
   <h1 class="login_text">Logga in</h1>
@@ -77,21 +27,14 @@
     <label for="login_email_field" hidden>Lösenord</label>
     <input type="password" name="password" id="login_password_field" class="input_field" placeholder="Lösenord">
 
-    <a href="#" id="login_forgotPassword">Glömt Lösenord</a>
-    <a href="#" id="login_registerAccount">Skapa Konto</a>
-    
+		<div id="login_linksContainer">
+    	<a href="#" id="login_forgotPassword">Glömt Lösenord</a>
+    	<a href="#" id="login_registerAccount">Skapa Konto</a>
+    </div>
     <input type="submit" value="Logga in" class="login_btn btn btn--yellow">
   </form>
 
 
-  <main class="main">
-		<div class="container">
-			<a href="#" class="btn btn--yellow">Visa mer</a>
-		</div>
-	</main>
-	<footer class="footer">
-		<div class="container">3</div>
-	</footer>
 	<script type="module" src="js/index.js"></script>
 </body>
 </html>
