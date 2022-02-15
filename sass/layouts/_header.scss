@@ -1,2 +1,20 @@
+/*Header*/
 .header{
+	//position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: 0 10px;
+	z-index: 3;
+	@include flexBox(row, center, space-between);
+	transition: all 0.5s ease;
+
+	@include breakpoint(small-max) {
+		height: 75px;
+	}
+
+	&__inner {
+		@include flexBox(row, center, space-between);
+	}
+
 }
