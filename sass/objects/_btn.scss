@@ -14,12 +14,12 @@
   height: 45px;
   transition: all 0.3s ease-in-out;
 
-  &--yellow{
-	background-color: $yellow;
+  &--yellow {
+    background-color: $yellow;
 
-	&:hover{
-		background-color: $black;
-		color: $yellow;
-	}
+    &:hover {
+      background-color: $black;
+      color: $yellow;
+    }
   }
 }

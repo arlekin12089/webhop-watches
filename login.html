@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="sv">
-
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="sass/img/favicon.ico">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="sass/img/favicon.ico">
 	<link rel="icon" type="image/png" href="sass/img/icons/favicon-16x16.png" sizes="16x16">
 	<link rel="icon" type="image/png" href="sass/img/icons/favicon-32x32.png" sizes="32x32">
 	<link rel="apple-touch-icon" href="sass/img/icons/apple-touch-icon.png" sizes="144x144">
-	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="sass/styles.css">
-	<title>FEND Time</title>
-</head>
 
+  <link rel="stylesheet" href="sass/styles.css">
+  <title>Logga in</title>
+</head>
 <body>
-	<header class="header">
+  <header class="header">
 		<div class="container">
 			<div class="header__inner">
 				<div class="header__logo">
@@ -70,7 +68,23 @@
 
 		</div>
 	</header>
-	<main class="main">
+
+<!--Formuläret-->
+  <h1 class="login_text">Logga in</h1>
+  <form class="login_form">
+    <label for="login_email_field" hidden>E-mail</label>
+    <input type="email" name="email" id="login_email_field" class="input_field" placeholder="E-mail" autocomplete="email">
+    <label for="login_email_field" hidden>Lösenord</label>
+    <input type="password" name="password" id="login_password_field" class="input_field" placeholder="Lösenord">
+
+    <a href="#" id="login_forgotPassword">Glömt Lösenord</a>
+    <a href="#" id="login_registerAccount">Skapa Konto</a>
+    
+    <input type="submit" value="Logga in" class="login_btn btn btn--yellow">
+  </form>
+
+
+  <main class="main">
 		<div class="container">
 			<a href="#" class="btn btn--yellow">Visa mer</a>
 		</div>
@@ -80,5 +94,4 @@
 	</footer>
 	<script type="module" src="js/index.js"></script>
 </body>
-
 </html>
