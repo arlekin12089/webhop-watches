@@ -7,6 +7,11 @@
 body {
   @include font-size(16);
   font-family: $font-primary;
+
+  .fa {
+	@include font-size(25);
+	color: $black;
+}
 }
 
 .center {
@@ -29,3 +34,8 @@ a {
 :focus {
     outline: 0;
 }
+
+img {
+	max-width: 100%;
+}
+

@@ -1,32 +1,122 @@
 /*Header*/
-.header{
-	//position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	padding: 0 10px;
-	z-index: 3;
-	@include flexBox(row, center, space-between);
-	transition: all 0.5s ease;
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 0 10px;
+  width: 100%;
+  z-index: 3;
+  @include flexBox(row, center, space-between);
+  transition: all 0.5s ease;
 
-	@include breakpoint(small-max) {
-		height: 75px;
-	}
+  @include breakpoint(small-max) {
+    height: 75px;
+  }
 
-	&__inner {
-		@include flexBox(row, center, space-between);
-	}
+  &--modified {
+    border-bottom: 1px solid $grey;
+    background: #fff;
+    height: 74px;
+  }
+
+  &__inner {
+    @include flexBox(row, center, center);
+    @include breakpoint(small-max) {
+      @include flexBox(row, center, space-between);
+    }
+  }
+
+  &__search {
+    display: none;
+    @include breakpoint(small-max) {
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
+  .actions{
+    @include flexBox(row, center, space-between);
+  }
+
+  &__nav {
+    .main-menu {
+      display: none;
+      @include breakpoint(small-max) {
+        @include flexBox(row, center, space-between);
+        display: flex;
+      }
+      &--mobile {
+        display: none;
+        &.open {
+          width: 100%;
+          display: block;
+          height: calc(100vh - 74px);
+          position: absolute;
+          z-index: 99;
+          left: 0;
+          right: 0;
+          top: 74px;
+          background: #fff;
+          padding: 30px 0;
+        }
+      }
+    }
+    .nav-link {
+      @include font-size(25);
+      line-height: 25px;
+      font-weight: 400;
+      display: block;
+      padding: 1rem 1.2rem;
+      text-transform: capitalize;
+      border-bottom: 1px solid $grey;
+      @include breakpoint(small-max) {
+        @include font-size(18);
+        line-height: 25px;
+        font-weight: 400;
+        display: inline-block;
+        padding: 0.7rem 1.2rem;
+        text-transform: capitalize;
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__widgets {
+    @include flexBox(row, center, space-between);
+    position: absolute;
+    right: 20px;
+    @include breakpoint(small-max) {
+      position: inherit;
+    }
+  }
+
+  &__user {
+      width: 25px;
+      height: 25px;
+  }
+
+  &__logo {
+    max-height: 30px;
+
+    a {
+      display: inline-flex;
+      width: 130px;
+    }
+  }
+}
+
+//Menu
+
 .menu-toggle {
   background: none;
   border: none;
-  width: 30px;
+  width: 25px;
   height: 23px;
   cursor: pointer;
   display: block;
   outline: none;
   position: absolute;
-  right: 30px;
-  top: 32px;
+  left: 20px;
+  top: 30px;
   padding: 0;
 
   &.menu-open {
@@ -79,5 +169,4 @@
       transition: 0.3s all ease-out;
     }
   }
-}
 }

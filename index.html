@@ -18,7 +18,7 @@
 </head>
 
 <body>
-	<header class="header">
+	<header class="header--transparent header--modified header">
 		<div class="container">
 			<div class="header__inner">
 				<div class="header__logo">
@@ -29,50 +29,77 @@
 				<button class="menu-toggle">
 					<span></span>
 				</button>
-				<div class="header__nav" id="nav">
-					<nav>
-						<ul>
-							<li>
-								<a href="" class="nav-link active">Herr</a>
-							</li>
-							<li>
-								<a href="" class="nav-link">Dam</a>
-							</li>
-							<li>
-								<a href="" class="nav-link">Barn</a>
-							</li>
-							<li>
-								<a href="" class="nav-link">Alla</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<div class="header__search">
-					<input type="text">
-					<button type="button">
-						<i class="fa fa-search"></i>
-					</button>
-				</div>
-				<div class="header__widgets">
-					<div class="header__user">
-						<a href="">
-							<i class="fa fa-user"></i>
-						</a>
+				<nav class="header__nav" id="nav">
+					<ul class="main-menu">
+						<li>
+							<a href="" class="nav-link active primary">Herr</a>
+						</li>
+						<li>
+							<a href="" class="nav-link primary">Dam</a>
+						</li>
+						<li>
+							<a href="" class="nav-link primary">Barn</a>
+						</li>
+						<li>
+							<a href="" class="nav-link primary">Alla</a>
+						</li>
+					</ul>
+					<ul class="main-menu--mobile">
+						<li>
+							<div class="header__search--mobile">
+								<input type="text" class="input_field">
+								<button type="button">
+									<i class="fa fa-search"></i>
+								</button>
+							</div>
+						</li>
+						<li>
+							<a href="" class="nav-link active primary">Herr</a>
+						</li>
+						<li>
+							<a href="" class="nav-link primary">Dam</a>
+						</li>
+						<li>
+							<a href="" class="nav-link primary">Barn</a>
+						</li>
+						<li>
+							<a href="" class="nav-link primary">Alla</a>
+						</li>
+						<li>
+							<a href="" class="nav-link primary">Log In</a>
+						</li>
+						<li>
+							<a href="" class="nav-link primary">Register</a>
+						</li>
+					</ul>
+				</nav>				
+				<div class="actions">
+					<div class="header__search">
+						<input type="text" class="input_field">
+						<button type="button">
+							<i class="fa fa-search"></i>
+						</button>
 					</div>
-					<div class="header__card">
-						<a href="">
-							<i class="fa fa-shopping-cart"></i>
-						</a>
+					<div class="header__widgets">
+						<div class="header__user">
+							<a href="">
+								<i class="fa fa-user"></i>
+							</a>
+						</div>
+						<div class="header__card">
+							<a href="">
+								<i class="fa fa-shopping-cart"></i>
+							</a>
+						</div>
 					</div>
-				</div>
+				</div>				
 			</div>
 
 		</div>
 	</header>
+	<section class="hero"></section>
 	<main class="main">
-		<div class="container">
-			<a href="#" class="btn btn--yellow">Visa mer</a>
-		</div>
+
 	</main>
 	<footer class="footer">
 		<div class="container">3</div>
