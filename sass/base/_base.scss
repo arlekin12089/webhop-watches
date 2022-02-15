@@ -9,9 +9,12 @@ body {
   font-family: $font-primary;
 
   .fa {
-	@include font-size(25);
-	color: $black;
-}
+    @include font-size(25);
+    color: $black;
+    &:hover {
+    	color: $yellow;
+    }
+  }
 }
 
 .center {
@@ -32,10 +35,13 @@ a {
 }
 
 :focus {
-    outline: 0;
+  outline: 0;
 }
 
 img {
-	max-width: 100%;
+  max-width: 100%;
 }
 
+.mb20 {
+	margin-bottom: 20px;
+}

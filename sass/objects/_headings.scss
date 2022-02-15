@@ -1,0 +1,17 @@
+h1{
+	@include font-size(40);
+	line-height: 50px;
+	@include breakpoint(small-max) {
+        @include font-size(72);
+		line-height: 72px;
+    }
+}
+h4 {
+	@include font-size(16);
+	line-height: 20px;
+
+	@include breakpoint(small-max) {
+		@include font-size(20);
+		line-height: 25px;
+	}
+}
