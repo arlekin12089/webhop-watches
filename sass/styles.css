@@ -336,6 +336,7 @@ a {
   -webkit-transition: 0.3s all ease-out;
   transition: 0.3s all ease-out;
 }
+<<<<<<< HEAD
 
 .footer {
   display: -webkit-box;
@@ -378,4 +379,6 @@ a {
 .footer .footer-text p {
   color: white;
 }
+=======
+>>>>>>> dde08e1ef0c166adedaa07b35ea841e072990eb2
 /*# sourceMappingURL=styles.css.map */
