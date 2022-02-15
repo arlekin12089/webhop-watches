@@ -1,0 +1,35 @@
+.login_text {
+  text-align: center;
+  margin-top: 30%;
+  font-size: 24px;
+}
+
+.login_form {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  #login_email_field,
+  #login_password_field {
+    width: 90%;
+    margin: 6px 0;
+    padding: 7px;
+    border: none;
+    border-bottom: 1.3px solid;
+  }
+  #login_linksContainer {
+    margin-bottom: 2em;
+
+    a {
+      display: block;
+      text-align: center;
+      margin: 16px;
+      font-size: 12px;
+      color: black;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+}

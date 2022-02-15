@@ -509,4 +509,50 @@ img {
 .hero {
   min-height: 650px;
 }
+
+.login_text {
+  text-align: center;
+  margin-top: 30%;
+  font-size: 24px;
+}
+
+.login_form {
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login_form #login_email_field,
+.login_form #login_password_field {
+  width: 90%;
+  margin: 6px 0;
+  padding: 7px;
+  border: none;
+  border-bottom: 1.3px solid;
+}
+
+.login_form #login_linksContainer {
+  margin-bottom: 2em;
+}
+
+.login_form #login_linksContainer a {
+  display: block;
+  text-align: center;
+  margin: 16px;
+  font-size: 12px;
+  color: black;
+  text-decoration: underline;
+  font-weight: bold;
+}
 /*# sourceMappingURL=styles.css.map */
