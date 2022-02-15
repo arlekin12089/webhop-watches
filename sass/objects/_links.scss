@@ -1,0 +1,8 @@
+.primary {
+ color: $black;
+ cursor: pointer;
+
+ &:hover{
+	color: $yellow;
+ }
+}
