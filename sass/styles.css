@@ -236,12 +236,6 @@ a {
           justify-content: space-between;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -278,31 +272,57 @@ a {
   right: 30px;
   top: 32px;
   padding: 0;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
 }
 
-.header .menu-toggle.menu-open span {
+.header .menu-toggle .menu-toggle {
+  background: none;
+  border: none;
+  width: 30px;
+  height: 23px;
+  cursor: pointer;
+  display: block;
+  outline: none;
+  position: absolute;
+  right: 30px;
+  top: 32px;
+  padding: 0;
+}
+
+.header .menu-toggle .menu-toggle.menu-open span {
   background: transparent;
 }
 
-.header .menu-toggle.menu-open span:before {
+.header .menu-toggle .menu-toggle.menu-open span:before {
   top: 0;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.header .menu-toggle.menu-open span:after {
+.header .menu-toggle .menu-toggle.menu-open span:after {
   bottom: 0;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
 @media only screen and (min-width: 768px) {
-  .header .menu-toggle {
+  .header .menu-toggle .menu-toggle {
     display: none;
   }
 }
 
-.header .menu-toggle span {
+.header .menu-toggle .menu-toggle span {
   position: absolute;
   right: 0;
   top: 7px;
@@ -313,7 +333,7 @@ a {
   transition: 0.3s all ease-out;
 }
 
-.header .menu-toggle span:before {
+.header .menu-toggle .menu-toggle span:before {
   content: "";
   top: -7px;
   height: 3px;
@@ -325,7 +345,7 @@ a {
   transition: 0.3s all ease-out;
 }
 
-.header .menu-toggle span:after {
+.header .menu-toggle .menu-toggle span:after {
   content: "";
   bottom: -7px;
   height: 3px;
@@ -336,7 +356,6 @@ a {
   -webkit-transition: 0.3s all ease-out;
   transition: 0.3s all ease-out;
 }
-<<<<<<< HEAD
 
 .footer {
   display: -webkit-box;
@@ -379,6 +398,4 @@ a {
 .footer .footer-text p {
   color: white;
 }
-=======
->>>>>>> dde08e1ef0c166adedaa07b35ea841e072990eb2
 /*# sourceMappingURL=styles.css.map */
