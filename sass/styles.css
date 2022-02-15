@@ -643,6 +643,18 @@ h4 {
 
 .home-img-holder img {
   height: 350px;
+  width: 100%;
+}
+
+.home-img-holder .home-h1 {
+  margin-top: -250px;
+  color: beige;
+  margin-bottom: 20px;
+}
+
+.home-img-holder .home-h2 {
+  color: beige;
+  margin-bottom: 25px;
 }
 
 .login_text {
