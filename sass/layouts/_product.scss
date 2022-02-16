@@ -1,10 +1,4 @@
 .product {
-	width: 100%;
-
-	@include breakpoint(small-max) {
-		width: 50%;
-	}
-
 	&__view {
 		@include flexBox(column, flex-start, space-between);
 		padding-top: 40px;
