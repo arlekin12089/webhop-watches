@@ -650,53 +650,6 @@ h4 {
   position: relative;
 }
 
-footer {
-  width: 100%;
-  height: 25vh;
-  background-color: #000000;
-  position: absolute;
-  bottom: 0%;
-}
-
-footer #footerWrapper {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-footer #footerWrapper #footerLogo {
-  width: 35%;
-}
-
-footer #footerWrapper .iconContainer {
-  width: 35%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-footer #footerWrapper .iconContainer .fa {
-  color: #ffffff;
-}
-
-footer #copyright {
-  text-align: center;
-  color: #ffffff;
-  font-size: 10px;
-  font-size: 0.625rem;
-  position: relative;
-  top: -25px;
-}
-
 .login_text {
   text-align: center;
   margin-top: 30%;
@@ -820,7 +773,9 @@ footer #copyright {
 }
 
 .product__photo {
-  background: #e7e2e2;
+  -webkit-filter: brightness(97%);
+          filter: brightness(97%);
+  background-color: rgba(0, 0, 0, 0.03);
   padding: 20px;
   position: relative;
   border-radius: 5px;
@@ -931,6 +886,7 @@ footer #copyright {
   .filter {
     width: 70%;
     display: block;
+    min-width: 250px;
   }
 }
 
