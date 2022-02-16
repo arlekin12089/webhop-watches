@@ -12,42 +12,80 @@
 }
 
 .products-list {
-  @include flexBox(column, center, center);
-  padding: 0 20px;
-  width: 100%;
+  	margin: 20px;
+  	display: grid;
+  	gap: 1rem;
+  	position: relative;
 
-  @include breakpoint(small-max) {
-    @include flexBox(row, center, center);
+  @include breakpoint(medium-tablet-max) {
+  	grid-template-columns: repeat(2, 1fr);
   }
+@include breakpoint(medium-max) {
+	grid-template-columns: repeat(3, 1fr);
+}
+
 }
 
 .product {
-  width: 100%;
-  margin: 0 10px 40px;
-  display: inline-block;
 
-  @include breakpoint(small-max) {
-    width: calc(35% - 1.5rem);
-    margin: 0 10px 20px;
+  &__icon {
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	display: flex;
+  	transition: all 0.3s linear;
+  	opacity: 0;
+  	z-index: 8;
   }
 
   &__photo {
   	background: $light-white;
   	padding: 20px;
     position: relative;
+	border-radius: 5px;
+
+	&:hover {
+		&:before {
+			content: '';
+			background: rgba($black, .5);
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			border-radius: 5px;
+		}
+
+		.product__icon {
+			opacity: 1;
+		}
+	}
     }
 
     .addToCard {
-    	display: inline-block;
-    	width: 30px;
-    	height: 30px;
-    	right: 10px;
-    	position: absolute;
-    	bottom: 10px;
+	margin-left: 10px;
+
+	.fa:hover {
+		color: $black;
+	}
     }
 
     &__link {
-    	display: block;
+    	display: inline-flex;
+    	justify-content: center;
+    	align-items: center;
+    	width: 36px;
+    	height: 36px;
+    	border-radius: 100%;
+    	background: $yellow;
+
+    	&:hover {
+    		.fa {
+    			color: $black;
+    		}
+    	}
     }
 
     &__description {
@@ -92,7 +130,7 @@
     	}
 
     	@include breakpoint(small-max) {
-    		width: 30%;
+    		width: 70%;
     		display: block;
     	}
 
