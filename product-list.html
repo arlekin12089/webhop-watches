@@ -1,276 +1,208 @@
 <!DOCTYPE html>
 <html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="sass/img/favicon.ico" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="sass/img/icons/favicon-16x16.png"
-      sizes="16x16"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="sass/img/icons/favicon-32x32.png"
-      sizes="32x32"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="sass/img/icons/apple-touch-icon.png"
-      sizes="144x144"
-    />
-    <link rel="stylesheet" href="sass/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>FEND Time</title>
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="sass/img/favicon.ico" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="sass/img/icons/favicon-16x16.png"
+			sizes="16x16"
+			/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="sass/img/icons/favicon-32x32.png"
+			sizes="32x32"
+			/>
+		<link
+			rel="apple-touch-icon"
+			href="sass/img/icons/apple-touch-icon.png"
+			sizes="144x144"
+			/>
+		<link rel="stylesheet" href="sass/styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+			/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+			rel="stylesheet"
+			/>
+		<title>FEND Time</title>
+	</head>
 
-  <body>
-    <header class="header--transparent header--modified header">
-      <div class="container">
-        <div class="header__inner">
-          <div class="header__logo">
-            <a href="/">
-              <img src="sass/img/FENDTime.svg" alt="FEND Time" />
-            </a>
-          </div>
-          <button class="menu-toggle">
-            <span></span>
-          </button>
-          <nav class="header__nav" id="nav">
-            <ul class="main-menu">
-              <li>
-                <a href="" class="nav-link active primary">Herr</a>
-              </li>
-              <li>
-                <a href="" class="nav-link primary">Dam</a>
-              </li>
-              <li>
-                <a href="" class="nav-link primary">Barn</a>
-              </li>
-              <li>
-                <a href="" class="nav-link primary">Alla</a>
-              </li>
-            </ul>
-            <ul class="main-menu--mobile">
-              <li>
-                <div class="header__search--mobile">
-                  <input type="text" class="input_field" />
-                  <button type="button">
-                    <i class="fa fa-search"></i>
-                  </button>
-                </div>
-              </li>
-              <li>
-                <a href="" class="nav-link active primary">Herr</a>
-              </li>
-              <li>
-                <a href="" class="nav-link primary">Dam</a>
-              </li>
-              <li>
-                <a href="" class="nav-link primary">Barn</a>
-              </li>
-              <li>
-                <a href="" class="nav-link primary">Alla</a>
-              </li>
-              <li>
-                <a href="" class="nav-link primary">Log In</a>
-              </li>
-              <li>
-                <a href="" class="nav-link primary">Register</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="actions">
-            <div class="header__search">
-              <input type="text" class="input_field" />
-              <button type="button">
-                <i class="fa fa-search"></i>
-              </button>
-            </div>
-            <div class="header__widgets">
-              <div class="header__user">
-                <a href="">
-                  <i class="fa fa-user"></i>
-                </a>
-              </div>
-              <div class="header__card">
-                <a href="">
-                  <i class="fa fa-shopping-cart"></i>
-				  <span>1</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <section class="hero--modified dam">
-      <div class="container">
-        <div class="hero--modified__intro">
-          <h1 class="center text--white">Damklockor</h1>
-        </div>
-      </div>
-    </section>
-    <main class="main">
-	<section class="menu-header">
-		<div class="container">
-			<h4 class="menu-header__title">Home / Products</h4>
-		</div>
-	</section>
-      <div class="container">
-        <p id="products-amount"><span>9</span>&nbsp;Items have displayed.</p>
-        <section class="products__wrap">
-          <div class="filter-mobile">
-            <a href="#" class="btn btn--white filter-toggle">Filter</a>
-          </div>
-          <div class="filter">
-            <div class="filter__search">
-              <i class="fa fa-search"></i>
-              <input type="text" class="input__field" placeholder="Search" />
-            </div>
-            <div class="filter__options">
-              <a href="#" id="all_watches" class="text--xs primary"
-                >Alla klockor</a
-              >
-              <div class="filter__option">
-                <p class="filter__title text--xs">MARKEN</p>
-                <ul class="filter__list">
-                  <li>
-                    <input type="checkbox" />
-                    <div>Omega <span>2</span></div>
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-                    <div>Cartier <span>2</span></div>
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-                    <div>Rolex<span>2</span></div>
-                  </li>
-                </ul>
-              </div>
-              <div class="filter__option">
-                <p class="filter__title text--xs">MATERIAL</p>
-                <ul class="filter__list">
-                  <li>
-                    <input type="checkbox" />
-                    <div>Guld <span>2</span></div>
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-                    <div>Silver<span>2</span></div>
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-                    <div>Bronze<span>2</span></div>
-                  </li>
-                </ul>
-              </div>
-              <div class="filter__option">
-                <p class="filter__title text--xs">FARGEN</p>
-                <ul class="filter__list">
-                  <li>
-                    <input type="checkbox" />
-                    <div>Gul<span>2</span></div>
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-                    <div>Silver <span>2</span></div>
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-                    <div>Vit<span>2</span></div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="mb20">
-              <a href="#" class="primary"
-                ><i class="fa fa-close"></i> Rensa filter</a
-              >
-            </div>
-            <a href="#" class="btn btn--yellow">Apply filter</a>
-          </div>
-          <div class="products-list">
-             <article class="product">
-              <div class="product__photo">
-                <img
-                  src="sass/img/watches/17303325_2.png"
-                  alt="Big Bang One Click 33mm"
-                />
-                <div class="product__icon">
-                  <a href="#" target="_blank" class="product__link">
-                    <i class="fa fa-search"></i>
-                  </a>
-                  <button class="addToCard product__link">
-                    <i class="fa fa-shopping-cart"></i>
-                  </button>
-                </div>
-              </div>
-              <footer class="product__description">
-                <h4 class="name">Big Bang One Click 33mm</h4>
-                <p class="price">20.000 SEK</p>
-              </footer>
-            </article>
-            <article class="product">
-              <div class="product__photo">
-                <img
-                  src="sass/img/watches/17303325_2.png"
-                  alt="Big Bang One Click 33mm"
-                />
-                <div class="product__icon">
-                  <a href="#" target="_blank" class="product__link">
-                    <i class="fa fa-search"></i>
-                  </a>
-                  <button class="addToCard product__link">
-                    <i class="fa fa-shopping-cart"></i>
-                  </button>
-                </div>
-              </div>
-              <footer class="product__description">
-                <h4 class="name">Big Bang One Click 33mm</h4>
-                <p class="price">20.000 SEK</p>
-              </footer>
-            </article>
-            <article class="product">
-              <div class="product__photo">
-                <img
-                  src="sass/img/watches/17303325_2.png"
-                  alt="Big Bang One Click 33mm"
-                />
-                <div class="product__icon">
-                  <a href="#" target="_blank" class="product__link">
-                    <i class="fa fa-search"></i>
-                  </a>
-                  <button class="addToCard product__link">
-                    <i class="fa fa-shopping-cart"></i>
-                  </button>
-                </div>
-              </div>
-              <footer class="product__description">
-                <h4 class="name">Big Bang One Click 33mm</h4>
-                <p class="price">20.000 SEK</p>
-              </footer>
-            </article>
-          </div>
-        </section>
-      </div>
-    </main>
-    <footer class="footer">
-      <div class="container">3</div>
-    </footer>
-    <script type="module" src="js/index.js"></script>
-  </body>
+	<body>
+		<header class="header--transparent header--modified header">
+			<div class="container">
+				<div class="header__inner">
+					<div class="header__logo">
+						<a href="/">
+							<img src="sass/img/FENDTime.svg" alt="FEND Time" />
+						</a>
+					</div>
+					<button class="menu-toggle">
+						<span></span>
+					</button>
+					<nav class="header__nav" id="nav">
+						<ul class="main-menu">
+							<li>
+								<a href="product-list.html?category=man" class="nav-link active
+									primary">Herr</a>
+							</li>
+							<li>
+								<a href="product-list.html?category=woman" class="nav-link primary">Dam</a>
+							</li>
+							<li>
+								<a href="product-list.html?category=child" class="nav-link primary">Barn</a>
+							</li>
+							<li>
+								<a href="product-list.html?category=all" class="nav-link primary">Alla</a>
+							</li>
+						</ul>
+						<ul class="main-menu--mobile">
+							<li>
+								<div class="header__search--mobile">
+									<input type="text" class="input_field" />
+									<button type="button">
+										<i class="fa fa-search"></i>
+									</button>
+								</div>
+							</li>
+							<li>
+								<a href="" class="nav-link active primary">Herr</a>
+							</li>
+							<li>
+								<a href="" class="nav-link primary">Dam</a>
+							</li>
+							<li>
+								<a href="" class="nav-link primary">Barn</a>
+							</li>
+							<li>
+								<a href="" class="nav-link primary">Alla</a>
+							</li>
+							<li>
+								<a href="" class="nav-link primary">Log In</a>
+							</li>
+							<li>
+								<a href="" class="nav-link primary">Register</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="actions">
+						<div class="header__search">
+							<input type="text" class="input_field" />
+							<button type="button">
+								<i class="fa fa-search"></i>
+							</button>
+						</div>
+						<div class="header__widgets">
+							<div class="header__user">
+								<a href="">
+									<i class="fa fa-user"></i>
+								</a>
+							</div>
+							<div class="header__card">
+								<a href="">
+									<i class="fa fa-shopping-cart"></i>
+									<span>1</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="hero--modified dam">
+			<div class="container">
+				<div class="hero--modified__intro">
+					<h1 class="center text--white" id="category-name"></h1>
+				</div>
+			</div>
+		</section>
+		<main class="main">
+			<section class="menu-header">
+				<div class="container">
+					<h4 class="menu-header__title">Home / <span id="categoryMenuItem"></span></h4>
+				</div>
+			</section>
+			<div class="container">
+				<p id="products-amount"><span>9</span>&nbsp;Items have displayed.</p>
+				<section class="products__wrap">
+					<div class="filter-mobile">
+						<a href="#" class="btn btn--white filter-toggle">Filter</a>
+					</div>
+					<div class="filter">
+						<div class="filter__search">
+							<i class="fa fa-search"></i>
+							<input type="text" class="input__field" placeholder="Search" />
+						</div>
+						<div class="filter__options">
+							<a href="#" id="all_watches" class="text--xs primary">Alla klockor</a>
+							<div class="filter__option">
+								<p class="filter__title text--xs">MARKEN</p>
+								<ul class="filter__list">
+									<li>
+										<input type="checkbox" />
+										<div>Omega <span>2</span></div>
+									</li>
+									<li>
+										<input type="checkbox" />
+										<div>Cartier <span>2</span></div>
+									</li>
+									<li>
+										<input type="checkbox" />
+										<div>Rolex<span>2</span></div>
+									</li>
+								</ul>
+							</div>
+							<div class="filter__option">
+								<p class="filter__title text--xs">MATERIAL</p>
+								<ul class="filter__list">
+									<li>
+										<input type="checkbox" />
+										<div>Guld <span>2</span></div>
+									</li>
+									<li>
+										<input type="checkbox" />
+										<div>Silver<span>2</span></div>
+									</li>
+									<li>
+										<input type="checkbox" />
+										<div>Bronze<span>2</span></div>
+									</li>
+								</ul>
+							</div>
+							<div class="filter__option">
+								<p class="filter__title text--xs">FARGEN</p>
+								<ul class="filter__list">
+									<li>
+										<input type="checkbox" />
+										<div>Gul<span>2</span></div>
+									</li>
+									<li>
+										<input type="checkbox" />
+										<div>Silver <span>2</span></div>
+									</li>
+									<li>
+										<input type="checkbox" />
+										<div>Vit<span>2</span></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="mb20">
+							<a href="#" class="primary"><i class="fa fa-close"></i> Rensa filter</a>
+						</div>
+						<a href="#" class="btn btn--yellow">Apply filter</a>
+					</div>
+					<div class="products-list" id="products-list"></div>
+				</section>
+			</div>
+		<script type="module" src="js/index.js"></script>
+	</body>
 </html>

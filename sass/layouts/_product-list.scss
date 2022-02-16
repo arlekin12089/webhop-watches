@@ -40,7 +40,8 @@
   }
 
   &__photo {
-  	background: $light-white;
+  	filter: brightness(97%);
+  	background-color: rgba($black, .03);
   	padding: 20px;
     position: relative;
 	border-radius: 5px;
@@ -132,6 +133,7 @@
     	@include breakpoint(small-max) {
     		width: 70%;
     		display: block;
+			min-width: 250px;
     	}
 
     	#all_watches {
