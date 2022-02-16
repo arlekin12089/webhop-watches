@@ -1,22 +1,20 @@
-{
-  "products": [
-    {
-      "id": "man",
-      "name": "Herr",
-      "image": "img/watches/categories/men.jpg",
-      "description": "Varje mans tid är dyrbar. Upptäck lyxklockor för honom bland vårt exklusiva urval av märken i världsklass."
-    },
-    {
-      "id": "woman",
-      "name": "Dam",
-      "image": "img/watches/categories/woman.jpg",
-      "description": "Hon tickar. Folk pratar. Tidlösa stilar. Utmärkta varumärken. Ett exklusivt urval av raffinerat hantverk bara för henne."
-    },
-    {
-      "id": "children",
-      "name": "Barn",
-      "image": "img/watches/categories/children.jpg",
-      "description": "Klockor är tillverkade av de finaste råvarorna och monterade med noggrann uppmärksamhet på detaljer. Varje komponent är designad, utvecklad och producerad enligt de mest krävande standarderna"
-    }
-  ]
-}
+[
+  {
+    "id": "man",
+    "name": "Herr",
+    "image": "img/watches/categories/men.jpg",
+    "description": "Varje mans tid är dyrbar. Upptäck lyxklockor för honom bland vårt exklusiva urval av märken i världsklass."
+  },
+  {
+    "id": "woman",
+    "name": "Dam",
+    "image": "img/watches/categories/woman.jpg",
+    "description": "Hon tickar. Folk pratar. Tidlösa stilar. Utmärkta varumärken. Ett exklusivt urval av raffinerat hantverk bara för henne."
+  },
+  {
+    "id": "children",
+    "name": "Barn",
+    "image": "img/watches/categories/children.jpg",
+    "description": "Klockor är tillverkade av de finaste råvarorna och monterade med noggrann uppmärksamhet på detaljer. Varje komponent är designad, utvecklad och producerad enligt de mest krävande standarderna"
+  }
+]
