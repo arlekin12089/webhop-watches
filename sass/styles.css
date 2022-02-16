@@ -853,6 +853,7 @@ footer #copyright {
 .product__description .brand {
   font-size: 18px;
   font-size: 1.125rem;
+  line-height: 25px;
   letter-spacing: 0.1rem;
   margin-bottom: 20px;
   text-transform: uppercase;

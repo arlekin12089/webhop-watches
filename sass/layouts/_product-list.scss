@@ -59,6 +59,7 @@
 
 		.brand {
 			@include font-size(18);
+			line-height: 25px;
 			letter-spacing: 0.1rem;
 			margin-bottom: 20px;
 			text-transform: uppercase;
