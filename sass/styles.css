@@ -1144,6 +1144,105 @@ h4 {
   font-weight: 600;
 }
 
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 15vh;
+}
+
+main h1 {
+  font-size: 24px;
+}
+
+main form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 1000px;
+}
+
+main form .div-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main form .div-inputs div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 50px;
+}
+
+main form .div-inputs div input {
+  margin-top: 30px;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid black;
+  font-size: 18px;
+  padding: 3px 7px;
+  width: 400px;
+}
+
+main form .btn {
+  font-size: 18px;
+  font-size: 1.125rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 40px;
+  border-radius: 30px;
+  font-family: "Roboto", Verdana, sans-serif;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  color: #000000;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 20%;
+  background-color: #FCCB1E;
+  cursor: pointer;
+  margin-top: 25px;
+  height: 45px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .input__field {
   border: none;
   border-bottom: 1px solid #000000;
