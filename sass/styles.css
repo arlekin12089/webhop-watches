@@ -1,0 +1,605 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   should we use this? not importing it right away as it interfered with the variables /T
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before, blockquote::after {
+  content: "";
+  content: none;
+}
+
+q::before, q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Roboto", Verdana, sans-serif;
+}
+
+body .fa {
+  font-size: 25px;
+  font-size: 1.5625rem;
+  color: #000000;
+}
+
+.center {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 991px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn {
+  font-size: 18px;
+  font-size: 1.125rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 40px;
+  border-radius: 30px;
+  font-family: "Roboto", Verdana, sans-serif;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  color: #000000;
+  cursor: pointer;
+  height: 45px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn--yellow {
+  background-color: #FCCB1E;
+}
+
+.btn--yellow:hover {
+  background-color: #000000;
+  color: #FCCB1E;
+}
+
+.primary {
+  color: #000000;
+  cursor: pointer;
+}
+
+.primary:hover {
+  color: #FCCB1E;
+}
+
+/*Header*/
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 0 10px;
+  width: 100%;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    height: 75px;
+  }
+}
+
+.header--modified {
+  border-bottom: 1px solid #CECECE;
+  background: #fff;
+  height: 74px;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.header__search {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__search {
+    display: inline-block;
+    margin-right: 20px;
+  }
+}
+
+.header .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__nav .main-menu {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__nav .main-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    display: flex;
+  }
+}
+
+.header__nav .main-menu--mobile {
+  display: none;
+}
+
+.header__nav .main-menu--mobile.open {
+  width: 100%;
+  display: block;
+  height: calc(100vh - 74px);
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  right: 0;
+  top: 74px;
+  background: #fff;
+  padding: 30px 0;
+}
+
+.header__nav .nav-link {
+  font-size: 25px;
+  font-size: 1.5625rem;
+  line-height: 25px;
+  font-weight: 400;
+  display: block;
+  padding: 1rem 1.2rem;
+  text-transform: capitalize;
+  border-bottom: 1px solid #CECECE;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__nav .nav-link {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 25px;
+    font-weight: 400;
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    text-transform: capitalize;
+    border-bottom: none;
+  }
+}
+
+.header__widgets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  right: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__widgets {
+    position: inherit;
+  }
+}
+
+.header__user {
+  width: 25px;
+  height: 25px;
+}
+
+.header__logo {
+  max-height: 30px;
+}
+
+.header__logo a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 130px;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  width: 25px;
+  height: 23px;
+  cursor: pointer;
+  display: block;
+  outline: none;
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  padding: 0;
+}
+
+.menu-toggle.menu-open span {
+  background: transparent;
+}
+
+.menu-toggle.menu-open span:before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.menu-toggle.menu-open span:after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle span {
+  position: absolute;
+  right: 0;
+  top: 7px;
+  height: 3px;
+  background: #000000;
+  width: 100%;
+  -webkit-transition: 0.3s all ease-out;
+  transition: 0.3s all ease-out;
+}
+
+.menu-toggle span:before {
+  content: "";
+  top: -7px;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  -webkit-transition: 0.3s all ease-out;
+  transition: 0.3s all ease-out;
+}
+
+.menu-toggle span:after {
+  content: "";
+  bottom: -7px;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  -webkit-transition: 0.3s all ease-out;
+  transition: 0.3s all ease-out;
+}
+
+.hero {
+  min-height: 650px;
+}
+
+footer {
+  width: 100%;
+  height: 25vh;
+  background-color: #000000;
+  position: absolute;
+  bottom: 0%;
+}
+
+footer #footerWrapper {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer #footerWrapper #footerLogo {
+  width: 35%;
+}
+
+footer #footerWrapper .iconContainer {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer #footerWrapper .iconContainer .fa {
+  color: #ffffff;
+}
+
+footer #copyright {
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+  font-size: 0.625rem;
+  position: relative;
+  top: -25px;
+}
+
+.login_text {
+  text-align: center;
+  margin-top: 30%;
+  font-size: 24px;
+}
+
+.login_form {
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login_form #login_email_field,
+.login_form #login_password_field {
+  width: 90%;
+  margin: 6px 0;
+  padding: 7px;
+  border: none;
+  border-bottom: 1.3px solid;
+}
+
+.login_form #login_linksContainer {
+  margin-bottom: 2em;
+}
+
+.login_form #login_linksContainer a {
+  display: block;
+  text-align: center;
+  margin: 16px;
+  font-size: 12px;
+  color: black;
+  text-decoration: underline;
+  font-weight: bold;
+}
+/*# sourceMappingURL=styles.css.map */
