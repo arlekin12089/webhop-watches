@@ -513,7 +513,7 @@ img {
 footer {
   width: 100%;
   height: 25vh;
-  background-color: black;
+  background-color: #000000;
   position: absolute;
   bottom: 0%;
 }
@@ -545,13 +545,14 @@ footer #footerWrapper .iconContainer {
 }
 
 footer #footerWrapper .iconContainer .fa {
-  color: white;
+  color: #ffffff;
 }
 
 footer #copyright {
   text-align: center;
-  color: white;
+  color: #ffffff;
   font-size: 10px;
+  font-size: 0.625rem;
   position: relative;
   top: -25px;
 }
