@@ -4,6 +4,7 @@ function ProductList() {
   const categoryName = document.getElementById("category-name");
   const productsWrap = document.getElementById("products-list");
   const categoryMenuItem = document.getElementById("categoryMenuItem");
+  const heroWrapper = document.getElementById("hero-wrap");
 
   function listProducts(listProducts) {
     listProducts.forEach((item) => {
@@ -41,6 +42,8 @@ function ProductList() {
     if (qsCategory === "all") {
       changeTitle("Alla klockor");
       categoryMenuItem.innerHTML = "Alla klockor";
+      heroWrapper.style.backgroundImage =
+        "url('sass/img/watches/covers/unisex-cover.jpeg')";
     } else {
       const categoriesResponse = await fetch("js/Categories.json");
       const categories = await categoriesResponse.json();
@@ -49,6 +52,9 @@ function ProductList() {
       );
       changeTitle(findCategory.name);
       categoryMenuItem.innerHTML = findCategory.name;
+      console.log(findCategory.backgroundImage);
+      heroWrapper.style.backgroundImage =
+        "url(" + findCategory.backgroundImage + ")";
     }
     const productsResponse = await fetch("js/Products.json");
     const products = await productsResponse.json();

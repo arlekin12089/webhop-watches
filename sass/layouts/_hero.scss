@@ -5,9 +5,11 @@
     position: relative;
     padding-top: 74px;
     min-height: 300px;
+    background-size: cover;
+    background-position: 50% 50%;
     @include flexBox(row, center, center);
-	@include breakpoint(small-max) {
-        min-height: 600px;
+    @include breakpoint(small-max) {
+      min-height: 600px;
     }
 
     &::before {
@@ -17,21 +19,12 @@
       height: 100%;
       background: rgba(0, 0, 0, 0.7);
       max-height: 225px;
-	  @include breakpoint(small-max) {
+      @include breakpoint(small-max) {
         max-height: 525px;
+      }
     }
-    }
-
-    &.dam {
-      	background-image: url(img/watches/covers/dam-cover.jpeg);
-   		background-size: cover;
-		background-position: 50% 50%;
-    }
-
     &__intro {
       position: relative;
     }
   }
 }
-
-
