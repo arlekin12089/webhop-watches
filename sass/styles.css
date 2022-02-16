@@ -1028,6 +1028,21 @@ footer #copyright {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    padding: 20px;
+  }
+}
+
+.product__view .photo {
+  width: 100%;
+  background: #e7e2e2;
+  padding: 20px;
+  position: relative;
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .product__view .photo {
+    width: 50%;
   }
 }
 
