@@ -162,10 +162,13 @@ body .fa {
   color: #000000;
 }
 
+<<<<<<< HEAD
 body .fa:hover {
   color: #FCCB1E;
 }
 
+=======
+>>>>>>> acd4271540c721342894eecd8242b5804848d6f9
 .center {
   text-align: center;
 }
@@ -194,6 +197,7 @@ img {
   max-width: 100%;
 }
 
+<<<<<<< HEAD
 .mb20 {
   margin-bottom: 20px;
 }
@@ -209,6 +213,8 @@ img {
   font-weight: 500;
 }
 
+=======
+>>>>>>> acd4271540c721342894eecd8242b5804848d6f9
 .btn {
   font-size: 18px;
   font-size: 1.125rem;
@@ -243,6 +249,7 @@ img {
   color: #FCCB1E;
 }
 
+<<<<<<< HEAD
 .btn--white {
   border-radius: 0;
   background-color: #ffffff;
@@ -289,6 +296,8 @@ h4 {
   }
 }
 
+=======
+>>>>>>> acd4271540c721342894eecd8242b5804848d6f9
 .primary {
   color: #000000;
   cursor: pointer;
@@ -575,6 +584,7 @@ h4 {
   min-height: 650px;
 }
 
+<<<<<<< HEAD
 .hero--modified {
   position: relative;
   padding-top: 74px;
@@ -655,6 +665,53 @@ h4 {
 .home-img-holder .home-h2 {
   color: beige;
   margin-bottom: 25px;
+=======
+footer {
+  width: 100%;
+  height: 25vh;
+  background-color: #000000;
+  position: absolute;
+  bottom: 0%;
+}
+
+footer #footerWrapper {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer #footerWrapper #footerLogo {
+  width: 35%;
+}
+
+footer #footerWrapper .iconContainer {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer #footerWrapper .iconContainer .fa {
+  color: #ffffff;
+}
+
+footer #copyright {
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+  font-size: 0.625rem;
+  position: relative;
+  top: -25px;
+>>>>>>> acd4271540c721342894eecd8242b5804848d6f9
 }
 
 .login_text {
@@ -702,6 +759,7 @@ h4 {
   text-decoration: underline;
   font-weight: bold;
 }
+<<<<<<< HEAD
 
 .products__wrap {
   display: -webkit-box;
@@ -930,4 +988,6 @@ h4 {
   -webkit-transition: .2s;
   transition: .2s;
 }
+=======
+>>>>>>> acd4271540c721342894eecd8242b5804848d6f9
 /*# sourceMappingURL=styles.css.map */
