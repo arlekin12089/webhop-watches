@@ -9,6 +9,7 @@ main {
     form {
         display: flex;
         flex-direction: column;
+        max-width: 1000px;
       .div-inputs {
         display: flex;
         flex-direction: row;
@@ -49,6 +50,14 @@ main {
       }
     }
   }
-  
+  @media screen and (max-width: $screen-sm) {
+   form{
+    flex-direction: column;
+    
+  }
+   
+  }
+
+
   
   
