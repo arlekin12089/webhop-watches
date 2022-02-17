@@ -1,3 +1,5 @@
+import * as ProductRepository from "./ProductRepository.js";
+
 function ProductList() {
   const queryString = new URLSearchParams(location.search);
   const qsCategory = queryString.get("category");
@@ -10,14 +12,14 @@ function ProductList() {
     listProducts.forEach((item) => {
       let elem = document.createElement("article");
       elem.classList.add("product");
-      elem.innerHTML = `       
+      elem.innerHTML = `
               <div class="product__photo">
                 <img
                   src="sass/${item.image}"
                   alt="${item.image}"
                 />
                 <div class="product__icon">
-                  <a href="#" target="_blank" class="product__link">
+                  <a href="product-view.html?productId=${item.id}" target="_blank" class="product__link">
                     <i class="fa fa-search"></i>
                   </a>
                   <button class="addToCard product__link">
@@ -39,38 +41,13 @@ function ProductList() {
   }
 
   async function getProducts() {
-    if (qsCategory === "all") {
-      changeTitle("Alla klockor");
-      categoryMenuItem.innerHTML = "Alla klockor";
-      heroWrapper.style.backgroundImage =
-        "url('sass/img/watches/covers/unisex-cover.jpeg')";
-    } else {
-      const categoriesResponse = await fetch("js/Categories.json");
-      const categories = await categoriesResponse.json();
-      let findCategory = categories.find(
-        (category) => qsCategory === category.id
-      );
-      changeTitle(findCategory.name);
-      categoryMenuItem.innerHTML = findCategory.name;
-      console.log(findCategory.backgroundImage);
-      heroWrapper.style.backgroundImage =
-        "url(" + findCategory.backgroundImage + ")";
-    }
-    const productsResponse = await fetch("js/Products.json");
-    const products = await productsResponse.json();
-
-    if (qsCategory === "all") {
-      listProducts([...products]);
-    } else {
-      let filteredProducts = products.filter(
-        (item) => item.categoryId === qsCategory
-      );
-      listProducts([...filteredProducts]);
-    }
+    let category = await ProductRepository.getCategoryById(qsCategory);
+    changeTitle(category.name);
+    categoryMenuItem.innerHTML = category.name;
+    heroWrapper.style.backgroundImage = "url(" + category.backgroundImage + ")";
+    listProducts(await ProductRepository.getProductsByCategory(qsCategory));
   }
-
   getProducts();
 }
-
 
 export default ProductList();
