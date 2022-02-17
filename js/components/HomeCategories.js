@@ -12,8 +12,10 @@ function listCategoriesHome(list) {
             <div class="home-img-contain">
       		<img src="sass/${item.image}" alt="bakgrund klocka">
               </div>
+              <div class ="home-text-container"
   				<h2 class="home-title">${item.name}</h2>
   				<p class="home-desc">${item.description}</p>
+                  </div>
       `;
     homeCategories.appendChild(elem);
   });
