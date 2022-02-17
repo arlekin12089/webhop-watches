@@ -12,3 +12,9 @@ export async function getCategoryById(id) {
   const categories = await categoriesResponse.json();
   return categories.find((category) => category.id === id);
 }
+
+export async function getAllCategories(id) {
+  const categoriesResponse = await fetch("js/Categories.json");
+  const categories = await categoriesResponse.json();
+  return categories;
+}
