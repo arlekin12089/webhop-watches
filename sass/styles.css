@@ -278,8 +278,6 @@ h1 {
   }
 }
 
-<<<<<<< HEAD
-=======
 h2 {
   font-size: 30px;
   font-size: 1.875rem;
@@ -294,7 +292,6 @@ h2 {
   }
 }
 
->>>>>>> d2b231c6bd2ce6a135b2f6ca6d2dd204e65816f8
 h4 {
   font-size: 16px;
   font-size: 1rem;
@@ -595,67 +592,8 @@ h4 {
   margin-top: 30px;
 }
 
-<<<<<<< HEAD
-.hero--modified {
-  position: relative;
-  padding-top: 74px;
-  min-height: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media only screen and (min-width: 768px) {
-  .hero--modified {
-    min-height: 600px;
-  }
-}
-
-.hero--modified::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  max-height: 225px;
-}
-
-@media only screen and (min-width: 768px) {
-  .hero--modified::before {
-    max-height: 525px;
-  }
-}
-
-.hero--modified.dam {
-  background-image: url(img/watches/covers/dam-cover.jpeg);
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.hero--modified__intro {
-  position: relative;
-}
-
-footer {
-  width: 100%;
-  height: 25vh;
-  background-color: #000000;
-  position: absolute;
-  bottom: 0%;
-=======
 .menu-header__title {
   padding: 0 20px;
->>>>>>> d2b231c6bd2ce6a135b2f6ca6d2dd204e65816f8
 }
 
 .hero {
@@ -841,74 +779,6 @@ footer {
   }
 }
 
-<<<<<<< HEAD
-.products-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0 20px;
-  width: 100%;
-}
-
-@media only screen and (min-width: 768px) {
-  .products-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-.product {
-  width: 100%;
-  margin: 0 10px 40px;
-  display: inline-block;
-}
-
-@media only screen and (min-width: 768px) {
-  .product {
-    width: calc(35% - 1.5rem);
-    margin: 0 10px 20px;
-  }
-}
-
-.product__photo {
-  background: #fafafa;
-  padding: 20px;
-  position: relative;
-}
-
-.product .addToCard {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  right: 10px;
-  position: absolute;
-  bottom: 10px;
-}
-
-.product__link {
-  display: block;
-=======
 .products--feature {
   margin: 40px 0;
 }
@@ -1001,23 +871,16 @@ footer {
 
 .product__link:hover .fa {
   color: #000000;
->>>>>>> d2b231c6bd2ce6a135b2f6ca6d2dd204e65816f8
 }
 
 .product__description {
   margin-top: 20px;
-<<<<<<< HEAD
-  text-align: center;
-=======
->>>>>>> d2b231c6bd2ce6a135b2f6ca6d2dd204e65816f8
 }
 
 .product__description .name {
   margin-bottom: 20px;
 }
 
-<<<<<<< HEAD
-=======
 .product__description .brand {
   font-size: 18px;
   font-size: 1.125rem;
@@ -1028,7 +891,6 @@ footer {
   font-weight: 600;
 }
 
->>>>>>> d2b231c6bd2ce6a135b2f6ca6d2dd204e65816f8
 .product__description .price {
   font-weight: 600;
   font-size: 20px;
@@ -1070,14 +932,9 @@ footer {
 
 @media only screen and (min-width: 768px) {
   .filter {
-<<<<<<< HEAD
-    width: 30%;
-    display: block;
-=======
     width: 70%;
     display: block;
     min-width: 250px;
->>>>>>> d2b231c6bd2ce6a135b2f6ca6d2dd204e65816f8
   }
 }
 
@@ -1143,8 +1000,6 @@ footer {
   margin: 20px 10px;
 }
 
-<<<<<<< HEAD
-=======
 .product__view {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1341,7 +1196,6 @@ footer {
   font-weight: 600;
 }
 
->>>>>>> d2b231c6bd2ce6a135b2f6ca6d2dd204e65816f8
 .input__field {
   border: none;
   border-bottom: 1px solid #000000;
