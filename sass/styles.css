@@ -594,6 +594,7 @@ h4 {
   margin-top: 30px;
 }
 
+<<<<<<< HEAD
 .hero--modified {
   position: relative;
   padding-top: 74px;
@@ -650,6 +651,10 @@ footer {
   background-color: #000000;
   position: absolute;
   bottom: 0%;
+=======
+.menu-header__title {
+  padding: 0 20px;
+>>>>>>> 46ee34f21175447ce79ca5f62053ba8a85658e74
 }
 
 .hero {
@@ -830,8 +835,13 @@ footer {
     -ms-flex-align: start;
     align-items: flex-start;
     -webkit-box-pack: justify;
+<<<<<<< HEAD
     -ms-flex-pack: justify;
     justify-content: space-between;
+=======
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+>>>>>>> 46ee34f21175447ce79ca5f62053ba8a85658e74
   }
 }
 
@@ -931,7 +941,10 @@ footer {
 
 .product__description {
   margin-top: 20px;
+<<<<<<< HEAD
   text-align: center;
+=======
+>>>>>>> 46ee34f21175447ce79ca5f62053ba8a85658e74
 }
 
 .product__description .name {
