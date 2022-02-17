@@ -9,9 +9,11 @@ function listCategoriesHome(list) {
     let elem = document.createElement("div");
     elem.classList.add("category-item");
     elem.innerHTML = `
+            <div class="home-img-contain">
       		<img src="sass/${item.image}" alt="bakgrund klocka">
-  				<h2 class="title">${item.name}</h2>
-  				<p class="desc">${item.description}</p>
+              </div>
+  				<h2 class="home-title">${item.name}</h2>
+  				<p class="home-desc">${item.description}</p>
       `;
     homeCategories.appendChild(elem);
   });

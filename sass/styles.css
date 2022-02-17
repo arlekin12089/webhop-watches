@@ -734,6 +734,18 @@ footer #copyright {
   z-index: 1;
 }
 
+.home-img-contain {
+  height: 350px;
+  width: 75%;
+  background-color: black;
+}
+
+.home-img-contain img {
+  height: 350px;
+  width: 100%;
+  opacity: 0.4;
+}
+
 .login_text {
   text-align: center;
   margin-top: 30%;
