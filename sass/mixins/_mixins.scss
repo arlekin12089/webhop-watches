@@ -15,7 +15,7 @@
 $screen-xs: 600px;
 $screen-sm: 768px;
 $screen-sm-max: 768px;
-$screen-md-tablet: 991px;
+$screen-md-tablet: 992px;
 $screen-md: 1070px;
 $screen-md-menu: 1279px;
 $screen-lg: 1290px;
@@ -38,11 +38,11 @@ $screen-xl: 1450px;
       @content;
     }
   } @else if $canvas==medium-max {
-    @media only screen and (max-width: $screen-md) {
+    @media only screen and (min-width: $screen-md) {
       @content;
     }
   } @else if $canvas==medium-max-menu {
-    @media only screen and (max-width: $screen-md-menu) {
+    @media only screen and (min-width: $screen-md-menu) {
       @content;
     }
   } @else if $canvas==large-max {

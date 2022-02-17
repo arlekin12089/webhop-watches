@@ -1,0 +1,107 @@
+.product {
+  &__view {
+  	@include flexBox(column, flex-start, space-between);
+  	padding-top: 40px;
+
+    @include breakpoint(small-max) {
+    	@include flexBox(row, flex-start, space-between);
+		padding: 20px;
+		}
+
+		.photo {
+			width: 100%;
+			background: #e7e2e2;
+			padding: 20px;
+			position: relative;
+			border-radius: 5px;
+
+			@include breakpoint(small-max) {
+				width: 50%;
+			}
+    }
+    }
+
+  &__icons {
+  	ul {
+      @include flexBox(row, flex-start, center);
+      }
+
+    li {
+    	@include flexBox(column, center, center);
+    	text-align: center;
+
+      @include breakpoint(small-max) {
+      	width: 30%;
+      }
+      }
+
+    span {
+    	line-height: 16px;
+    	@include font-size(10);
+
+      @include breakpoint(small-max) {
+      	line-height: 20px;
+      	@include font-size(16);
+      }
+      }
+
+    img {
+    	width: 50px;
+    	height: 50px;
+    	background: $grey;
+    	padding: 10px;
+    	display: inline-block;
+    	margin-bottom: 20px;
+    }
+  }
+
+  &__info {
+  	width: 100%;
+  	padding: 0 20px;
+
+    @include breakpoint(small-max) {
+    	width: 50%;
+    	padding-left: 7%;
+    }
+
+    .name {
+    	@include font-size(25);
+    	line-height: 35px;
+
+      @include breakpoint(small-max) {
+      	@include font-size(42);
+      	line-height: 50px;
+      }
+      }
+
+    .desc {
+    	@include font-size(18);
+    	line-height: 30px;
+    	font-weight: 200;
+    	margin: 20px 0;
+    }
+
+    .add-card {
+    	margin: 40px 0;
+    }
+
+    .specs {
+    	margin: 30px 0;
+
+      li {
+      	margin-bottom: 20px;
+      	@include flexBox(row, flex-start, space-between);
+
+        @include breakpoint(small-max) {
+        	@include flexBox(row, center, space-between);
+        }
+        }
+
+      .specLabel {
+      	@include font-size(16);
+      	text-transform: uppercase;
+      	font-weight: 600;
+      }
+      }
+      }
+}

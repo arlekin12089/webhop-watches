@@ -7,6 +7,8 @@
 body {
   @include font-size(16);
   font-family: $font-primary;
+  width: 100%;
+  height: 100%;
 
   .fa {
     @include font-size(25);
