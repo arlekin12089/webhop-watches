@@ -16,6 +16,16 @@ h2 {
 	}
 }
 
+h3 {
+	@include font-size(25);
+	line-height: 30px;
+
+	@include breakpoint(small-max) {
+		@include font-size(35);
+		line-height: 40px;
+	}
+}
+
 h4 {
 	@include font-size(16);
 	line-height: 20px;
