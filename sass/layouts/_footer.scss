@@ -1,9 +1,7 @@
-footer {
+.page_footer {
   width: 100%;
   height: 25vh;
   background-color: $black;
-  position: absolute;
-  bottom: 0%;
 
   #footerWrapper {
     height: 100%;
@@ -17,7 +15,7 @@ footer {
     .iconContainer {
       width: 35%;
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
       .fa {
         color: $white;
       }
@@ -29,5 +27,14 @@ footer {
     @include font-size(10);
     position: relative;
     top: -25px;
+  }
+}
+@include breakpoint(small-max) {
+  .iconContainer {
+    max-width: 20%;
+    .fa {
+      width: 30px;
+      @include font-size(35);
+    }
   }
 }

@@ -16,10 +16,12 @@
   <link rel="stylesheet" href="sass/styles.css">
   <title>Logga in</title>
 </head>
-<body>
+<body class="login_body">
  
 
 <!--Formuläret-->
+<main class="login_wrapper">
+  <section class="login_wrapper">
   <h1 class="login_text">Logga in</h1>
   <form class="login_form">
     <label for="login_email_field" hidden>E-mail</label>
@@ -27,13 +29,14 @@
     <label for="login_email_field" hidden>Lösenord</label>
     <input type="password" name="password" id="login_password_field" class="input_field" placeholder="Lösenord">
 
-		<div id="login_linksContainer">
+		<div class="login_linksContainer">
     	<a href="#" id="login_forgotPassword">Glömt Lösenord</a>
     	<a href="#" id="login_registerAccount">Skapa Konto</a>
     </div>
     <input type="submit" value="Logga in" class="login_btn btn btn--yellow">
   </form>
-
+</section>
+</main>
 
 	<script type="module" src="js/index.js"></script>
 </body>
