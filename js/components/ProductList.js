@@ -15,7 +15,7 @@ function ProductList() {
       elem.innerHTML = `
               <div class="product__photo">
                 <img
-                  src="sass/${item.image}"
+                  src="${item.image}"
                   alt="${item.image}"
                 />
                 <div class="product__icon">

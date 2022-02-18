@@ -670,6 +670,10 @@ h4 {
   position: relative;
 }
 
+main.modified {
+  padding-top: 74px;
+}
+
 .page_footer {
   width: 100%;
   padding: 30px 0 20px;
@@ -1205,7 +1209,9 @@ h4 {
 
 .product__view .photo {
   width: 100%;
-  background: #e7e2e2;
+  -webkit-filter: brightness(97%);
+          filter: brightness(97%);
+  background-color: rgba(0, 0, 0, 0.03);
   padding: 20px;
   position: relative;
   border-radius: 5px;
