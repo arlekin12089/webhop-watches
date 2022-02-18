@@ -9,7 +9,7 @@ main {
     form {
         display: flex;
         flex-direction: column;
-        max-width: 1000px;
+    
       .div-inputs {
         display: flex;
         flex-direction: row;
@@ -24,7 +24,7 @@ main {
             border-bottom: 1px solid black;
             font-size: 18px;
             padding: 3px 7px;
-            width: 400px;
+            width: 375px;
           }
         }
       }
@@ -48,14 +48,30 @@ main {
           height: 45px;
           transition: all 0.3s ease-in-out;      
       }
+      .user-agreement{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          margin: 45px 0 5px 0;
+          input{
+              margin-left: 14px;
+              align-self    : center;
+          }
+      }
     }
   }
   @media screen and (max-width: $screen-sm) {
-   form{
-    flex-direction: column;
-    
-  }
-   
+      main{
+    form{
+    .div-inputs {
+      
+        flex-direction: column;
+    }
+    .btn{
+        width: 40%;
+    }
+}
+}
   }
 
 

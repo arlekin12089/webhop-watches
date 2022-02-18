@@ -1170,7 +1170,6 @@ main form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 1000px;
 }
 
 main form .div-inputs {
@@ -1201,7 +1200,7 @@ main form .div-inputs div input {
   border-bottom: 1px solid black;
   font-size: 18px;
   padding: 3px 7px;
-  width: 400px;
+  width: 375px;
 }
 
 main form .btn {
@@ -1234,12 +1233,36 @@ main form .btn {
   transition: all 0.3s ease-in-out;
 }
 
+main form .user-agreement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 45px 0 5px 0;
+}
+
+main form .user-agreement input {
+  margin-left: 14px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 @media screen and (max-width: 768px) {
-  form {
+  main form .div-inputs {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  main form .btn {
+    width: 40%;
   }
 }
 
