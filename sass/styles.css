@@ -231,6 +231,7 @@ img {
   letter-spacing: 0.1px;
   color: #000000;
   cursor: pointer;
+  text-decoration: none;
   border: none;
   height: 45px;
   -webkit-transition: all 0.3s ease-in-out;
@@ -255,6 +256,15 @@ img {
 .btn--white:hover {
   background-color: #000000;
   color: #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+  .btn--large {
+    font-size: 22px;
+    font-size: 1.375rem;
+    height: 60px;
+    padding: 20px 100px;
+  }
 }
 
 button {
@@ -289,6 +299,20 @@ h2 {
     font-size: 50px;
     font-size: 3.125rem;
     line-height: 60px;
+  }
+}
+
+h3 {
+  font-size: 25px;
+  font-size: 1.5625rem;
+  line-height: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  h3 {
+    font-size: 35px;
+    font-size: 2.1875rem;
+    line-height: 40px;
   }
 }
 
@@ -646,13 +670,13 @@ h4 {
   position: relative;
 }
 
-footer {
+.page_footer {
   width: 100%;
-  height: 25vh;
+  padding: 30px 0 20px;
   background-color: #000000;
 }
 
-footer #footerWrapper {
+.page_footer #footerWrapper {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -664,31 +688,54 @@ footer #footerWrapper {
           align-items: center;
 }
 
-footer #footerWrapper #footerLogo {
+.page_footer #footerWrapper #footerLogo {
   width: 35%;
 }
 
-footer #footerWrapper .iconContainer {
+.page_footer #footerWrapper .iconContainer {
   width: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 
-footer #footerWrapper .iconContainer .fa {
+.page_footer #footerWrapper .iconContainer a {
+  display: inline-block;
+  padding-left: 15px;
+}
+
+.page_footer #footerWrapper .iconContainer .fa {
   color: #ffffff;
 }
 
-footer #copyright {
-  text-align: center;
-  color: #ffffff;
+.page_footer #footerWrapper .iconContainer .fa:hover {
+  color: #FCCB1E;
+}
+
+.page_footer .copyright {
   font-size: 10px;
   font-size: 0.625rem;
-  position: relative;
-  top: -25px;
+}
+
+@media only screen and (min-width: 768px) {
+  .iconContainer {
+    max-width: 20%;
+  }
+  .iconContainer .fa {
+    width: 30px;
+    font-size: 35px;
+    font-size: 2.1875rem;
+  }
 }
 
 .home-img-holder {
@@ -778,21 +825,14 @@ footer #copyright {
   margin-bottom: 20px;
 }
 
-a {
-  margin-bottom: 15px;
-  color: black;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
 .login_text {
   text-align: center;
-  margin-top: 30%;
+  margin-top: 20%;
   font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .login_form {
-  margin: 2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -811,24 +851,64 @@ a {
 .login_form #login_email_field,
 .login_form #login_password_field {
   width: 90%;
+  max-width: 450px;
   margin: 6px 0;
   padding: 7px;
   border: none;
   border-bottom: 1.3px solid;
 }
 
-.login_form #login_linksContainer {
+.login_form .login_linksContainer {
   margin-bottom: 2em;
 }
 
-.login_form #login_linksContainer a {
+.login_form .login_linksContainer a {
   display: block;
   text-align: center;
   margin: 16px;
   font-size: 12px;
-  color: black;
+  font-size: 0.75rem;
+  color: #000000;
   text-decoration: underline;
   font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+  .login_body .login_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .login_body .login_wrapper .login_form {
+    max-width: 500px;
+  }
+  .login_body .login_wrapper .login_form #login_email_field,
+  .login_body .login_wrapper .login_form #login_password_field {
+    font-size: 15px;
+    font-size: 0.9375rem;
+  }
+  .login_body .login_wrapper .login_form .login_linksContainer {
+    margin: 2em;
+  }
+  .login_body .login_wrapper .login_form .login_linksContainer #login_forgotPassword,
+  .login_body .login_wrapper .login_form .login_linksContainer #login_registerAccount {
+    display: inline;
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+  .login_body .login_wrapper .login_form .login_linksContainer #login_registerAccount {
+    margin-left: 7em;
+  }
 }
 
 .products__wrap {
