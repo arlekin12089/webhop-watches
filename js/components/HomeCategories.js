@@ -1,7 +1,8 @@
 import * as ProductRepository from "./ProductRepository.js";
+import { CreateProductView } from "./CreateProductView.js";
 
 const homeCategories = document.getElementById("categoriesHome");
-
+let featuredWrap = document.querySelector(".featured-products");
 console.log(homeCategories);
 
 function listCategoriesHome(list) {
@@ -22,3 +23,11 @@ function listCategoriesHome(list) {
 }
 
 listCategoriesHome(await ProductRepository.getAllCategories());
+
+//Show Featured products
+let productsFeatured = await ProductRepository.getFeaturedProduct();
+productsFeatured.forEach((product) => {
+  let element = CreateProductView(product);
+  featuredWrap.appendChild(element);
+});
+

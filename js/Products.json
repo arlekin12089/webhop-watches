@@ -8,7 +8,8 @@
     "material": "gold",
     "color": "yellow",
     "price": "20.000 SEK",
-    "categoryId": "man"
+    "categoryId": "man",
+    "featured": true
   },
   {
     "id": "WSRN0022",
@@ -19,7 +20,8 @@
     "material": "silver",
     "color": "brown",
     "price": "120.000 SEK",
-    "categoryId": "woman"
+    "categoryId": "woman",
+    "featured": true
   },
   {
     "id": "Twenty-4 7300/1200R-001",
@@ -30,7 +32,8 @@
     "material": "bronze",
     "color": "yellow",
     "price": "150.000 SEK",
-    "categoryId": "child"
+    "categoryId": "child",
+    "featured": false
   },
   {
     "id": "279160",
@@ -41,7 +44,8 @@
     "material": "silver",
     "color": "silver",
     "price": "45.000 SEK",
-    "categoryId": "man"
+    "categoryId": "man",
+    "featured": true
   },
   {
     "id": "126233",
@@ -52,7 +56,8 @@
     "material": "gold",
     "color": "silver",
     "price": "200.000 SEK",
-    "categoryId": "child"
+    "categoryId": "child",
+    "featured": true
   },
   {
     "id": "DZ1961",
@@ -63,6 +68,7 @@
     "material": "gold",
     "color": "pink",
     "price": "40.400 SEK",
-    "categoryId": "woman"
+    "categoryId": "woman",
+    "featured": false
   }
 ]
