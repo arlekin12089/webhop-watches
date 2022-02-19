@@ -10,7 +10,8 @@
 
 		.photo {
 			width: 100%;
-			background: #e7e2e2;
+			filter: brightness(97%);
+    		background-color: rgba($black, 0.03);
 			padding: 20px;
 			position: relative;
 			border-radius: 5px;

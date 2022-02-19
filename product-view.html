@@ -49,20 +49,36 @@
             <span></span>
           </button>
           <nav class="header__nav" id="nav">
-					<ul class="main-menu">
-						<li>
-							<a href="product-list.html?category=man" class="nav-link active primary">Herr</a>
-						</li>
-						<li>
-							<a href="product-list.html?category=woman" class="nav-link primary">Dam</a>
-						</li>
-						<li>
-							<a href="product-list.html?category=child" class="nav-link primary">Barn</a>
-						</li>
-						<li>
-							<a href="product-list.html?category=all" class="nav-link primary">Alla</a>
-						</li>
-					</ul>
+            <ul class="main-menu">
+              <li>
+                <a
+                  href="product-list.html?category=man"
+                  class="nav-link active primary"
+                  >Herr</a
+                >
+              </li>
+              <li>
+                <a
+                  href="product-list.html?category=woman"
+                  class="nav-link primary"
+                  >Dam</a
+                >
+              </li>
+              <li>
+                <a
+                  href="product-list.html?category=child"
+                  class="nav-link primary"
+                  >Barn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="product-list.html?category=all"
+                  class="nav-link primary"
+                  >Alla</a
+                >
+              </li>
+            </ul>
             <ul class="main-menu--mobile">
               <li>
                 <div class="header__search--mobile">
@@ -116,14 +132,7 @@
         </div>
       </div>
     </header>
-    <section class="hero--modified dam">
-      <div class="container">
-        <div class="hero--modified__intro">
-          <h1 class="center text--white">Damklockor</h1>
-        </div>
-      </div>
-    </section>
-    <main class="main">
+    <main class="main modified">
       <section class="menu-header">
         <div class="container">
           <h4 class="menu-header__title">Home / Products</h4>
@@ -131,31 +140,30 @@
       </section>
       <div class="container">
         <section class="product__view">
-            <div class="photo">
-              <img
-                src="sass/img/watches/17303325_2.png"
-                alt="Big Bang One Click 33mm"
-              />
-          	</div>
+          <div class="photo">
+            <img
+              src=""
+              alt="Big Bang One Click 33mm"
+			  class="product-image"
+            />
+          </div>
           <article class="product__info">
             <div class="product__description">
-              <h2 class="brand">Omega</h2>
-              <h1 class="name">Oyster, 36 mm, Oystersteel och gult guld</h1>
+              <h2 class="brand"></h2>
+              <h1 class="name"></h1>
               <ul class="specs">
                 <li>
                   <span class="specLabel">Material</span>
-                  <span class="specValue">Guld</span>
+                  <span class="specValue"></span>
                 </li>
                 <li>
                   <span class="specLabel">Fargen</span>
-                  <span class="specValue">Gul</span>
+                  <span class="specValue specColor"></span>
                 </li>
               </ul>
               <p class="desc">
-                This 32mm Baby Chief features a mirrored and negative display
-                dial, digital movement and a gold-tone stainless steel bracelet.
               </p>
-              <p class="price">20.000 SEK</p>
+              <p class="price"></p>
               <div class="add-card">
                 <a href="#" class="btn btn--yellow">Lägg i varukorgen</a>
               </div>
@@ -195,75 +203,37 @@
         <section class="products--feature">
           <div class="container">
             <h2 class="center mb20">Featured klockor</h2>
-            <div class="products-list">
-              <article class="product">
-                <div class="product__photo">
-                  <img
-                    src="sass/img/watches/17303325_2.png"
-                    alt="Big Bang One Click 33mm"
-                  />
-                  <div class="product__icon">
-                    <a href="#" target="_blank" class="product__link">
-                      <i class="fa fa-search"></i>
-                    </a>
-                    <button class="addToCard product__link">
-                      <i class="fa fa-shopping-cart"></i>
-                    </button>
-                  </div>
-                </div>
-                <footer class="product__description">
-                  <h4 class="name">Big Bang One Click 33mm</h4>
-                  <p class="price">20.000 SEK</p>
-                </footer>
-              </article>
-              <article class="product">
-                <div class="product__photo">
-                  <img
-                    src="sass/img/watches/17303325_2.png"
-                    alt="Big Bang One Click 33mm"
-                  />
-                  <div class="product__icon">
-                    <a href="#" target="_blank" class="product__link">
-                      <i class="fa fa-search"></i>
-                    </a>
-                    <button class="addToCard product__link">
-                      <i class="fa fa-shopping-cart"></i>
-                    </button>
-                  </div>
-                </div>
-                <footer class="product__description">
-                  <h4 class="name">Big Bang One Click 33mm</h4>
-                  <p class="price">20.000 SEK</p>
-                </footer>
-              </article>
-              <article class="product">
-                <div class="product__photo">
-                  <img
-                    src="sass/img/watches/17303325_2.png"
-                    alt="Big Bang One Click 33mm"
-                  />
-                  <div class="product__icon">
-                    <a href="#" target="_blank" class="product__link">
-                      <i class="fa fa-search"></i>
-                    </a>
-                    <button class="addToCard product__link">
-                      <i class="fa fa-shopping-cart"></i>
-                    </button>
-                  </div>
-                </div>
-                <footer class="product__description">
-                  <h4 class="name">Big Bang One Click 33mm</h4>
-                  <p class="price">20.000 SEK</p>
-                </footer>
-              </article>
+            <div class="products-list featured-products">
             </div>
             <div class="center">
-              <a href="#" class="btn btn--yellow">Visa mer</a>
+              <a href="product-list.html?category=all" class="btn btn--yellow">Visa mer</a>
             </div>
           </div>
         </section>
       </div>
     </main>
+    <footer class="page_footer">
+      <div id="footerWrapper">
+        <a id="footerLogo" href="#"
+          ><img src="sass/img/FEND_Time.svg" alt="FEND Time logo"
+        /></a>
+
+        <div class="iconContainer">
+          <a href="https://www.instagram.com/"
+            ><i class="fa-brands fa-instagram fa"></i
+          ></a>
+          <a href="https://sv-se.facebook.com/"
+            ><i class="fa-brands fa-facebook-square fa"></i
+          ></a>
+          <a href="https://twitter.com/?lang=sv"
+            ><i class="fa-brands fa-twitter-square fa"></i
+          ></a>
+        </div>
+      </div>
+      <p class="copyright center text--white">© Stockholm, 2022</p>
+    </footer>
     <script type="module" src="js/index.js"></script>
+	<script type="module" src="js/components/ProductDetails.js"></script>
+	
   </body>
 </html>

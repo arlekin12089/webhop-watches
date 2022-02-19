@@ -4,6 +4,7 @@ export async function getProductsByCategory(categoryId) {
   if (categoryId === "all") {
     return products;
   }
+
   return products.filter((item) => item.categoryId === categoryId);
 }
 
@@ -18,3 +19,19 @@ export async function getAllCategories(id) {
   const categories = await categoriesResponse.json();
   return categories;
 }
+
+//Get single products by Id
+export async function getProductById(productId) {
+  const productsResponse = await fetch("js/Products.json");
+  const products = await productsResponse.json();
+  return products.find((product) => product.id === productId);
+}
+
+//Get featured product
+
+export async function getFeaturedProduct() {
+  const productsResponse = await fetch("js/Products.json");
+  const products = await productsResponse.json();
+  return products.filter((product) => product.featured === true).slice(0, 3);
+}
+
