@@ -110,10 +110,20 @@
           </nav>
           <div class="actions">
             <div class="header__search">
-              <input type="text" class="input_field" />
-              <button type="button">
-                <i class="fa fa-search icon"></i>
+              <button type="button" id="header-search">
+                <i class="fa fa-search"></i>
               </button>
+			  <div class="search-field">
+			  	 <div class="search-field__wrap">
+				   <form method="get" autocomplete="off">
+						<div class="form-field">
+								<label for="search-header"></label>
+								<input type="text" id="search-header" name="search-header">
+								<div class="suggestions"></div>
+						</div>
+				   </form>
+				</div>
+			  </div>
             </div>
             <div class="header__widgets">
               <div class="header__user">
