@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="sass/img/favicon.ico">
+	<link rel="icon" type="image/png" href="sass/img/icons/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="sass/img/icons/favicon-32x32.png" sizes="32x32">
+	<link rel="apple-touch-icon" href="sass/img/icons/apple-touch-icon.png" sizes="144x144">
+	<link rel="stylesheet" href="sass/styles.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+	<title>FEND Time</title>
+</head>
+
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="header__inner">
+				<div class="header__logo">
+					<a href="/">
+						<img src="sass/img/FENDTime.svg" alt="FEND Time" />
+					</a>
+				</div>
+				<button class="menu-toggle">
+					<span></span>
+				</button>
+				<div class="header__nav" id="nav">
+					<nav>
+						<ul>
+							<li>
+								<a href="" class="nav-link active">Herr</a>
+							</li>
+							<li>
+								<a href="" class="nav-link">Dam</a>
+							</li>
+							<li>
+								<a href="" class="nav-link">Barn</a>
+							</li>
+							<li>
+								<a href="" class="nav-link">Alla</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__search">
+					<input type="text">
+					<button type="button">
+						<i class="fa fa-search"></i>
+					</button>
+				</div>
+				<div class="header__widgets">
+					<div class="header__user">
+						<a href="">
+							<i class="fa fa-user"></i>
+						</a>
+					</div>
+					<div class="header__card">
+						<a href="">
+							<i class="fa fa-shopping-cart"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</header>
+<main>
+	<h1>Skapa användare</h1>
+		<form>
+			<div class="div-inputs">
+			<div>
+				<input type="text" id="username" placeholder="Användarnamn">
+				<input type="text" id="password" placeholder="Lösenord">
+				<input type="text" id="email" placeholder="Email">
+				<input type="text" id="location" placeholder="Ort">
+			</div>
+			<div>
+			<input type="text" id="zip-code" placeholder="Postnummer">
+			<input type="text" id="street-adress" placeholder="Gatuadress">
+			<input type="text" id="phone-number" placeholder="Telefonnummer">
+		</div>
+	</div>
+	<div class="user-agreement">
+	<label for="">Jag har läst och godkänt villkoren</label>
+		<input type="checkbox">
+	</div>
+		<button type="submit" class="btn">Registrera</button>
+		</form>
+</main>
+	<script type="module" src="js/index.js"></script>
+</body>
+
+</html>
