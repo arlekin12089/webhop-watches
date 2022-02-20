@@ -749,101 +749,6 @@ main.modified {
   }
 }
 
-.home-img-holder {
-  background-image: url("img/watches/Breitling-klockor-herr.jpeg");
-}
-
-.home-img-holder .home-h1,
-.home-img-holder .home-h3 {
-  margin-bottom: 30px;
-}
-
-.home-img-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.home_show_btn {
-  z-index: 1;
-}
-
-.category-item {
-  color: white;
-  max-width: 500px;
-  margin: 0;
-}
-
-.category-item .home-text-container {
-  position: relative;
-  top: -20rem;
-  padding: 0 2rem;
-  text-align: center;
-}
-
-.category-item .home-text-container .home-title {
-  font-size: 30px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-
-.home-img-contain {
-  max-width: 500px;
-}
-
-.home-img-contain img {
-  max-height: 500px;
-  max-width: 500px;
-  -webkit-filter: brightness(47%);
-          filter: brightness(47%);
-  background-color: rgba(0, 0, 0, 0.03);
-  padding: 20px;
-  position: relative;
-  border-radius: 5px;
-}
-
-.home-img-contain img:hover {
-  -webkit-filter: brightness(22%);
-          filter: brightness(22%);
-  cursor: pointer;
-}
-
-#categoriesHome {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.home-h3-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.home-h3-container .home-h3 {
-  margin-top: 70px;
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
 .login_text {
   text-align: center;
   margin-top: 20%;
@@ -928,6 +833,135 @@ main.modified {
   .login_body .login_wrapper .login_form .login_linksContainer #login_registerAccount {
     margin-left: 7em;
   }
+}
+
+.home-img-holder {
+  background-image: url("img/watches/Breitling-klockor-herr.jpeg");
+}
+
+.home-img-holder .home-h1,
+.home-img-holder .home-h3 {
+  margin-bottom: 30px;
+}
+
+.home-img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home_show_btn {
+  z-index: 1;
+}
+
+.category-item {
+  width: 100%;
+  margin: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .category-item {
+    width: 47%;
+  }
+}
+
+.category-item .home-text-container {
+  position: relative;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.category-item .home-text-container .home-title {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.category-item .home-text-container .home-title + p {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 30px;
+}
+
+.home-img-contain {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-img-contain::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  border-radius: 5px;
+}
+
+.home-img-contain img:hover {
+  -webkit-filter: brightness(22%);
+          filter: brightness(22%);
+  cursor: pointer;
+}
+
+#categoriesHome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-h3-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-h3-container .home-h3 {
+  margin-top: 70px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.category-link {
+  color: #ffffff;
+}
+
+.category-link:hover {
+  color: #FCCB1E;
 }
 
 .products__wrap {
