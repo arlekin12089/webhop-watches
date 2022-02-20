@@ -9,6 +9,7 @@ const specColor = document.querySelector(".specColor");
 const productPrice = document.querySelector(".price");
 const productImage = document.querySelector(".product-image");
 let html = document.getElementsByTagName("html")[0];
+const productMenuItem = document.getElementById("productMenuItem");
 const queryString = new URLSearchParams(location.search);
 const productId = queryString.get("productId");
 if (productId === "" || productId === undefined || productId === null) {
@@ -24,7 +25,7 @@ specValue.innerHTML = `${product.material}`;
 specColor.innerHTML = `${product.color}`;
 productPrice.innerHTML = `${product.price}`;
 productImage.src = `${product.image}`;
-
+productMenuItem.innerHTML = `${product.name}`;
 //Featured
 let productsFeatured = await ProductRepository.getFeaturedProduct();
 productsFeatured.forEach((product) => {

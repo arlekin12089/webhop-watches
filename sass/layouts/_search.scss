@@ -67,4 +67,24 @@
 .result-count-container {
 	display: none;
 	margin-top: 20px;
+	padding: 0 35px;
+
+	b {
+		font-weight: 600;
+	}
+    
+}
+
+.search-hero{
+	min-height:  300px;
+	padding-top: 74px;
+	background: rgba($black, .6);
+	@include flexBox(column, center, center);
+
+	p{
+		@include font-size(22);
+		font-weight: 600;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
 }

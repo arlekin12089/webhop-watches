@@ -114,14 +114,16 @@
                 <i class="fa fa-search"></i>
               </button>
 			  <div class="search-field">
-			  	 <div class="search-field__wrap">
+			  	<div class="search-field__wrap">
 				   <form method="get" autocomplete="off" id="search-form">
 						<div class="form-field">
 								<label for="search-header"></label>
 								<input type="text" id="search-header" name="search-header">
-								<div class="suggestions"></div>
 						</div>
 				   </form>
+				   <button class="search-close">
+				   	<i class="fa fa-close"></i>
+				   </button>
 				</div>
 			  </div>
             </div>
@@ -142,7 +144,7 @@
         </div>
       </div>
     </header>
-    <section class="hero--modified" id="hero-wrap">
+    <section class="search-hero" id="hero-wrap">
       <div class="container">
         <div class="hero--modified__intro">
 		<p>Your search results:</p>
@@ -151,6 +153,13 @@
       </div>
     </section>
     <main class="main">
+	    <section class="menu-header">
+			<div class="container">
+			<h4 class="menu-header__title">
+				<a href="/" class="primary">Home</a>
+			</h4>
+			</div>
+      </section>
       <div class="container">
        <p class="result-count-container"><b class="amount-results"></b> found. </p>
         <section class="products__wrap">
