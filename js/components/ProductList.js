@@ -1,12 +1,17 @@
 import * as ProductRepository from "./ProductRepository.js";
+<<<<<<< HEAD
 
 function ProductList() {
+=======
+import { CreateProductView } from "./CreateProductView.js";
+export function ProductList() {
+>>>>>>> ebd22d4885981c09bdec347fd3668be2149e2192
   const queryString = new URLSearchParams(location.search);
   const qsCategory = queryString.get("category");
   const categoryName = document.getElementById("category-name");
-  const productsWrap = document.getElementById("products-list");
   const categoryMenuItem = document.getElementById("categoryMenuItem");
   const heroWrapper = document.getElementById("hero-wrap");
+<<<<<<< HEAD
 
   function listProducts(listProducts) {
     listProducts.forEach((item) => {
@@ -35,6 +40,9 @@ function ProductList() {
       productsWrap.appendChild(elem);
     });
   }
+=======
+  const productsWrap = document.getElementById("products-list");
+>>>>>>> ebd22d4885981c09bdec347fd3668be2149e2192
 
   function changeTitle(title) {
     categoryName.innerHTML = title;
@@ -45,9 +53,25 @@ function ProductList() {
     changeTitle(category.name);
     categoryMenuItem.innerHTML = category.name;
     heroWrapper.style.backgroundImage = "url(" + category.backgroundImage + ")";
+<<<<<<< HEAD
     listProducts(await ProductRepository.getProductsByCategory(qsCategory));
+=======
+
+    let productsList = await ProductRepository.getProductsByCategory(
+      qsCategory
+    );
+
+    productsList.forEach((product) => {
+      let element = CreateProductView(product);
+      productsWrap.appendChild(element);
+    });
+>>>>>>> ebd22d4885981c09bdec347fd3668be2149e2192
   }
   getProducts();
 }
 
+<<<<<<< HEAD
 export default ProductList();
+=======
+ProductList();
+>>>>>>> ebd22d4885981c09bdec347fd3668be2149e2192
