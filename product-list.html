@@ -115,7 +115,7 @@
               </button>
 			  <div class="search-field">
 			  	 <div class="search-field__wrap">
-				   <form method="get" autocomplete="off">
+				   <form method="get" autocomplete="off" id="search-form">
 						<div class="form-field">
 								<label for="search-header"></label>
 								<input type="text" id="search-header" name="search-header">
@@ -165,8 +165,10 @@
           </div>
           <div class="filter">
             <div class="filter__search">
-              <i class="fa fa-search"></i>
-              <input type="text" class="input__field" placeholder="Search" />
+				<form class="input-form">
+					<i class="fa fa-search"></i>
+					<input type="text" class="input__field" placeholder="Search"  id="search-input"/>
+				</form>
             </div>
             <div class="filter__options">
               <a href="#" id="all_watches" class="text--xs primary"

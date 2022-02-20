@@ -7,6 +7,8 @@ export function ProductList() {
   const categoryMenuItem = document.getElementById("categoryMenuItem");
   const heroWrapper = document.getElementById("hero-wrap");
   const productsWrap = document.getElementById("products-list");
+  const searchInput = document.getElementById("search-input");
+  const inputForm = document.querySelector(".input-form");
 
   function changeTitle(title) {
     categoryName.innerHTML = title;
@@ -28,6 +30,8 @@ export function ProductList() {
     });
   }
   getProducts();
+
+  
 }
 
 ProductList();

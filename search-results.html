@@ -22,6 +22,7 @@
       href="sass/img/icons/apple-touch-icon.png"
       sizes="144x144"
     />
+    <link rel="stylesheet" href="sass/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -32,12 +33,11 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="sass/styles.css" />
-    <title>Logga in</title>
+    <title>FEND Time</title>
   </head>
-  <body class="login_body">
-  <header class="header--transparent header--modified header">
+
+  <body>
+    <header class="header--transparent header--modified header">
       <div class="container">
         <div class="header__inner">
           <div class="header__logo">
@@ -142,40 +142,21 @@
         </div>
       </div>
     </header>
-    <!--Formuläret-->
-    <main class="login_wrapper">
-      <section class="login_wrapper">
-        <h1 class="login_text">Logga in</h1>
-        <form class="login_form">
-          <label for="login_email_field" hidden>E-mail</label>
-          <input
-            type="email"
-            name="email"
-            id="login_email_field"
-            class="input_field"
-            placeholder="E-mail"
-            autocomplete="email"
-          />
-          <label for="login_email_field" hidden>Lösenord</label>
-          <input
-            type="password"
-            name="password"
-            id="login_password_field"
-            class="input_field"
-            placeholder="Lösenord"
-          />
-
-          <div class="login_linksContainer">
-            <a href="#" id="login_forgotPassword">Glömt Lösenord</a>
-            <a href="#" id="login_registerAccount">Skapa Konto</a>
-          </div>
-          <input
-            type="submit"
-            value="Logga in"
-            class="login_btn btn btn--yellow"
-          />
-        </form>
-      </section>
+    <section class="hero--modified" id="hero-wrap">
+      <div class="container">
+        <div class="hero--modified__intro">
+		<p>Your search results:</p>
+          <h1 class=" text--white" id="search-words">Dog</h1>
+        </div>
+      </div>
+    </section>
+    <main class="main">
+      <div class="container">
+       <p class="result-count-container"><b class="amount-results"></b> found. </p>
+        <section class="products__wrap">
+          <div class="products-list" id="products-list"></div>
+        </section>
+      </div>
     </main>
     <footer class="page_footer">
       <div id="footerWrapper">
@@ -198,5 +179,6 @@
       <p class="copyright center text--white">© Stockholm, 2022</p>
     </footer>
     <script type="module" src="js/index.js"></script>
+	<script type="module" src="js/components/SearchResults.js"></script>
   </body>
 </html>
