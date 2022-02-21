@@ -1,7 +1,12 @@
+
 footer {
+
+.page_footer {
+
   width: 100%;
   height: 25vh;
   background-color: $black;
+  margin-top: auto;
 
   #footerWrapper {
     height: 100%;
@@ -14,12 +19,31 @@ footer {
     }
     .iconContainer {
       width: 35%;
+
       display: flex;
       justify-content: space-evenly;
       .fa {
         color: $white;
       }
     }
+
+      @include flexBox(row, center, end);
+
+      a {
+        display: inline-block;
+        padding-left: 15px;
+      }
+      .fa {
+        color: $white;
+        &:hover {
+          color: $yellow;
+        }
+      }
+    }
+  }
+  .copyright {
+    @include font-size(10);
+
   }
   #copyright {
     text-align: center;

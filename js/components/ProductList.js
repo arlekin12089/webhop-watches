@@ -1,17 +1,16 @@
 import * as ProductRepository from "./ProductRepository.js";
-<<<<<<< HEAD
+
 
 function ProductList() {
-=======
+
 import { CreateProductView } from "./CreateProductView.js";
 export function ProductList() {
->>>>>>> ebd22d4885981c09bdec347fd3668be2149e2192
+
   const queryString = new URLSearchParams(location.search);
   const qsCategory = queryString.get("category");
   const categoryName = document.getElementById("category-name");
   const categoryMenuItem = document.getElementById("categoryMenuItem");
   const heroWrapper = document.getElementById("hero-wrap");
-<<<<<<< HEAD
 
   function listProducts(listProducts) {
     listProducts.forEach((item) => {
@@ -40,9 +39,12 @@ export function ProductList() {
       productsWrap.appendChild(elem);
     });
   }
-=======
+
   const productsWrap = document.getElementById("products-list");
->>>>>>> ebd22d4885981c09bdec347fd3668be2149e2192
+
+  const searchInput = document.getElementById("search-input");
+  const inputForm = document.querySelector(".input-form");
+
 
   function changeTitle(title) {
     categoryName.innerHTML = title;
@@ -53,9 +55,9 @@ export function ProductList() {
     changeTitle(category.name);
     categoryMenuItem.innerHTML = category.name;
     heroWrapper.style.backgroundImage = "url(" + category.backgroundImage + ")";
-<<<<<<< HEAD
+
     listProducts(await ProductRepository.getProductsByCategory(qsCategory));
-=======
+
 
     let productsList = await ProductRepository.getProductsByCategory(
       qsCategory
@@ -65,13 +67,44 @@ export function ProductList() {
       let element = CreateProductView(product);
       productsWrap.appendChild(element);
     });
->>>>>>> ebd22d4885981c09bdec347fd3668be2149e2192
+
   }
   getProducts();
+
+  //Search inside category
+  inputForm.addEventListener(
+    "submit",
+    (e) => {
+      e.preventDefault();
+    },
+    false
+  );
+  inputForm.addEventListener(
+    "keyup",
+    async (e) => {
+      e.preventDefault();
+      let searchResults = await ProductRepository.searchProducts(
+        searchInput.value
+      );
+      if (searchResults.length === 0) {
+        productsWrap.innerHTML = `<h3 class="filter-error">
+       Sorry, no products matched your search! :( 
+       </h3>`;
+        productsWrap.classList.add("error");
+      } else {
+        productsWrap.innerHTML = "";
+        searchResults.forEach((product) => {
+          let element = CreateProductView(product);
+          productsWrap.appendChild(element);
+        });
+      }
+    },
+    false
+  );
 }
 
-<<<<<<< HEAD
+
 export default ProductList();
-=======
+
 ProductList();
->>>>>>> ebd22d4885981c09bdec347fd3668be2149e2192
+

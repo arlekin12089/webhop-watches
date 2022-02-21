@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="sass/img/favicon.ico" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="sass/img/icons/favicon-16x16.png"
-      sizes="16x16"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="sass/img/icons/favicon-32x32.png"
-      sizes="32x32"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="sass/img/icons/apple-touch-icon.png"
-      sizes="144x144"
-    />
-    <link rel="stylesheet" href="sass/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>FEND Time</title>
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="sass/img/favicon.ico" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="sass/img/icons/favicon-16x16.png"
+			sizes="16x16"
+			/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="sass/img/icons/favicon-32x32.png"
+			sizes="32x32"
+			/>
+		<link
+			rel="apple-touch-icon"
+			href="sass/img/icons/apple-touch-icon.png"
+			sizes="144x144"
+			/>
+		<link rel="stylesheet" href="sass/styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+			/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+			rel="stylesheet"
+			/>
+		<title>FEND Time</title>
+	</head>
 
 <<<<<<< HEAD
 	<body>
@@ -282,16 +282,34 @@
           </nav>
           <div class="actions">
             <div class="header__search">
-              <input type="text" class="input_field" />
-              <button type="button">
+              <button type="button" id="header-search">
                 <i class="fa fa-search"></i>
               </button>
+				  <div class="search-field">
+			  	<div class="search-field__wrap">
+				   <form method="get" autocomplete="off" id="search-form">
+						<div class="form-field">
+								<label for="search-header"></label>
+								<input type="text" id="search-header" name="search-header">
+						</div>
+				   </form>
+				   <button class="search-close">
+				   	<i class="fa fa-close"></i>
+				   </button>
+				</div>
+			  </div>
             </div>
             <div class="header__widgets">
               <div class="header__user">
                 <a href="">
                   <i class="fa fa-user"></i>
                 </a>
+				<div class="dropdown-users">
+					<p class="userName"></p>
+					<a href="register.html" class="register-link">Register</a>
+					<a href="login.html" class="login-link">Log In</a>
+					<a href="#" class="logout-link">Log Out</a>
+				</div>
               </div>
               <div class="header__card">
                 <a href="">
@@ -315,7 +333,7 @@
       <section class="menu-header">
         <div class="container">
           <h4 class="menu-header__title">
-            Home / <span id="categoryMenuItem"></span>
+            <a href="/" class="primary">Home</a> / <span id="categoryMenuItem"></span>
           </h4>
         </div>
       </section>
@@ -327,8 +345,10 @@
           </div>
           <div class="filter">
             <div class="filter__search">
-              <i class="fa fa-search"></i>
-              <input type="text" class="input__field" placeholder="Search" />
+				<form class="input-form">
+					<i class="fa fa-search"></i>
+					<input type="text" class="input__field" placeholder="Search"  id="search-input"/>
+				</form>
             </div>
             <div class="filter__options">
               <a href="#" id="all_watches" class="text--xs primary"

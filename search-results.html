@@ -89,22 +89,22 @@
                 </div>
               </li>
               <li>
-                <a href="product-list.html?category=man" class="nav-link active primary">Herr</a>
+                <a href="" class="nav-link active primary">Herr</a>
               </li>
               <li>
-                <a href="product-list.html?category=woman" class="nav-link primary">Dam</a>
+                <a href="" class="nav-link primary">Dam</a>
               </li>
               <li>
-                <a href="product-list.html?category=child" class="nav-link primary">Barn</a>
+                <a href="" class="nav-link primary">Barn</a>
               </li>
               <li>
-                <a href="product-list.html?category=all" class="nav-link primary">Alla</a>
+                <a href="" class="nav-link primary">Alla</a>
               </li>
               <li>
-                <a href="login.html" class="nav-link primary">Log In</a>
+                <a href="" class="nav-link primary">Log In</a>
               </li>
               <li>
-                <a href="register.html" class="nav-link primary">Register</a>
+                <a href="" class="nav-link primary">Register</a>
               </li>
             </ul>
           </nav>
@@ -132,6 +132,12 @@
                 <a href="">
                   <i class="fa fa-user"></i>
                 </a>
+				<div class="dropdown-users">
+					<p class="userName"></p>
+					<a href="register.html" class="register-link">Register</a>
+					<a href="login.html" class="login-link">Log In</a>
+					<a href="#" class="logout-link">Log Out</a>
+				</div>
               </div>
               <div class="header__card">
                 <a href="">
@@ -144,83 +150,26 @@
         </div>
       </div>
     </header>
-    <main class="main modified">
-      <section class="menu-header">
-        <div class="container">
-          <h4 class="menu-header__title"> <a href="/" class="primary">Home</a> / <span id="productMenuItem"></span></h4>
+    <section class="search-hero" id="hero-wrap">
+      <div class="container">
+        <div class="hero--modified__intro">
+		<p>Your search results:</p>
+          <h1 class=" text--white" id="search-words">Dog</h1>
         </div>
+      </div>
+    </section>
+    <main class="main">
+	    <section class="menu-header">
+			<div class="container">
+			<h4 class="menu-header__title">
+				<a href="/" class="primary">Home</a>
+			</h4>
+			</div>
       </section>
       <div class="container">
-        <section class="product__view">
-          <div class="photo">
-            <img
-              src=""
-              alt="Big Bang One Click 33mm"
-			  class="product-image"
-            />
-          </div>
-          <article class="product__info">
-            <div class="product__description">
-              <h2 class="brand"></h2>
-              <h1 class="name"></h1>
-              <ul class="specs">
-                <li>
-                  <span class="specLabel">Material</span>
-                  <span class="specValue"></span>
-                </li>
-                <li>
-                  <span class="specLabel">Fargen</span>
-                  <span class="specValue specColor"></span>
-                </li>
-              </ul>
-              <p class="desc">
-              </p>
-              <p class="price"></p>
-              <div class="add-card">
-                <a href="#" class="btn btn--yellow">Lägg i varukorgen</a>
-              </div>
-              <div class="product__icons">
-                <ul>
-                  <li>
-                    <img
-                      src="sass/img/icons/shield-check.svg"
-                      alt="Auktoriserad lyxåterförsäljare"
-                    />
-                    <span>Auktoriserad lyxåterförsäljare</span>
-                  </li>
-                  <li>
-                    <img
-                      src="sass/img/icons/phone-call.svg"
-                      alt="Auktoriserad lyxåterförsäljare"
-                    />
-                    <span>Linjer öppna 7 dagar i veckan</span>
-                  </li>
-                  <li>
-                    <img
-                      src="sass/img/icons/truck.svg"
-                      alt="Auktoriserad lyxåterförsäljare"
-                    /><span>Fri leverans tillgänglig</span>
-                  </li>
-                  <li>
-                    <img
-                      src="sass/img/icons/gift.svg"
-                      alt="Auktoriserad lyxåterförsäljare"
-                    /><span>Presentpapper finns i butik</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </article>
-        </section>
-        <section class="products--feature">
-          <div class="container">
-            <h2 class="center mb20">Featured klockor</h2>
-            <div class="products-list featured-products">
-            </div>
-            <div class="center">
-              <a href="product-list.html?category=all" class="btn btn--yellow">Visa mer</a>
-            </div>
-          </div>
+       <p class="result-count-container"><b class="amount-results"></b> found. </p>
+        <section class="products__wrap">
+          <div class="products-list" id="products-list"></div>
         </section>
       </div>
     </main>
@@ -245,6 +194,6 @@
       <p class="copyright center text--white">© Stockholm, 2022</p>
     </footer>
     <script type="module" src="js/index.js"></script>
-	<script type="module" src="js/components/ProductDetails.js"></script>
+	<script type="module" src="js/components/SearchResults.js"></script>
   </body>
 </html>
