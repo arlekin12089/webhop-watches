@@ -226,7 +226,6 @@ img {
   padding: 10px 40px;
   border-radius: 30px;
   font-family: "Roboto", Verdana, sans-serif;
-  text-transform: capitalize;
   font-weight: 500;
   letter-spacing: 0.1px;
   color: #000000;
@@ -814,6 +813,7 @@ main.modified {
 
 .home-img-holder {
   background-image: url("img/watches/Breitling-klockor-herr.jpeg");
+  width: 100%;
 }
 
 .home-img-holder .home-h1,
@@ -860,6 +860,12 @@ main.modified {
   text-transform: uppercase;
 }
 
+.category-item:hover img {
+  -webkit-filter: brightness(22%);
+          filter: brightness(22%);
+  cursor: pointer;
+}
+
 .home-img-contain {
   max-width: 500px;
 }
@@ -875,9 +881,7 @@ main.modified {
   border-radius: 5px;
 }
 
-.home-img-contain img:hover {
-  -webkit-filter: brightness(22%);
-          filter: brightness(22%);
+.home-text-container:hover {
   cursor: pointer;
 }
 
@@ -905,6 +909,12 @@ main.modified {
   margin-top: 70px;
   font-size: 20px;
   margin-bottom: 20px;
+}
+
+.home-link {
+  margin-left: 10px;
+  text-decoration: underline;
+  color: #000000;
 }
 
 .login_wrapper {
