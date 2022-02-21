@@ -796,6 +796,8 @@ main.modified {
 .page_footer .copyright {
   font-size: 10px;
   font-size: 0.625rem;
+  position: relative;
+  top: -30%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -915,6 +917,10 @@ main.modified {
   color: #000000;
 }
 
+.login_wrapper {
+  padding: 40px;
+}
+
 .login_text {
   text-align: center;
   margin-top: 20%;
@@ -963,6 +969,35 @@ main.modified {
   font-weight: bold;
 }
 
+.user_dropdown {
+  width: 25%;
+  width: 40%;
+  height: 30%;
+  border: 1px solid;
+  position: fixed;
+  top: 75px;
+  right: 2px;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.user_dropdown .closeDropdown {
+  padding: 5px;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+.user_dropdown a {
+  display: block;
+  padding: 9px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.hide_userDropdown {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   .login_body .login_wrapper {
     display: -webkit-box;
@@ -978,6 +1013,7 @@ main.modified {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 4em;
   }
   .login_body .login_wrapper .login_form {
     max-width: 500px;

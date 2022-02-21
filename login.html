@@ -118,7 +118,7 @@
             <div class="header__widgets">
               <div class="header__user">
                 <a href="">
-                  <i class="fa fa-user"></i>
+                  <i class="fa fa-user user_menu"></i>
                 </a>
               </div>
               <div class="header__card">
@@ -132,6 +132,13 @@
         </div>
       </div>
     </header>
+
+    <div id="userDropdown" >
+      <button class="closeDropdown">x</button>
+      <a class="user_dropdown_login" href="login.html">Logga in</a><br>
+      <a class="user_dropdown_register" href="registrera.html">Skapa konto</a>
+    </div>
+    
     <!--Formuläret-->
     <main class="login_wrapper">
       <section class="login_wrapper">
@@ -188,5 +195,7 @@
       <p class="copyright center text--white">© Stockholm, 2022</p>
     </footer>
     <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/components/ProductList.js"></script>
+    <script src="./js/components/FormLogin.js"></script>
   </body>
 </html>
