@@ -1,0 +1,66 @@
+.login_text {
+  text-align: center;
+  margin-top: 20%;
+  @include font-size(24);
+}
+
+.login_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  #login_email_field,
+  #login_password_field {
+    width: 90%;
+    max-width: 450px;
+    margin: 6px 0;
+    padding: 7px;
+    border: none;
+    border-bottom: 1.3px solid;
+  }
+  .login_linksContainer {
+    margin-bottom: 2em;
+
+    a {
+      display: block;
+      text-align: center;
+      margin: 16px;
+      @include font-size(12);
+      color: $black;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+}
+
+@include breakpoint(small-max) {
+  .login_body {
+    .login_wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .login_form {
+        max-width: 500px;
+        #login_email_field,
+        #login_password_field {
+          @include font-size(15);
+        }
+        .login_linksContainer {
+          margin: 2em;
+
+          #login_forgotPassword,
+          #login_registerAccount {
+            display: inline;
+            @include font-size(14);
+          }
+          #login_registerAccount {
+            margin-left: 7em;
+          }
+        }
+      }
+    }
+  }
+}

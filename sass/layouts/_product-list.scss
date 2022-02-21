@@ -1,0 +1,191 @@
+.products__wrap {
+	@include flexBox(column, flex-start, space-between);
+	padding: 20px;
+
+	@include breakpoint(small-max) {
+		@include flexBox(row, flex-start, space-between);
+	}
+}
+
+.products--feature {
+	margin: 40px 0;
+}
+
+.products-list {
+  	margin: 20px;
+  	display: grid;
+  	gap: 1rem;
+  	position: relative;
+
+  @include breakpoint(medium-tablet-max) {
+  	grid-template-columns: repeat(2, 1fr);
+  }
+@include breakpoint(medium-max) {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+}
+
+.product {
+
+  &__icon {
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	display: flex;
+  	transition: all 0.3s linear;
+  	opacity: 0;
+  	z-index: 8;
+  }
+
+  &__photo {
+  	filter: brightness(97%);
+  	background-color: rgba($black, .03);
+  	padding: 20px;
+    position: relative;
+	border-radius: 5px;
+
+	&:hover {
+		&:before {
+			content: '';
+			background: rgba($black, .5);
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			border-radius: 5px;
+		}
+
+		.product__icon {
+			opacity: 1;
+		}
+	}
+    }
+
+    .addToCard {
+	margin-left: 10px;
+
+	.fa:hover {
+		color: $black;
+	}
+    }
+
+    &__link {
+    	display: inline-flex;
+    	justify-content: center;
+    	align-items: center;
+    	width: 36px;
+    	height: 36px;
+    	border-radius: 100%;
+    	background: $yellow;
+
+    	&:hover {
+    		.fa {
+    			color: $black;
+    		}
+    	}
+    }
+
+    &__description {
+    	margin-top: 20px;
+
+    	.name {
+    		margin-bottom: 20px;
+    	}
+
+		.brand {
+			@include font-size(18);
+			line-height: 25px;
+			letter-spacing: 0.1rem;
+			margin-bottom: 20px;
+			text-transform: uppercase;
+			font-weight: 600;
+		}
+
+    	.price {
+    		font-weight: 600;
+    		@include font-size(20);
+    	}
+    }
+    }
+
+    .filter {
+    	width: 100%;
+    	display: none;
+
+    	&.open {
+    		display: block;
+    	}
+
+    	&-mobile {
+    		@include flexBox(column, center, center);
+    		margin-bottom: 30px;
+    		width: 100%;
+
+    		@include breakpoint(small-max) {
+    			display: none;
+    		}
+    	}
+
+    	@include breakpoint(small-max) {
+    		width: 70%;
+    		display: block;
+			min-width: 250px;
+    	}
+
+    	#all_watches {
+    		margin-bottom: 20px;
+    		display: block;
+    	}
+
+    	&__option {
+    		padding: 20px 0;
+    		border-top: 1px solid $grey;
+    	}
+
+    	&__search {
+    		display: flex;
+    		margin-bottom: 80px;
+    	}
+
+    	&__list {
+    		div {
+    			margin: 15px 0;
+    			padding-left: 30px;
+    		}
+
+    		li {
+    			display: flex;
+    			align-items: center;
+    			position: relative;
+    		}
+    	}
+
+    	input[type="text"] {
+    		width: 100%;
+    	}
+
+    	input[type="checkbox"] {
+    		position: absolute;
+    		width: 17px;
+    		height: 17px;
+    		cursor: pointer;
+    		border: 1px solid $grey;
+    		cursor: pointer;
+    	}
+
+    	.fa {
+    		@include font-size(18);
+    		margin-right: 10px;
+}
+}
+
+#products-amount {
+	display: flex;
+	justify-content: flex-end;
+	opacity: 0;
+	margin: 20px 10px;
+}

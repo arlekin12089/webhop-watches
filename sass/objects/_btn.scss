@@ -11,15 +11,42 @@
   letter-spacing: 0.1px;
   color: $black;
   cursor: pointer;
+  text-decoration: none;
+  border:none;
   height: 45px;
   transition: all 0.3s ease-in-out;
 
-  &--yellow{
-	background-color: $yellow;
+  &--yellow {
+    background-color: $yellow;
 
-	&:hover{
-		background-color: $black;
-		color: $yellow;
-	}
+    &:hover {
+      background-color: $black;
+      color: $yellow;
+    }
   }
+&--white {
+	border-radius: 0;
+	background-color: $white;
+	border: 1px solid $black;
+
+	&:hover {
+		background-color: $black;
+		color: $white;
+	}
+}
+
+&--large{
+  @include breakpoint(small-max) {
+    @include font-size(22);
+    height: 60px;
+    padding: 20px 100px;
+  }
+}
+}
+
+button {
+	border: none;
+	background: none;
+	cursor: pointer;
+	outline: none;
 }

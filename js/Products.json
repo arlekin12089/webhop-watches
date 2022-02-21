@@ -3,66 +3,72 @@
     "id": "17170937",
     "name": "Big Bang One Click 33mm",
     "desc": "Classic Fusion Svart/Gummi Ø42 mm",
-    "image": "img/watches/hublot-542.NX.1171.RX.jpg",
+    "image": "sass/img/watches/17381957_1.jpeg",
     "brand": "Hublot",
     "material": "gold",
     "color": "yellow",
     "price": "20.000 SEK",
-    "categoryId": "man"
+    "categoryId": "man",
+    "featured": true
   },
   {
     "id": "WSRN0022",
     "name": "Ronde Solo De Cartier",
     "desc": "Ronde Solo De Cartier Watch 42mm, Automatic Movement, Steel, Leather",
-    "image": "img/watches/17310930_1.jpeg",
+    "image": "sass/img/watches/17331438_1.jpeg",
     "brand": "Cartier",
     "material": "silver",
     "color": "brown",
     "price": "120.000 SEK",
-    "categoryId": "woman"
+    "categoryId": "woman",
+    "featured": true
   },
   {
     "id": "Twenty-4 7300/1200R-001",
     "name": "HAPPY SPORT - 30MM AUTO RG/ST STRAP 2 DIA 3 RUBIES",
     "desc": "Stål/18K Roseguld - Silver/Guilloche",
-    "image": "img/watches/278573-6026_1.jpg",
+    "image": "sass/img/watches/18270014_1.jpeg",
     "brand": "Chopard",
     "material": "bronze",
     "color": "yellow",
     "price": "150.000 SEK",
-    "categoryId": "barn"
+    "categoryId": "child",
+    "featured": false
   },
   {
     "id": "279160",
     "name": "LADY-DATEJUST",
     "desc": "Oyster, 28 mm, Oystersteel",
-    "image": "img/watches/17303325_2.png",
+    "image": "sass/img/watches/18270011_1.jpeg",
     "brand": "Rolex",
     "material": "silver",
     "color": "silver",
     "price": "45.000 SEK",
-    "categoryId": "man"
+    "categoryId": "man",
+    "featured": true
   },
   {
     "id": "126233",
     "name": "PATEK PHILIPPE",
     "desc": "Oyster, 36 mm, Oystersteel och gult guld",
-    "image": "img/watches/m126233-0038.png",
+    "image": "sass/img/watches/17531903_1.jpeg",
     "brand": "Rolex",
     "material": "gold",
     "color": "silver",
     "price": "200.000 SEK",
-    "categoryId": "barn"
+    "categoryId": "child",
+    "featured": true
   },
   {
     "id": "DZ1961",
     "name": "Diesel Baby Chief",
     "desc": "This 32mm Baby Chief features a mirrored and negative display dial, digital movement and a gold-tone stainless steel bracelet.",
-    "image": "img/watches/DZ1961-1.jpeg",
+    "image": "sass/img/watches/18390031_1.jpeg",
     "brand": "Diesel",
     "material": "gold",
     "color": "pink",
     "price": "40.400 SEK",
-    "categoryId": "woman"
+    "categoryId": "woman",
+    "featured": false
   }
 ]

@@ -1,1 +1,10 @@
 //paragraph texts
+.text--white {
+ color:$white;
+}
+.text--xs {
+	@include font-size(18);
+	text-transform: uppercase;
+	font-weight: 500;
+
+}
