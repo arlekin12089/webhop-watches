@@ -659,6 +659,13 @@ h4 {
   padding: 0 20px;
 }
 
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 0 10px;
+}
+
 .hero {
   min-height: 650px;
 }
