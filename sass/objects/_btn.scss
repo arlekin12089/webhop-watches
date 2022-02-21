@@ -11,6 +11,7 @@
   letter-spacing: 0.1px;
   color: $black;
   cursor: pointer;
+  text-decoration: none;
   border:none;
   height: 45px;
   transition: all 0.3s ease-in-out;
@@ -32,6 +33,14 @@
 		background-color: $black;
 		color: $white;
 	}
+}
+
+&--large{
+  @include breakpoint(small-max) {
+    @include font-size(22);
+    height: 60px;
+    padding: 20px 100px;
+  }
 }
 }
 
