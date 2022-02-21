@@ -9,6 +9,7 @@ export async function getProductsByCategory(categoryId) {
   if (categoryId === "all") {
     return products;
   }
+
   return products.filter((item) => item.categoryId === categoryId);
 }
 
@@ -34,6 +35,8 @@ export async function getFeaturedProduct() {
   return products.filter((product) => product.featured === true).slice(0, 3);
 }
 
+
+
 export async function searchProducts(searchText) {
   let products = await getAllProducts();
   let lowerCaseText = searchText.toLowerCase();
@@ -46,3 +49,4 @@ export async function searchProducts(searchText) {
       product.material.toLowerCase().includes(lowerCaseText)
   );
 }
+

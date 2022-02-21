@@ -138,6 +138,12 @@
                 <a href="">
                   <i class="fa fa-user"></i>
                 </a>
+								<div class="dropdown-users">
+									<p class="userName"></p>
+					<a href="register.html" class="register-link">Register</a>
+					<a href="login.html" class="login-link">Log In</a>
+					<a href="#" class="logout-link">Log Out</a>
+				</div>
               </div>
               <div class="header__card">
                 <a href="">
@@ -151,27 +157,93 @@
       </div>
     </header>
     <main class="main">
-      <h1>Skapa användare</h1>
-      <form>
-        <div class="div-inputs">
-          <div>
-            <input type="text" id="username" placeholder="Användarnamn" />
-            <input type="text" id="password" placeholder="Lösenord" />
-            <input type="text" id="email" placeholder="Email" />
-            <input type="text" id="location" placeholder="Ort" />
+      <div class="container">
+        <h1>Skapa användare</h1>
+        <form style="margin-top: 100px" id="registration-form">
+          <div class="form-group">
+            <label for="username">Full Name</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Användarnamn"
+              name="name"
+              required
+              minlength="3"
+              maxlength="100"
+            />
           </div>
-          <div>
-            <input type="text" id="zip-code" placeholder="Postnummer" />
-            <input type="text" id="street-adress" placeholder="Gatuadress" />
-            <input type="text" id="phone-number" placeholder="Telefonnummer" />
+		    <div class="form-group">
+				<label for="email">Email Address</label>
+				<input
+				type="email"
+				id="email"
+				placeholder="email@address.com"
+          required
+				/>
           </div>
-        </div>
-        <div class="user-agreement">
-          <label for="">Jag har läst och godkänt villkoren</label>
-          <input type="checkbox" />
-        </div>
-        <button type="submit" class="btn">Registrera</button>
-      </form>
+		<div class="form-group">
+		<label for="location">Ort</label>
+		  <input 
+      type="text" 
+      id="location" 
+      placeholder="Ort"
+      required
+       />
+   
+		</div>
+          <div class="form-group">
+		  <label for="zip-code">Postnummer</label>
+		   	<input 
+         type="text"
+          id="zip-code"
+           placeholder="Postnummer" 
+           pattern="[0-9]*"
+           required/>
+		  </div>
+          <div class="form-group"></div>
+          <div class="form-group">
+            <label for="password1">Password</label>
+            <input
+              type="password"
+              id="password1"
+              placeholder="Lösenord(Min. 8 characters)"
+              required
+       
+            />
+          </div>
+          <div class="form-group">
+            <label for="password2">Confirm Password</label>
+            <input
+              type="password"
+              id="password2"
+              placeholder="Confirm Password"
+              name="password"
+              required
+            />
+          </div>
+		  <div class="form-group">
+		  	<label for="street-adress">Gatuadress</label>
+		  	<input
+         type="text"
+          id="street-adress"
+           placeholder="Gatuadress"
+           required
+            />
+		  </div>
+		  <div class="form-group">
+		  	<label for="phone-number">Telefonnummer</label>
+		  	<input 
+        type="tel" 
+        id="phone-number" 
+        placeholder="Telefonnummer" 
+        name="phone"
+        required
+          />
+		  </div>
+
+          <button type="submit" class="btn">Registrera</button>
+        </form>
+      </div>
     </main>
     <footer class="page_footer">
       <div id="footerWrapper">
@@ -197,5 +269,7 @@
       <p class="copyright center text--white">© Stockholm, 2022</p>
     </footer>
     <script type="module" src="js/index.js"></script>
+	<script type="module" src="js/components/UserRepository.js"></script>
+	<script type="module" src="js/components/Register.js"></script>
   </body>
 </html>
