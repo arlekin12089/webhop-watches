@@ -6,6 +6,8 @@ const userName = document.getElementById("username");
 const userMail = document.getElementById("email");
 const password1 = document.getElementById("password1");
 const password2 = document.getElementById("password2");
+const streetAdress = document.getElementById("street-adress");
+const phoneNumber = document.getElementById("phone-number");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -18,7 +20,9 @@ form.addEventListener("submit", (e) => {
   let errorCode = UserRepository.register(
     userName.value,
     userMail.value,
-    password1.value
+    password1.value,
+    streetAdress.value,
+    phoneNumber.value
   );
   if (errorCode === UserRepository.ERROR_USER_ALREADY_EXISTS) {
     alert("user exists");
