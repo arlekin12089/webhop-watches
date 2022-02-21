@@ -566,57 +566,31 @@ h4 {
   left: 20px;
   top: 30px;
   padding: 0;
-  width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 20px;
 }
 
-.menu-toggle .menu-toggle {
-  background: none;
-  border: none;
-  width: 30px;
-  height: 23px;
-  cursor: pointer;
-  display: block;
-  outline: none;
-  position: absolute;
-  right: 30px;
-  top: 32px;
-  padding: 0;
-}
-
-.menu-toggle .menu-toggle.menu-open span {
+.menu-toggle.menu-open span {
   background: transparent;
 }
 
-.menu-toggle .menu-toggle.menu-open span:before {
+.menu-toggle.menu-open span:before {
   top: 0;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.menu-toggle .menu-toggle.menu-open span:after {
+.menu-toggle.menu-open span:after {
   bottom: 0;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
 @media only screen and (min-width: 768px) {
-  .menu-toggle .menu-toggle {
+  .menu-toggle {
     display: none;
   }
 }
 
-.menu-toggle .menu-toggle span {
+.menu-toggle span {
   position: absolute;
   right: 0;
   top: 7px;
@@ -627,7 +601,7 @@ h4 {
   transition: 0.3s all ease-out;
 }
 
-.menu-toggle .menu-toggle span:before {
+.menu-toggle span:before {
   content: "";
   top: -7px;
   height: 3px;
@@ -639,7 +613,7 @@ h4 {
   transition: 0.3s all ease-out;
 }
 
-.menu-toggle .menu-toggle span:after {
+.menu-toggle span:after {
   content: "";
   bottom: -7px;
   height: 3px;
@@ -659,11 +633,12 @@ h4 {
   padding: 0 20px;
 }
 
-.header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  padding: 0 10px;
+.menu-header {
+  margin-top: 30px;
+}
+
+.menu-header__title {
+  padding: 0 20px;
 }
 
 .hero {
