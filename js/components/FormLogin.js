@@ -16,7 +16,10 @@ let userDropdown = document.querySelector("#userDropdown")
 let login_nav = document.querySelector(".login_nav")
 let num= 0;
 
+console.log(header_user);
+
 header_user.addEventListener("click", (e) => {
+  console.log('click');
   e.preventDefault();
   num ++
   console.log(1)
