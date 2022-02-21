@@ -102,4 +102,5 @@ if (user){
   userlocation.value = user.location;
   email.value = user.email;
   phone.value = user.phoneNumber;
-}
+};
+

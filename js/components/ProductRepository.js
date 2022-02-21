@@ -4,7 +4,6 @@ export async function getProductsByCategory(categoryId) {
   if (categoryId === "all") {
     return products;
   }
-
   return products.filter((item) => item.categoryId === categoryId);
 }
 

@@ -28,6 +28,37 @@ export function ProductList() {
     });
   }
   getProducts();
+
+  //Search inside category
+  inputForm.addEventListener(
+    "submit",
+    (e) => {
+      e.preventDefault();
+    },
+    false
+  );
+  inputForm.addEventListener(
+    "keyup",
+    async (e) => {
+      e.preventDefault();
+      let searchResults = await ProductRepository.searchProducts(
+        searchInput.value
+      );
+      if (searchResults.length === 0) {
+        productsWrap.innerHTML = (
+          <h3 class="filter-error">sorry, no products matched your search</h3>
+        );
+        productsWrap.classList.add("error");
+      } else {
+        productsWrap.innerHTML = "";
+        searchResults.forEach((product) => {
+          let element = CreateProductView(product);
+          productsWrap.appendChild(element);
+        });
+      }
+    },
+    false
+  );
 }
 
 ProductList();
