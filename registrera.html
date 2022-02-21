@@ -16,58 +16,119 @@
 	<title>FEND Time</title>
 </head>
 
-<body>
-	<header class="header">
-		<div class="container">
-			<div class="header__inner">
-				<div class="header__logo">
-					<a href="/">
-						<img src="sass/img/FENDTime.svg" alt="FEND Time" />
-					</a>
-				</div>
-				<button class="menu-toggle">
-					<span></span>
-				</button>
-				<div class="header__nav" id="nav">
-					<nav>
-						<ul>
-							<li>
-								<a href="" class="nav-link active">Herr</a>
-							</li>
-							<li>
-								<a href="" class="nav-link">Dam</a>
-							</li>
-							<li>
-								<a href="" class="nav-link">Barn</a>
-							</li>
-							<li>
-								<a href="" class="nav-link">Alla</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<div class="header__search">
-					<input type="text">
-					<button type="button">
-						<i class="fa fa-search"></i>
-					</button>
-				</div>
-				<div class="header__widgets">
-					<div class="header__user">
-						<a href="">
-							<i class="fa fa-user"></i>
-						</a>
-					</div>
-					<div class="header__card">
-						<a href="">
-							<i class="fa fa-shopping-cart"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-
+<body> <header class="header--transparent header--modified header">
+	<div class="container">
+	  <div class="header__inner">
+		<div class="header__logo">
+		  <a href="/">
+			<img src="sass/img/FENDTime.svg" alt="FEND Time" />
+		  </a>
 		</div>
-	</header>
+		<button class="menu-toggle">
+		  <span></span>
+		</button>
+		<nav class="header__nav" id="nav">
+		  <ul class="main-menu">
+			<li>
+			  <a
+				href="product-list.html?category=man"
+				class="nav-link active primary"
+				>Herr</a
+			  >
+			</li>
+			<li>
+			  <a
+				href="product-list.html?category=woman"
+				class="nav-link primary"
+				>Dam</a
+			  >
+			</li>
+			<li>
+			  <a
+				href="product-list.html?category=child"
+				class="nav-link primary"
+				>Barn</a
+			  >
+			</li>
+			<li>
+			  <a
+				href="product-list.html?category=all"
+				class="nav-link primary"
+				>Alla</a
+			  >
+			</li>
+		  </ul>
+		  <ul class="main-menu--mobile">
+			<li>
+			  <div class="header__search--mobile">
+				<input type="text" class="input_field" />
+				<button type="button">
+				  <i class="fa fa-search"></i>
+				</button>
+			  </div>
+			</li>
+			<li>
+			  <a
+				href="product-list.html?category=man"
+				class="nav-link active primary"
+				>Herr</a
+			  >
+			</li>
+			<li>
+			  <a
+				href="product-list.html?category=woman"
+				class="nav-link primary"
+				>Dam</a
+			  >
+			</li>
+			<li>
+			  <a
+				href="product-list.html?category=child"
+				class="nav-link primary"
+				>Barn</a
+			  >
+			</li>
+			<li>
+			  <a
+				href="product-list.html?category=all"
+				class="nav-link primary"
+				>Alla</a
+			  >
+			</li>
+			<li>
+			  <a href="login.html" class="nav-link primary">Log In</a>
+			</li>
+			<li>
+			  <a href="register.html" class="nav-link primary"
+				>Register</a
+			  >
+			</li>
+		  </ul>
+		</nav>
+		<div class="actions">
+		  <div class="header__search">
+			<input type="text" class="input_field" />
+			<button type="button">
+			  <i class="fa fa-search icon"></i>
+			</button>
+		  </div>
+		  <div class="header__widgets">
+			<div class="header__user">
+			  <a href="">
+				<i class="fa fa-user"></i>
+			  </a>
+			</div>
+			<div class="header__card">
+			  <a href="">
+				<i class="fa fa-shopping-cart"></i>
+				<span>1</span>
+			  </a>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </header>
 <main>
 	<h1>Skapa användare</h1>
 		<form>
@@ -100,6 +161,29 @@
 		<button type="submit" class="btn">Registrera</button>
 		</form>
 </main>
+<footer class="page_footer">
+	<div id="footerWrapper">
+	  <a id="footerLogo" href="#"
+		><img
+		  src="sass/img/FEND_Time.svg"
+		  alt="FEND Time
+					  logo"
+	  /></a>
+
+	  <div class="iconContainer">
+		<a href="https://www.instagram.com/"
+		  ><i class="fa-brands fa-instagram fa"></i
+		></a>
+		<a href="https://sv-se.facebook.com/"
+		  ><i class="fa-brands fa-facebook-square fa"></i
+		></a>
+		<a href="https://twitter.com/?lang=sv"
+		  ><i class="fa-brands fa-twitter-square fa"></i
+		></a>
+	  </div>
+	</div>
+	<p class="copyright center text--white">© Stockholm, 2022</p>
+  </footer>
 	<script type="module" src="js/index.js"></script>
 </body>
 
