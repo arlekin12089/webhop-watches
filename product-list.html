@@ -110,10 +110,22 @@
           </nav>
           <div class="actions">
             <div class="header__search">
-              <input type="text" class="input_field" />
-              <button type="button">
+              <button type="button" id="header-search">
                 <i class="fa fa-search"></i>
               </button>
+				  <div class="search-field">
+			  	<div class="search-field__wrap">
+				   <form method="get" autocomplete="off" id="search-form">
+						<div class="form-field">
+								<label for="search-header"></label>
+								<input type="text" id="search-header" name="search-header">
+						</div>
+				   </form>
+				   <button class="search-close">
+				   	<i class="fa fa-close"></i>
+				   </button>
+				</div>
+			  </div>
             </div>
             <div class="header__widgets">
               <div class="header__user">
@@ -143,7 +155,7 @@
       <section class="menu-header">
         <div class="container">
           <h4 class="menu-header__title">
-            Home / <span id="categoryMenuItem"></span>
+            <a href="/" class="primary">Home</a> / <span id="categoryMenuItem"></span>
           </h4>
         </div>
       </section>
@@ -155,8 +167,10 @@
           </div>
           <div class="filter">
             <div class="filter__search">
-              <i class="fa fa-search"></i>
-              <input type="text" class="input__field" placeholder="Search" />
+				<form class="input-form">
+					<i class="fa fa-search"></i>
+					<input type="text" class="input__field" placeholder="Search"  id="search-input"/>
+				</form>
             </div>
             <div class="filter__options">
               <a href="#" id="all_watches" class="text--xs primary"

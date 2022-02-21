@@ -9,7 +9,7 @@ function CreateProductView(product) {
                   alt="${product.image}"
                 />
                 <div class="product__icon">
-                  <a href="product-view.html?productId=${product.id}" target="_blank" class="product__link">
+                  <a href="product-view.html?productId=${product.id}" class="product__link">
                     <i class="fa fa-search"></i>
                   </a>
                   <button class="addToCard product__link">
