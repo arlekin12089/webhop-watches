@@ -1,5 +1,4 @@
 .home-img-holder {
-<<<<<<< HEAD
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -28,24 +27,12 @@
     font-size: medium;
   }
 }
-=======
-  background-image: url("img/watches/Breitling-klockor-herr.jpeg");
-  .home-h1,
-  .home-h3 {
-    margin-bottom: 30px;
-  }
-}
-.home-img-container {
-  @include flexBox(column, center, center);
-}
->>>>>>> ebd22d4885981c09bdec347fd3668be2149e2192
 
 .home_show_btn {
   z-index: 1;
 }
 
 .category-item {
-<<<<<<< HEAD
   position: relative;
   text-align: center;
   color: white;
@@ -55,60 +42,24 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-=======
-  color: white;
-  max-width: 500px;
-  margin: 0;
-
-  .home-text-container {
-    position: relative;
-    top: -20rem;
-    padding: 0 2rem;
-    text-align: center;
->>>>>>> ebd22d4885981c09bdec347fd3668be2149e2192
 
     .home-title {
       font-size: 30px;
       margin-bottom: 15px;
-<<<<<<< HEAD
-=======
-      text-transform: uppercase;
->>>>>>> ebd22d4885981c09bdec347fd3668be2149e2192
     }
   }
 }
 
 .home-img-contain {
-<<<<<<< HEAD
   img {
     height: 500px;
     width: 100%;
-=======
-  max-width: 500px;
-  img {
-    max-height: 500px;
-    max-width: 500px;
->>>>>>> ebd22d4885981c09bdec347fd3668be2149e2192
     filter: brightness(47%);
     background-color: rgba($black, 0.03);
     padding: 20px;
     position: relative;
     border-radius: 5px;
   }
-<<<<<<< HEAD
-=======
-
-  img:hover {
-    filter: brightness(22%);
-    cursor: pointer;
-  }
-}
-
-#categoriesHome {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
->>>>>>> ebd22d4885981c09bdec347fd3668be2149e2192
 }
 
 .home-h3-container {
@@ -121,7 +72,6 @@
     margin-bottom: 20px;
   }
 }
-<<<<<<< HEAD
 
 a {
   margin-bottom: 15px;
@@ -129,5 +79,3 @@ a {
   text-decoration: underline;
   cursor: pointer;
 }
-=======
->>>>>>> ebd22d4885981c09bdec347fd3668be2149e2192
