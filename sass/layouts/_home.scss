@@ -16,7 +16,7 @@
 .category-item {
   width: 100%;
   margin: 10px;
-@include breakpoint(small-max) {
+  @include breakpoint(small-max) {
     width: 47%;
   }
 
@@ -29,10 +29,10 @@
       margin-bottom: 15px;
       text-transform: uppercase;
 
-	  + p{
-	  @include font-size(18);
-	  line-height: 30px;
-	  }
+      + p {
+        @include font-size(18);
+        line-height: 30px;
+      }
     }
   }
 }
@@ -47,24 +47,6 @@
     position: absolute;
     border-radius: 5px;
   }
-<<<<<<< HEAD
-
-  img:hover:before {
-    content: "";
-    background: rgba(0, 0, 0, 0.5);
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    border-radius: 5px;
-  }
-  .img:hover {
-    opacity: 1;
-  }
-}
-=======
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -72,7 +54,6 @@
   overflow: hidden;
   height: 500px;
   @include flexBox(column, center, center);
->>>>>>> 874c073a7c15a33c2e7ece7fc247d9e03461a52f
 
   img:hover {
     filter: brightness(22%);
@@ -98,9 +79,9 @@
 }
 
 .category-link {
-color: $white;
+  color: $white;
 
-&:hover{
-color: $yellow;
-}
+  &:hover {
+    color: $yellow;
+  }
 }
