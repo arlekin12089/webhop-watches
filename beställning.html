@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="sass/styles.css">
+</head>
+<body>
+  <main class="b-main">
+    <section class="order-wrapper">
+      <h1>Kassa</h1>
+    <section class="order-view">
+    <br>
+    <h2>Orderöversikt</h2>
+      <article class="order-items">
+        <ul class="order-list">
+          <li>
+            <div class="receipt-item">
+              <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="">
+            </div>
+            <div>
+              <p>Namn på produkt</p>
+              <p>Pris</p>
+            </div>
+            <button>Ta bort</button>
+          </li>
+          <li>
+            <div class="receipt-item">
+              <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="">
+            </div>
+            <div>
+              <p>Namn på produkt</p>
+              <p>Pris</p>
+            </div>
+            <button>Ta bort</button>
+          </li>
+          <li>
+            <div class="receipt-item">
+              <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="">
+            </div>
+            <div>
+              <p>Namn på produkt</p>
+              <p>Pris</p>
+            </div>
+            <button>Ta bort</button>
+          </li>
+        </ul>
+      </article>
+      <article class="order-price">
+        <h3 class="order-value">Totalbelopp SEK: </h3>
+      </article>
+    </section>
+  </section>
+    
+    <section class="order-input">
+      <h2>Beställningsuppgifter</h2>
+      <form class="order-form">
+        <input type="text" placeholder="För- och efternamn" required>
+        <input type="text" placeholder="Gatuadress" required>
+        <input type="number" placeholder="Postnummer" required>
+        <input type="text" placeholder="Ort" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Telefonnummer ">
+        <label for="comment">Övriga kommentarer</label>
+        <textarea name="" id="comment" cols="30" rows="3"></textarea>
+        <button class="btn order-btn">Skicka beställning</button>
+      </form>
+    </section>
+  </main>
+
+      <!--Receipt starts here -->
+      <section class="order-receipt">
+        <div class="receipt-titel">
+          <h3>Tack för din beställning</h3>
+        </div>
+        <div class="receipt-cart">
+          <ul class="receipt-list">
+            <li>
+              <div class="receipt-item">
+                <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="">
+              </div>
+              <div>
+                <p>Namn på produkt</p>
+                <p>Pris</p>
+              </div>
+            </li>
+            <li>
+              <div class="receipt-item">
+                <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="">
+              </div>
+              <div>
+                <p>Namn på produkt</p>
+                <p>Pris</p>
+              </div>
+            </li>
+            <li>
+              <div class="receipt-item">
+                <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="">
+              </div>
+              <div>
+                <p>Namn på produkt</p>
+                <p>Pris</p>
+              </div>
+            </li>
+          </ul>
+          <h3>Totalbelopp SEK:</h3>
+        </div>
+        <div class="receipt-info">
+          <h3>Paketet kommer att skickas till: </h3>
+        </div>
+      </section>    
+</body>
+</html>
