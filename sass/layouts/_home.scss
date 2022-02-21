@@ -1,5 +1,6 @@
 .home-img-holder {
   background-image: url("img/watches/Breitling-klockor-herr.jpeg");
+  width: 100%;
   .home-h1,
   .home-h3 {
     margin-bottom: 30px;
@@ -30,10 +31,16 @@
       text-transform: uppercase;
     }
   }
+
+  &:hover img {
+    filter: brightness(22%);
+    cursor: pointer;
+  }
 }
 
 .home-img-contain {
   max-width: 500px;
+
   img {
     max-height: 500px;
     max-width: 500px;
@@ -43,11 +50,10 @@
     position: relative;
     border-radius: 5px;
   }
+}
 
-  img:hover {
-    filter: brightness(22%);
-    cursor: pointer;
-  }
+.home-text-container:hover {
+  cursor: pointer;
 }
 
 #categoriesHome {
@@ -65,4 +71,10 @@
     font-size: 20px;
     margin-bottom: 20px;
   }
+}
+
+.home-link {
+  margin-left: 10px;
+  text-decoration: underline;
+  color: $black;
 }
