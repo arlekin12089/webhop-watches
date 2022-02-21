@@ -1,11 +1,7 @@
 import * as ProductRepository from "./ProductRepository.js";
-
-
-function ProductList() {
-
 import { CreateProductView } from "./CreateProductView.js";
-export function ProductList() {
 
+export function ProductList () {
   const queryString = new URLSearchParams(location.search);
   const qsCategory = queryString.get("category");
   const categoryName = document.getElementById("category-name");
