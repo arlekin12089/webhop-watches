@@ -1,3 +1,6 @@
+.login_wrapper {
+  padding: 40px;
+}
 .login_text {
   text-align: center;
   margin-top: 20%;
@@ -34,6 +37,33 @@
   }
 }
 
+.user_dropdown {
+  width: 25%;
+  width: 40%;
+  height: 30%;
+  border: 1px solid;
+  position: fixed;
+  top: 75px;
+  right: 2px;
+  padding: 10px;
+  background-color: $white;
+
+  .closeDropdown {
+    padding: 5px;
+    @include font-size(24);
+  }
+
+  a {
+    display: block;
+    padding: 9px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+.hide_userDropdown {
+  display: none;
+}
 @include breakpoint(small-max) {
   .login_body {
     .login_wrapper {
@@ -41,6 +71,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin-bottom: 4em;
 
       .login_form {
         max-width: 500px;

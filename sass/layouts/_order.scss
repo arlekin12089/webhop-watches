@@ -1,0 +1,251 @@
+.hidden{
+  display: none;
+}
+
+.b-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 100%;
+
+  .b-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin: 100px 0px;
+    width: 100%;
+
+    .order-wrapper{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+
+    h1{
+      margin-top: 20px;
+      font-size: 50px;
+    }
+    
+    .order-view{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+      flex-direction: column;
+      width: 75%;
+      height: auto;
+      margin-top: 10px;
+      border-top: solid black 1px;
+      border-bottom: solid black 1px;
+  
+      .order-items{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: auto;
+        width: 100%;
+  
+        .order-list{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+
+          li{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 20px 0px;
+  
+            img{
+              height: 60px;
+              width: 60px;
+            }
+
+            p{
+              margin-right: 40px;
+            }
+
+            .delete-btn{
+              background-color: grey;
+              padding: 3px;
+            }
+          }
+        }
+      }
+      .order-price{
+        display: flex;
+        justify-content: center;
+  
+        h3{
+          margin-top: 20px;
+        }
+      }
+    }
+    .order-input{
+      width: 60%;
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      h3{
+      font-size: 20px;
+      }
+  
+      input{
+        margin: 20px 0px;
+        border-bottom: 20px;
+        width: 100%;
+        border: none;
+        border-bottom: solid black 1px;
+      }
+     
+      textarea{
+        margin-bottom: 20px;
+      }
+
+      .order-form{
+        .order-btn{
+          width: 75%;
+        }
+      }
+    }
+  }
+  
+  .order-receipt{
+    margin: 20px 0px 100px 0px;
+    border: solid black 1px;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0px;
+    display: none;
+
+  
+  
+    .receipt-titel{
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0px 20px 0px;
+    }
+  
+    .receipt-cart{
+      width: 80%; 
+      height: auto;  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: solid black 1px;
+      border-top: solid black 1px;
+  
+      .receipt-list{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        .receipt-item{
+          img{
+            height: 60px;
+            width: 60px;
+          }
+        }
+      }
+    }
+  
+    .receipt-info{
+      margin-top: 20px;
+      width: 100%;
+
+      h3{
+        font-size: 18px;
+        margin-left: 5px;
+      }
+    }
+  }
+
+
+  li{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+
+    img{
+      margin-right: 20px;
+    }
+  }
+}
+
+
+
+@include breakpoint(small-max) {
+  body{
+    .b-main{
+      flex-direction: row;
+      width: 100%;
+      align-items: flex-start;
+      justify-content: flex-end;
+      margin-top: 25px;
+
+     .order-wrapper{
+       width: 45%;
+
+       .order-form{
+         background-color: red;
+       }
+ 
+      .order-list{
+       justify-content: flex-start;
+      
+      }
+     }
+     .order-input{
+      width: 45%;
+      align-items: flex-start;
+    } 
+    
+     .order-form{
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+
+      input{
+        width: 60%;
+      }
+
+      textarea{
+        width: 60%;
+      }
+
+       label{
+         margin: 10px 0px;
+       }
+
+       .order-btn {
+         width: 20%;
+       }
+     }
+
+     .order-view{
+       .order-items{
+         .order-list{
+          li{
+            p{
+              margin-right: 240px;
+            }
+          }
+         }
+       }
+     }
+    } 
+    .order-receipt{
+      width: 50%;
+    }
+  }
+ }
