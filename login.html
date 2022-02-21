@@ -110,16 +110,34 @@
           </nav>
           <div class="actions">
             <div class="header__search">
-              <input type="text" class="input_field" />
-              <button type="button">
-                <i class="fa fa-search icon"></i>
+              <button type="button" id="header-search">
+                <i class="fa fa-search"></i>
               </button>
+              <div class="search-field">
+                <div class="search-field__wrap">
+                <form method="get" autocomplete="off" id="search-form">
+                  <div class="form-field">
+                      <label for="search-header"></label>
+                      <input type="text" id="search-header" name="search-header">
+                  </div>
+                </form>
+                <button class="search-close">
+                  <i class="fa fa-close"></i>
+                </button>
+              </div>
+              </div>
             </div>
             <div class="header__widgets">
               <div class="header__user">
                 <a href="">
                   <i class="fa fa-user iconMenu"></i>
                 </a>
+                <div class="dropdown-users">
+                  <p class="userName"></p>
+                  <a href="register.html" class="register-link">Register</a>
+                  <a href="login.html" class="login-link">Log In</a>
+                  <a href="#" class="logout-link">Log Out</a>
+                </div>
               </div>
               <div class="header__card">
                 <a href="">
@@ -163,7 +181,6 @@
           />
 
           <div class="login_linksContainer">
-            <a href="#" id="login_forgotPassword">Glömt Lösenord</a>
             <a href="#" id="login_registerAccount">Skapa Konto</a>
           </div>
           <input
@@ -171,6 +188,7 @@
             value="Logga in"
             class="login_btn btn btn--yellow"
           />
+          <p class="errors">Incorrect email or password.</p>
         </form>
       </section>
     </main>
@@ -195,7 +213,8 @@
       <p class="copyright center text--white">© Stockholm, 2022</p>
     </footer>
     <script type="module" src="js/index.js"></script>
-    <script type="module" src="js/components/ProductList.js"></script>
+    <script type="module" src="js/components/UserRepository.js"></script>
+    <script type="module" src="js/components/Login.js"></script>
     <script src="./js/components/FormLogin.js"></script>
   </body>
 </html>
