@@ -911,12 +911,18 @@ footer #copyright {
 }
 
 .home-img-holder {
+  background-image: url("img/watches/Breitling-klockor-herr.jpeg");
+}
+
+.home-img-holder .home-h1,
+.home-img-holder .home-h3 {
+  margin-bottom: 30px;
+}
+
+.home-img-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -924,28 +930,9 @@ footer #copyright {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.home-img-holder .home-img-container img {
-  height: 350px;
-  width: 100%;
-  -webkit-filter: brightness(47%);
-          filter: brightness(47%);
-  background-color: rgba(0, 0, 0, 0.03);
-}
-
-.home-img-holder .home-h1 {
-  margin-top: -240px;
-  color: beige;
-  margin-bottom: 30px;
-  z-index: 1;
-}
-
-.home-img-holder .home-h2 {
-  color: beige;
-  margin-bottom: 40px;
-  z-index: 1;
-  font-size: medium;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .home_show_btn {
@@ -953,45 +940,34 @@ footer #copyright {
 }
 
 .category-item {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-.category-item .home-text-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   width: 100%;
   margin: 10px;
 }
 
 @media only screen and (min-width: 768px) {
-  .category-item .home-text-container {
+  .category-item {
     width: 47%;
   }
 }
 
-.category-item .home-text-container .home-text-container {
+.category-item .home-text-container {
   position: relative;
   padding: 0 2rem;
   text-align: center;
 }
 
-.category-item .home-text-container .home-text-container .home-title {
+.category-item .home-text-container .home-title {
   margin-bottom: 15px;
   text-transform: uppercase;
 }
 
-.category-item .home-text-container .home-text-container .home-title + p {
+.category-item .home-text-container .home-title + p {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 30px;
 }
 
-.category-item .home-img-contain {
+.home-img-contain {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1013,18 +989,7 @@ footer #copyright {
           justify-content: center;
 }
 
-.category-item .home-img-contain img {
-  height: 500px;
-  width: 100%;
-  -webkit-filter: brightness(47%);
-          filter: brightness(47%);
-  background-color: rgba(0, 0, 0, 0.03);
-  padding: 20px;
-  position: relative;
-  border-radius: 5px;
-}
-
-.category-item .home-img-contain::before {
+.home-img-contain::before {
   content: "";
   display: block;
   width: 100%;
@@ -1034,13 +999,13 @@ footer #copyright {
   border-radius: 5px;
 }
 
-.category-item .home-img-contain img:hover {
+.home-img-contain img:hover {
   -webkit-filter: brightness(22%);
           filter: brightness(22%);
   cursor: pointer;
 }
 
-.category-item #categoriesHome {
+#categoriesHome {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1051,7 +1016,7 @@ footer #copyright {
           justify-content: center;
 }
 
-.category-item .home-h3-container {
+.home-h3-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1060,24 +1025,17 @@ footer #copyright {
           justify-content: center;
 }
 
-.category-item .home-h3-container .home-h3 {
+.home-h3-container .home-h3 {
   margin-top: 70px;
   font-size: 20px;
   margin-bottom: 20px;
 }
 
-.category-item a {
-  margin-bottom: 15px;
-  color: black;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.category-item .category-link {
+.category-link {
   color: #ffffff;
 }
 
-.category-item .category-link:hover {
+.category-link:hover {
   color: #FCCB1E;
 }
 
