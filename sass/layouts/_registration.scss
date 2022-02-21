@@ -6,11 +6,11 @@ main {
   h1 {
     font-size: 24px;
   }
-  form {
+  #registration-form {
       display: flex;
       flex-direction: column;
   
-    .div-inputs {
+    .form-group {
       display: flex;
       flex-direction: row;
       div {
