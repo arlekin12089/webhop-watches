@@ -3,7 +3,6 @@ import { CreateProductView } from "./CreateProductView.js";
 
 const homeCategories = document.getElementById("categoriesHome");
 let featuredWrap = document.querySelector(".featured-products");
-console.log(homeCategories);
 
 function listCategoriesHome(list) {
   list.forEach((item) => {
