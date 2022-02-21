@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 footer {
   width: 100%;
   height: 25vh;
-=======
-.page_footer {
-  width: 100%;
-  padding: 30px 0 20px;
->>>>>>> ebd22d4885981c09bdec347fd3668be2149e2192
   background-color: $black;
 
   #footerWrapper {
@@ -20,7 +14,6 @@ footer {
     }
     .iconContainer {
       width: 35%;
-<<<<<<< HEAD
       display: flex;
       justify-content: space-evenly;
       .fa {
@@ -34,32 +27,5 @@ footer {
     @include font-size(10);
     position: relative;
     top: -25px;
-=======
-	  @include flexBox(row, center, end);
-
-	  a {
-	  	display: inline-block;
-		  padding-left: 15px;
-	  }
-      .fa {
-        color: $white;
-		&:hover{
-		color: $yellow;
-		}
-      }
-    }
-   }
-  .copyright {
-    @include font-size(10);
-  }
-}
-@include breakpoint(small-max) {
-  .iconContainer {
-    max-width: 20%;
-    .fa {
-      width: 30px;
-      @include font-size(35);
-    }
->>>>>>> ebd22d4885981c09bdec347fd3668be2149e2192
   }
 }
