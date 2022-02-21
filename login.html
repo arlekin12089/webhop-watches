@@ -181,7 +181,6 @@
           />
 
           <div class="login_linksContainer">
-            <a href="#" id="login_forgotPassword">Glömt Lösenord</a>
             <a href="#" id="login_registerAccount">Skapa Konto</a>
           </div>
           <input
@@ -189,6 +188,7 @@
             value="Logga in"
             class="login_btn btn btn--yellow"
           />
+          <p class="errors">Incorrect email or password.</p>
         </form>
       </section>
     </main>
@@ -213,7 +213,8 @@
       <p class="copyright center text--white">© Stockholm, 2022</p>
     </footer>
     <script type="module" src="js/index.js"></script>
-    <script type="module" src="js/components/ProductList.js"></script>
+    <script type="module" src="js/components/UserRepository.js"></script>
+    <script type="module" src="js/components/Login.js"></script>
     <script src="./js/components/FormLogin.js"></script>
   </body>
 </html>

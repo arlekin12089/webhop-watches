@@ -1,4 +1,5 @@
-function Search() {
+import * as UserRepository from "./UserRepository.js";
+function SearchInput() {
   let formSearch = document.getElementById("search-form");
   formSearch.addEventListener(
     "submit",
@@ -10,5 +11,11 @@ function Search() {
     false
   );
 }
+function SetupUserName() {}
 
-export default Search();
+function Header() {
+  SearchInput();
+  SetupUserName();
+}
+
+export default Header();
