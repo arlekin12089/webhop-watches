@@ -89,32 +89,16 @@
                 </div>
               </li>
               <li>
-                <a
-                  href="product-list.html?category=man"
-                  class="nav-link active primary"
-                  >Herr</a
-                >
+                <a href="product-list.html?category=man" class="nav-link active primary">Herr</a>
               </li>
               <li>
-                <a
-                  href="product-list.html?category=woman"
-                  class="nav-link primary"
-                  >Dam</a
-                >
+                <a href="product-list.html?category=woman" class="nav-link primary">Dam</a>
               </li>
               <li>
-                <a
-                  href="product-list.html?category=child"
-                  class="nav-link primary"
-                  >Barn</a
-                >
+                <a href="product-list.html?category=child" class="nav-link primary">Barn</a>
               </li>
               <li>
-                <a
-                  href="product-list.html?category=all"
-                  class="nav-link primary"
-                  >Alla</a
-                >
+                <a href="product-list.html?category=all" class="nav-link primary">Alla</a>
               </li>
               <li>
                 <a href="login.html" class="nav-link primary">Log In</a>
@@ -126,16 +110,34 @@
           </nav>
           <div class="actions">
             <div class="header__search">
-              <input type="text" class="input_field" />
-              <button type="button">
-                <i class="fa fa-search icon"></i>
+              <button type="button" id="header-search">
+                <i class="fa fa-search"></i>
               </button>
+			  <div class="search-field">
+			  	<div class="search-field__wrap">
+				   <form method="get" autocomplete="off" id="search-form">
+						<div class="form-field">
+								<label for="search-header"></label>
+								<input type="text" id="search-header" name="search-header">
+						</div>
+				   </form>
+				   <button class="search-close">
+				   	<i class="fa fa-close"></i>
+				   </button>
+				</div>
+			  </div>
             </div>
             <div class="header__widgets">
               <div class="header__user">
                 <a href="">
                   <i class="fa fa-user user_menu"></i>
                 </a>
+				<div class="dropdown-users">
+					<p class="userName"></p>
+					<a href="register.html" class="register-link">Register</a>
+					<a href="login.html" class="login-link">Log In</a>
+					<a href="#" class="logout-link">Log Out</a>
+				</div>
               </div>
               <div class="header__card">
                 <a href="">
@@ -152,32 +154,30 @@
       <div class="home-img-container hero--modified__intro">
         <h1 class="home-h1 text--white">Lyxiga Klockor</h1>
         <h3 class="home-h3 text--white">bra design och fantastiska priser</h3>
-        <a
-          href="product-list.html?category=all"
-          class="btn btn--yellow btn--large home-btn"
-          >Handla nu</a
-        >
+        <a href="#" class="btn btn--yellow btn--large">Handla Nu</a>
       </div>
     </section>
 
     <div class="home-h3-container">
       <h3 class="home-h3">Handla efter kategori</h3>
     </div>
-
-    <a class="home-link" href="">Home/</a>
-
-    <div id="categoriesHome"></div>
-    <section class="products--feature">
-      <div class="container">
-        <h2 class="center mb20">Featured klockor</h2>
-        <div class="products-list featured-products"></div>
-        <div class="center">
-          <a href="product-list.html?category=all" class="btn btn--yellow"
-            >Visa mer</a
-          >
-        </div>
-      </div>
-    </section>
+	<main class="main">
+		<div class="container">
+		    <div id="categoriesHome">
+			</div>
+		</div>
+		<section class="products--feature">
+		<div class="container">
+			<h2 class="center mb20">Featured klockor</h2>
+			<div class="products-list featured-products"></div>
+			<div class="center">
+			<a href="product-list.html?category=all" class="btn btn--yellow"
+				>Visa mer</a
+			>
+			</div>
+		</div>
+		</section>
+	</main>
     <footer class="page_footer">
       <div id="footerWrapper">
         <a id="footerLogo" href="#"

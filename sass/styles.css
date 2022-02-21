@@ -150,12 +150,18 @@ table {
   margin: 0;
 }
 
+html {
+  min-height: 100vh;
+}
+
 body {
   font-size: 16px;
   font-size: 1rem;
   font-family: "Roboto", Verdana, sans-serif;
   width: 100%;
   height: 100%;
+  position: relative;
+  min-height: 100vh;
 }
 
 body .fa {
@@ -198,6 +204,14 @@ img {
 
 .mb20 {
   margin-bottom: 20px;
+}
+
+.errors {
+  display: none;
+}
+
+.logout-link {
+  display: none;
 }
 
 .text--white {
@@ -699,52 +713,15 @@ main.modified {
   padding-top: 74px;
 }
 
-.footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: grey;
-  width: 100%;
-  height: 10vh;
-}
-
-.footer-logo .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.footer .footer-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.footer .footer-text p {
-  color: white;
+.main {
+  padding-bottom: 100px;
 }
 
 .page_footer {
   width: 100%;
   padding: 30px 0 20px;
   background-color: #000000;
+  margin-top: auto;
 }
 
 .page_footer #footerWrapper {
@@ -796,8 +773,6 @@ main.modified {
 .page_footer .copyright {
   font-size: 10px;
   font-size: 0.625rem;
-  position: relative;
-  top: -30%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -811,6 +786,7 @@ main.modified {
   }
 }
 
+<<<<<<< HEAD
 .home-img-holder {
   background-image: url("img/watches/Breitling-klockor-herr.jpeg");
   width: 100%;
@@ -933,6 +909,8 @@ main.modified {
   color: #000000;
 }
 
+=======
+>>>>>>> 874c073a7c15a33c2e7ece7fc247d9e03461a52f
 .login_wrapper {
   padding: 40px;
 }
@@ -1053,7 +1031,140 @@ main.modified {
   }
 }
 
-body {
+.home-img-holder {
+  background-image: url("img/watches/Breitling-klockor-herr.jpeg");
+}
+
+.home-img-holder .home-h1,
+.home-img-holder .home-h3 {
+  margin-bottom: 30px;
+}
+
+.home-img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home_show_btn {
+  z-index: 1;
+}
+
+.category-item {
+  width: 100%;
+  margin: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .category-item {
+    width: 47%;
+  }
+}
+
+.category-item .home-text-container {
+  position: relative;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.category-item .home-text-container .home-title {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.category-item .home-text-container .home-title + p {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 30px;
+}
+
+.home-img-contain {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-img-contain::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  border-radius: 5px;
+}
+
+.home-img-contain img:hover {
+  -webkit-filter: brightness(22%);
+          filter: brightness(22%);
+  cursor: pointer;
+}
+
+#categoriesHome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-h3-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-h3-container .home-h3 {
+  margin-top: 70px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.category-link {
+  color: #ffffff;
+}
+
+.category-link:hover {
+  color: #FCCB1E;
+}
+
+.hidden {
+  display: none;
+}
+
+.b-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1065,9 +1176,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: auto;
+  width: 100%;
 }
 
-body .b-main {
+.b-body .b-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1079,10 +1191,11 @@ body .b-main {
       -ms-flex-align: center;
           align-items: center;
   height: auto;
-  margin-bottom: 50px;
+  margin: 100px 0px;
+  width: 100%;
 }
 
-body .b-main .order-wrapper {
+.b-body .b-main .order-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1096,12 +1209,12 @@ body .b-main .order-wrapper {
           align-items: center;
 }
 
-body .b-main h1 {
+.b-body .b-main h1 {
   margin-top: 20px;
-  font-weight: 900;
+  font-size: 50px;
 }
 
-body .b-main .order-view {
+.b-body .b-main .order-view {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1122,7 +1235,7 @@ body .b-main .order-view {
   border-bottom: solid black 1px;
 }
 
-body .b-main .order-view .order-items {
+.b-body .b-main .order-view .order-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1134,7 +1247,7 @@ body .b-main .order-view .order-items {
   width: 100%;
 }
 
-body .b-main .order-view .order-items .order-list {
+.b-body .b-main .order-view .order-items .order-list {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1145,7 +1258,7 @@ body .b-main .order-view .order-items .order-list {
           flex-direction: column;
 }
 
-body .b-main .order-view .order-items .order-list li {
+.b-body .b-main .order-view .order-items .order-list li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1158,16 +1271,21 @@ body .b-main .order-view .order-items .order-list li {
   margin: 20px 0px;
 }
 
-body .b-main .order-view .order-items .order-list li img {
+.b-body .b-main .order-view .order-items .order-list li img {
   height: 60px;
   width: 60px;
 }
 
-body .b-main .order-view .order-items .order-list li p {
+.b-body .b-main .order-view .order-items .order-list li p {
   margin-right: 40px;
 }
 
-body .b-main .order-view .order-price {
+.b-body .b-main .order-view .order-items .order-list li .delete-btn {
+  background-color: grey;
+  padding: 3px;
+}
+
+.b-body .b-main .order-view .order-price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1176,13 +1294,13 @@ body .b-main .order-view .order-price {
           justify-content: center;
 }
 
-body .b-main .order-view .order-price h3 {
+.b-body .b-main .order-view .order-price h3 {
   margin-top: 20px;
 }
 
-body .b-main .order-input {
+.b-body .b-main .order-input {
   width: 60%;
-  margin-top: 20px;
+  margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1195,7 +1313,11 @@ body .b-main .order-input {
           flex-direction: column;
 }
 
-body .b-main .order-input input {
+.b-body .b-main .order-input h3 {
+  font-size: 20px;
+}
+
+.b-body .b-main .order-input input {
   margin: 20px 0px;
   border-bottom: 20px;
   width: 100%;
@@ -1203,16 +1325,19 @@ body .b-main .order-input input {
   border-bottom: solid black 1px;
 }
 
-body .b-main .order-input textarea {
+.b-body .b-main .order-input textarea {
   margin-bottom: 20px;
 }
 
-body .order-receipt {
-  display: none;
+.b-body .b-main .order-input .order-form .order-btn {
+  width: 75%;
+}
+
+.b-body .order-receipt {
   margin: 20px 0px 100px 0px;
   border: solid black 1px;
-  width: 75%;
-  height: 400px;
+  width: 80%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1223,9 +1348,11 @@ body .order-receipt {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 50px 0px;
+  display: none;
 }
 
-body .order-receipt .receipt-titel {
+.b-body .order-receipt .receipt-titel {
   width: 100%;
   height: auto;
   display: -webkit-box;
@@ -1240,7 +1367,7 @@ body .order-receipt .receipt-titel {
   margin: 20px 0px 20px 0px;
 }
 
-body .order-receipt .receipt-cart {
+.b-body .order-receipt .receipt-cart {
   width: 80%;
   height: auto;
   display: -webkit-box;
@@ -1257,7 +1384,7 @@ body .order-receipt .receipt-cart {
   border-top: solid black 1px;
 }
 
-body .order-receipt .receipt-cart .receipt-list {
+.b-body .order-receipt .receipt-cart .receipt-list {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1268,16 +1395,22 @@ body .order-receipt .receipt-cart .receipt-list {
           flex-direction: column;
 }
 
-body .order-receipt .receipt-cart .receipt-list .receipt-item img {
+.b-body .order-receipt .receipt-cart .receipt-list .receipt-item img {
   height: 60px;
   width: 60px;
 }
 
-body .order-receipt .receipt-info {
+.b-body .order-receipt .receipt-info {
   margin-top: 20px;
+  width: 100%;
 }
 
-body li {
+.b-body .order-receipt .receipt-info h3 {
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.b-body li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1288,7 +1421,7 @@ body li {
   margin-top: 20px;
 }
 
-body li img {
+.b-body li img {
   margin-right: 20px;
 }
 
@@ -1344,7 +1477,7 @@ body li img {
     margin: 10px 0px;
   }
   body .b-main .order-form .order-btn {
-    width: 45%;
+    width: 20%;
   }
   body .b-main .order-view .order-items .order-list li p {
     margin-right: 240px;
@@ -1399,6 +1532,12 @@ body li img {
   display: grid;
   gap: 1rem;
   position: relative;
+}
+
+.products-list.error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media only screen and (min-width: 992px) {
@@ -1542,9 +1681,11 @@ body li img {
 
 @media only screen and (min-width: 768px) {
   .filter {
-    width: 70%;
+    width: 100%;
     display: block;
-    min-width: 250px;
+    min-width: 300px;
+    max-width: 300px;
+    padding-right: 20px;
   }
 }
 
@@ -1563,6 +1704,23 @@ body li img {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 80px;
+}
+
+.filter__search form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
 }
 
 .filter__list div {
@@ -1928,6 +2086,126 @@ main form .user-agreement input {
   main form .btn {
     width: 40%;
   }
+}
+
+.search-field {
+  pointer-events: all;
+  visibility: hidden;
+  opacity: 0;
+  height: 40rem;
+  top: 74px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  background: #e7e2e2;
+  margin: 0 -50vw;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100vw;
+}
+
+.search-field.search-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.search-field__wrap {
+  padding: 10rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.search-field form {
+  width: 100%;
+}
+
+.search-field .form-field {
+  position: relative;
+  text-align: left;
+  max-width: 96rem;
+  padding: 0 2rem;
+}
+
+.search-field input {
+  font-size: 9rem;
+  width: 100%;
+  padding-bottom: 2rem;
+  background: none;
+  border: none;
+  border-bottom: 0.2rem solid #CECECE;
+  color: #000000;
+  display: block;
+  font-weight: 600;
+  margin: 0 auto;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+
+.search-close {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #CECECE;
+  border-radius: 5px;
+  position: absolute;
+  right: 5rem;
+  top: 3rem;
+}
+
+.result-count-container {
+  display: none;
+  margin-top: 20px;
+  padding: 0 35px;
+}
+
+.result-count-container b {
+  font-weight: 600;
+}
+
+.search-hero {
+  min-height: 300px;
+  padding-top: 74px;
+  background: rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.search-hero p {
+  font-size: 22px;
+  font-size: 1.375rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .input__field {
