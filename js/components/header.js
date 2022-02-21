@@ -1,24 +1,21 @@
-const header_user = document.querySelector(".iconMenu");
-const userDropdown = document.querySelector("#userDropdown");
+import * as UserRepository from "./UserRepository.js";
+function SearchInput() {
+  let formSearch = document.getElementById("search-form");
+  formSearch.addEventListener(
+    "submit",
+    async (e) => {
+      e.preventDefault();
+      let searchInputValue = document.getElementById("search-header").value;
+      window.location.href = `search-results.html?searchText=${searchInputValue}`;
+    },
+    false
+  );
+}
+function SetupUserName() {}
 
-let num= 0;
+function Header() {
+  SearchInput();
+  SetupUserName();
+}
 
-header_user.addEventListener("click", (e) => {
-   e.preventDefault();
-  num ++
-   
-  if(num ===1){
-    
-    userDropdown.classList.add("user_dropdown")
-    num++
-  
-  } else {
-    userDropdown.classList.toggle("hide_userDropdown") 
-  }
-})
-
-const closeDropdownBtn = document.querySelector(".closeDropdown");
-closeDropdownBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  userDropdown.classList.toggle("hide_userDropdown")
-});
+export default Header();
