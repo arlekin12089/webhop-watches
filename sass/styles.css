@@ -717,14 +717,22 @@ main.modified {
   padding-bottom: 100px;
 }
 
+<<<<<<< HEAD
 footer .page_footer {
+=======
+.page_footer {
+>>>>>>> 87eb656a0a7fad2981cff844eb7dc652c67cdaad
   width: 100%;
-  height: 25vh;
+  padding: 30px 0 20px;
   background-color: #000000;
   margin-top: auto;
 }
 
+<<<<<<< HEAD
 footer .page_footer #footerWrapper {
+=======
+.page_footer #footerWrapper {
+>>>>>>> 87eb656a0a7fad2981cff844eb7dc652c67cdaad
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -745,15 +753,24 @@ footer .page_footer #footerWrapper {
           justify-content: end;
 }
 
+<<<<<<< HEAD
 footer .page_footer #footerWrapper #footerLogo {
   width: 35%;
 }
 
 footer .page_footer #footerWrapper .iconContainer {
+=======
+.page_footer #footerWrapper #footerLogo {
+  width: 35%;
+}
+
+.page_footer #footerWrapper .iconContainer {
+>>>>>>> 87eb656a0a7fad2981cff844eb7dc652c67cdaad
   width: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -761,6 +778,18 @@ footer .page_footer #footerWrapper .iconContainer {
 
 footer .page_footer #footerWrapper .iconContainer .fa {
   color: #ffffff;
+=======
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+>>>>>>> 87eb656a0a7fad2981cff844eb7dc652c67cdaad
 }
 
 footer .page_footer #footerWrapper a {
@@ -768,6 +797,7 @@ footer .page_footer #footerWrapper a {
   padding-left: 15px;
 }
 
+<<<<<<< HEAD
 footer .page_footer #footerWrapper .fa {
   color: #ffffff;
 }
@@ -777,10 +807,22 @@ footer .page_footer #footerWrapper .fa:hover {
 }
 
 footer .copyright {
+=======
+.page_footer #footerWrapper .iconContainer .fa {
+  color: #ffffff;
+}
+
+.page_footer #footerWrapper .iconContainer .fa:hover {
+  color: #FCCB1E;
+}
+
+.page_footer .copyright {
+>>>>>>> 87eb656a0a7fad2981cff844eb7dc652c67cdaad
   font-size: 10px;
   font-size: 0.625rem;
 }
 
+<<<<<<< HEAD
 footer #copyright {
   text-align: center;
   color: #ffffff;
@@ -788,6 +830,17 @@ footer #copyright {
   font-size: 0.625rem;
   position: relative;
   top: -25px;
+=======
+@media only screen and (min-width: 768px) {
+  .iconContainer {
+    max-width: 20%;
+  }
+  .iconContainer .fa {
+    width: 30px;
+    font-size: 35px;
+    font-size: 2.1875rem;
+  }
+>>>>>>> 87eb656a0a7fad2981cff844eb7dc652c67cdaad
 }
 
 .login_wrapper {
@@ -924,6 +977,7 @@ footer #copyright {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+<<<<<<< HEAD
 }
 
 .home-img-holder .home-img-container img {
@@ -946,6 +1000,11 @@ footer #copyright {
   margin-bottom: 40px;
   z-index: 1;
   font-size: medium;
+=======
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+>>>>>>> 87eb656a0a7fad2981cff844eb7dc652c67cdaad
 }
 
 .home_show_btn {
@@ -980,7 +1039,11 @@ footer #copyright {
   text-align: center;
 }
 
+<<<<<<< HEAD
 .category-item .home-text-container .home-text-container .home-title {
+=======
+.category-item .home-text-container .home-title {
+>>>>>>> 87eb656a0a7fad2981cff844eb7dc652c67cdaad
   margin-bottom: 15px;
   text-transform: uppercase;
 }
@@ -1013,6 +1076,7 @@ footer #copyright {
           justify-content: center;
 }
 
+<<<<<<< HEAD
 .category-item .home-img-contain img {
   height: 500px;
   width: 100%;
@@ -1025,6 +1089,9 @@ footer #copyright {
 }
 
 .category-item .home-img-contain::before {
+=======
+.home-img-contain::before {
+>>>>>>> 87eb656a0a7fad2981cff844eb7dc652c67cdaad
   content: "";
   display: block;
   width: 100%;
