@@ -25,9 +25,9 @@ export function ProductList () {
 
     productsList.forEach((product) => {
       let element = CreateProductView(product);
-      element.getElementsByClassName( "addToCart" )[0].addEventListener( "click", () => {
-        CartRepository.addProductToCart( product.id );
-      } );
+      // element.getElementsByClassName( "addToCart" )[0].addEventListener( "click", () => {
+      //   CartRepository.addProductToCart( product.id );
+      // } );
       productsWrap.appendChild(element);
     } );
   }
