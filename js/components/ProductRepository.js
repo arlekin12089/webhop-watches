@@ -23,7 +23,7 @@ export async function getAllCategories() {
   return categories;
 }
 
-//Get single products by Id
+//Get single product by Id
 export async function getProductById(productId) {
   let products = await getAllProducts();
   return products.find((product) => product.id === productId);

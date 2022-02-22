@@ -1,4 +1,5 @@
 import * as ProductRepository from "./ProductRepository.js";
+import * as CartRepository from "./CartRepository.js";
 import { CreateProductView } from "./CreateProductView.js";
 
 export function ProductList () {
@@ -6,41 +7,10 @@ export function ProductList () {
   const qsCategory = queryString.get("category");
   const categoryName = document.getElementById("category-name");
   const categoryMenuItem = document.getElementById("categoryMenuItem");
-  const heroWrapper = document.getElementById("hero-wrap");
-
-  function listProducts(listProducts) {
-    listProducts.forEach((item) => {
-      let elem = document.createElement("article");
-      elem.classList.add("product");
-      elem.innerHTML = `
-              <div class="product__photo">
-                <img
-                  src="sass/${item.image}"
-                  alt="${item.image}"
-                />
-                <div class="product__icon">
-                  <a href="product-view.html?productId=${item.id}" target="_blank" class="product__link">
-                    <i class="fa fa-search"></i>
-                  </a>
-                  <button class="addToCard product__link">
-                    <i class="fa fa-shopping-cart"></i>
-                  </button>
-                </div>
-              </div>
-              <footer class="product__description center">
-                <h4 class="name">${item.name}</h4>
-                <p class="price">${item.price}</p>
-              </footer>
-        `;
-      productsWrap.appendChild(elem);
-    });
-  }
-
-  const productsWrap = document.getElementById("products-list");
-
+  const heroWrapper = document.getElementById( "hero-wrap" );
+  const productsWrap = document.getElementById( "products-list" );
   const searchInput = document.getElementById("search-input");
   const inputForm = document.querySelector(".input-form");
-
 
   function changeTitle(title) {
     categoryName.innerHTML = title;
@@ -52,36 +22,28 @@ export function ProductList () {
     categoryMenuItem.innerHTML = category.name;
     heroWrapper.style.backgroundImage = "url(" + category.backgroundImage + ")";
 
-    listProducts(await ProductRepository.getProductsByCategory(qsCategory));
-
-
-    let productsList = await ProductRepository.getProductsByCategory(
-      qsCategory
-    );
+    let productsList = await ProductRepository.getProductsByCategory( qsCategory );
 
     productsList.forEach((product) => {
       let element = CreateProductView(product);
+      element.getElementsByClassName( "addToCart" )[0].addEventListener( "click", () => {
+        CartRepository.addProductToCart( product.id );
+      } );
       productsWrap.appendChild(element);
-    });
-
+    } );
   }
   getProducts();
 
   //Search inside category
-  inputForm.addEventListener(
-    "submit",
-    (e) => {
+  inputForm.addEventListener( "submit", e => {
       e.preventDefault();
     },
     false
   );
-  inputForm.addEventListener(
-    "keyup",
-    async (e) => {
+
+  inputForm.addEventListener( "keyup", async ( e ) => {
       e.preventDefault();
-      let searchResults = await ProductRepository.searchProducts(
-        searchInput.value
-      );
+    let searchResults = await ProductRepository.searchProducts( searchInput.value );
       if (searchResults.length === 0) {
         productsWrap.innerHTML = `<h3 class="filter-error">
        Sorry, no products matched your search! :( 
@@ -99,8 +61,6 @@ export function ProductList () {
   );
 }
 
-
 export default ProductList();
 
 ProductList();
-

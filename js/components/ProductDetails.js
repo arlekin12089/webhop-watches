@@ -26,6 +26,7 @@ specColor.innerHTML = `${product.color}`;
 productPrice.innerHTML = `${product.price}`;
 productImage.src = `${product.image}`;
 productMenuItem.innerHTML = `${product.name}`;
+
 //Featured
 let productsFeatured = await ProductRepository.getFeaturedProduct();
 productsFeatured.forEach((product) => {
