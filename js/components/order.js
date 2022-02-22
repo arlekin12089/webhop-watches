@@ -73,7 +73,7 @@ let fakeCart = [
   }
 ];
 
-const user = {
+let user = {
   name:"Axel Åhlin Andersson", 
   streetadress:"Skogsvägen 32", 
   zipCode:"19550",
@@ -82,20 +82,29 @@ const user = {
   phoneNumber: "072 233 53 43",
   password: "axel"
 };
-
+//All the elements 
 const username = document.getElementById("name-input");
 const streetadress = document.getElementById("adress-input");
 const zip = document.getElementById("zip-input");
 const userlocation = document.getElementById("ort-input");
 const email = document.getElementById("email-input");
 const phone = document.getElementById("phone-input");
+const form = document.querySelector(".order-form");
+const orderList = document.querySelector(".order-list");
+const order = document.querySelector(".order-wrapper");
+const orderinput = document.querySelector(".order-input");
+const ordervalue = document.querySelector(".order-price")
+const orderReceipt = document.querySelector(".order-receipt")
 
-localStorage.setItem("user", JSON.stringify(user))
+//for reading fake data
+localStorage.setItem("user", JSON.stringify(user));
+localStorage.setItem("cart", JSON.stringify(fakeCart));
 
-const data = JSON.parse(localStorage.getItem('user'));
-console.log(data);
+const userData = JSON.parse(localStorage.getItem("user"));
+const cartData = JSON.parse(localStorage.getItem("cart"));
 
-if (user){
+//If u are logged in the inputs are already done
+if (userData){
   username.value = user.name;
   streetadress.value = user.streetadress;
   zip.value = user.zipCode;
@@ -104,3 +113,86 @@ if (user){
   phone.value = user.phoneNumber;
 };
 
+
+function drawCart (){
+let totalprice = 0;
+  for (let i = 0; i < cartData.length; i++) {
+    let product = document.createElement("li");
+    product.innerHTML = 
+    `<div class="receipt-item">
+        <img src="${cartData[i].image}" alt="bild på produkt">
+     </div>
+    <div>
+      <p>${cartData[i].name}</p>
+      <p>${cartData[i].price}</p>
+    </div>
+    `
+    orderList.appendChild(product)
+
+    let prodPrice = cartData[i].price.split(' ')[0];
+    prodPrice = prodPrice.replace('.', '');
+    prodPrice = parseInt(prodPrice);
+    totalprice += prodPrice;
+  };
+  let orderprice = document.createElement("h3");
+  orderprice.classList.add("order-value");
+  orderprice.innerHTML = 
+  `Totalbelopp: ${totalprice} SEK`
+  ordervalue.appendChild(orderprice);
+}
+
+drawCart();
+
+form.addEventListener("submit", (e) => {
+e.preventDefault();
+
+order.classList.add("hidden");
+orderinput.classList.add("hidden");
+orderReceipt.classList.remove("hidden")
+
+orderReceipt.innerHTML = 
+`<div class="receipt-titel">
+<h3>Tack för din beställning</h3>
+</div>
+<div class="receipt-cart">
+<ul class="receipt-list">
+  
+</ul>
+</div>
+<div class="receipt-info">
+<h3>Paketet kommer att skickas till: </h3>
+<p>
+${username.value} <br>
+${streetadress.value} ${zip.value},${userlocation.value} <br>
+${email.value} <br>
+${phone.value}
+</p>
+</div>
+`;
+const receiptList = document.querySelector(".receipt-list");
+let totalprice = 0;
+for (let i = 0; i < cartData.length; i++) {
+  let product = document.createElement("li");
+  product.innerHTML = 
+  `<div class="receipt-item">
+      <img src="${cartData[i].image}" alt="bild på produkt">
+   </div>
+  <div>
+    <p>${cartData[i].name}</p>
+    <p>${cartData[i].price}</p>
+  </div>
+  `
+  receiptList.appendChild(product)
+
+  let prodPrice = cartData[i].price.split(' ')[0];
+  prodPrice = prodPrice.replace('.', '');
+  prodPrice = parseInt(prodPrice);
+  totalprice += prodPrice;
+};
+let lastprice = document.createElement("h3");
+lastprice.innerText = 
+`
+Totalbelopp: ${totalprice} SEK
+`;
+receiptList.appendChild(lastprice);
+});
