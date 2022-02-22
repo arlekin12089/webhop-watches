@@ -110,16 +110,42 @@
           </nav>
           <div class="actions">
             <div class="header__search">
-              <input type="text" class="input_field" />
-              <button type="button">
+              <button type="button" id="header-search">
                 <i class="fa fa-search"></i>
               </button>
+			  <div class="search-field">
+			  	<div class="search-field__wrap">
+				   <form method="get" autocomplete="off" id="search-form">
+						<div class="form-field">
+								<label for="search-header"></label>
+								<input type="text" id="search-header" name="search-header">
+						</div>
+				   </form>
+				   <button class="search-close">
+				   	<i class="fa fa-close"></i>
+				   </button>
+				</div>
+			  </div>
             </div>
             <div class="header__widgets">
               <div class="header__user">
-                <a href="">
+                <a href="#" class="user-icon-link">
                   <i class="fa fa-user"></i>
                 </a>
+				<div class="dropdown-users">
+				<ul>
+					<li><p class="userName"></p></li>
+					<li>
+						<a href="register.html" class="register-link">Register</a>
+					</li>
+					<li>
+						<a href="login.html" class="login-link">Log In</a>
+					</li>
+					<li>
+						<a href="#" class="logout-link">Log Out</a>
+					</li>				
+				</ul>													
+				</div>
               </div>
               <div class="header__card">
                 <a href="">
@@ -135,7 +161,7 @@
     <main class="main modified">
       <section class="menu-header">
         <div class="container">
-          <h4 class="menu-header__title">Home / Products</h4>
+          <h4 class="menu-header__title"> <a href="/" class="primary">Home</a> / <span id="productMenuItem"></span></h4>
         </div>
       </section>
       <div class="container">
@@ -234,6 +260,5 @@
     </footer>
     <script type="module" src="js/index.js"></script>
 	<script type="module" src="js/components/ProductDetails.js"></script>
-	
   </body>
 </html>

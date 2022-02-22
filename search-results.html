@@ -89,57 +89,51 @@
                 </div>
               </li>
               <li>
-                <a
-                  href="product-list.html?category=man"
-                  class="nav-link active primary"
-                  >Herr</a
-                >
+                <a href="" class="nav-link active primary">Herr</a>
               </li>
               <li>
-                <a
-                  href="product-list.html?category=woman"
-                  class="nav-link primary"
-                  >Dam</a
-                >
+                <a href="" class="nav-link primary">Dam</a>
               </li>
               <li>
-                <a
-                  href="product-list.html?category=child"
-                  class="nav-link primary"
-                  >Barn</a
-                >
+                <a href="" class="nav-link primary">Barn</a>
               </li>
               <li>
-                <a
-                  href="product-list.html?category=all"
-                  class="nav-link primary"
-                  >Alla</a
-                >
+                <a href="" class="nav-link primary">Alla</a>
               </li>
               <li>
-                <a href="login.html" class="nav-link primary">Log In</a>
+                <a href="" class="nav-link primary">Log In</a>
               </li>
               <li>
-                <a href="register.html" class="nav-link primary"
-                  >Register</a
-                >
+                <a href="" class="nav-link primary">Register</a>
               </li>
             </ul>
           </nav>
           <div class="actions">
             <div class="header__search">
-              <input type="text" class="input_field" />
-              <button type="button">
-                <i class="fa fa-search icon"></i>
+              <button type="button" id="header-search">
+                <i class="fa fa-search"></i>
               </button>
+			  <div class="search-field">
+			  	<div class="search-field__wrap">
+				   <form method="get" autocomplete="off" id="search-form">
+						<div class="form-field">
+								<label for="search-header"></label>
+								<input type="text" id="search-header" name="search-header">
+						</div>
+				   </form>
+				   <button class="search-close">
+				   	<i class="fa fa-close"></i>
+				   </button>
+				</div>
+			  </div>
             </div>
             <div class="header__widgets">
               <div class="header__user">
                 <a href="">
                   <i class="fa fa-user"></i>
                 </a>
-								<div class="dropdown-users">
-									<p class="userName"></p>
+				<div class="dropdown-users">
+					<p class="userName"></p>
 					<a href="register.html" class="register-link">Register</a>
 					<a href="login.html" class="login-link">Log In</a>
 					<a href="#" class="logout-link">Log Out</a>
@@ -156,102 +150,33 @@
         </div>
       </div>
     </header>
-    <main class="main">
+    <section class="search-hero" id="hero-wrap">
       <div class="container">
-        <h1>Skapa användare</h1>
-        <form style="margin-top: 100px" id="registration-form">
-          <div class="form-group">
-            <label for="username">Full Name</label>
-            <input
-              type="text"
-              id="username"
-              placeholder="Användarnamn"
-              name="name"
-              required
-              minlength="3"
-              maxlength="100"
-            />
-          </div>
-		    <div class="form-group">
-				<label for="email">Email Address</label>
-				<input
-				type="email"
-				id="email"
-				placeholder="email@address.com"
-          required
-				/>
-          </div>
-		<div class="form-group">
-		<label for="location">Ort</label>
-		  <input 
-      type="text" 
-      id="location" 
-      placeholder="Ort"
-      required
-       />
-   
-		</div>
-          <div class="form-group">
-		  <label for="zip-code">Postnummer</label>
-		   	<input 
-         type="text"
-          id="zip-code"
-           placeholder="Postnummer" 
-           pattern="[0-9]*"
-           required/>
-		  </div>
-          <div class="form-group"></div>
-          <div class="form-group">
-            <label for="password1">Password</label>
-            <input
-              type="password"
-              id="password1"
-              placeholder="Lösenord(Min. 8 characters)"
-              required
-       
-            />
-          </div>
-          <div class="form-group">
-            <label for="password2">Confirm Password</label>
-            <input
-              type="password"
-              id="password2"
-              placeholder="Confirm Password"
-              name="password"
-              required
-            />
-          </div>
-		  <div class="form-group">
-		  	<label for="street-adress">Gatuadress</label>
-		  	<input
-         type="text"
-          id="street-adress"
-           placeholder="Gatuadress"
-           required
-            />
-		  </div>
-		  <div class="form-group">
-		  	<label for="phone-number">Telefonnummer</label>
-		  	<input 
-        type="tel" 
-        id="phone-number" 
-        placeholder="Telefonnummer" 
-        name="phone"
-        required
-          />
-		  </div>
-
-          <button type="submit" class="btn">Registrera</button>
-        </form>
+        <div class="hero--modified__intro">
+		<p>Your search results:</p>
+          <h1 class=" text--white" id="search-words">Dog</h1>
+        </div>
+      </div>
+    </section>
+    <main class="main">
+	    <section class="menu-header">
+			<div class="container">
+			<h4 class="menu-header__title">
+				<a href="/" class="primary">Home</a>
+			</h4>
+			</div>
+      </section>
+      <div class="container">
+       <p class="result-count-container"><b class="amount-results"></b> found. </p>
+        <section class="products__wrap">
+          <div class="products-list" id="products-list"></div>
+        </section>
       </div>
     </main>
     <footer class="page_footer">
       <div id="footerWrapper">
         <a id="footerLogo" href="#"
-          ><img
-            src="sass/img/FEND_Time.svg"
-            alt="FEND Time
-						logo"
+          ><img src="sass/img/FEND_Time.svg" alt="FEND Time logo"
         /></a>
 
         <div class="iconContainer">
@@ -269,7 +194,6 @@
       <p class="copyright center text--white">© Stockholm, 2022</p>
     </footer>
     <script type="module" src="js/index.js"></script>
-	<script type="module" src="js/components/UserRepository.js"></script>
-	<script type="module" src="js/components/Register.js"></script>
+	<script type="module" src="js/components/SearchResults.js"></script>
   </body>
 </html>

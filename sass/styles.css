@@ -150,12 +150,18 @@ table {
   margin: 0;
 }
 
+html {
+  min-height: 100vh;
+}
+
 body {
   font-size: 16px;
   font-size: 1rem;
   font-family: "Roboto", Verdana, sans-serif;
   width: 100%;
   height: 100%;
+  position: relative;
+  min-height: 100vh;
 }
 
 body .fa {
@@ -198,6 +204,10 @@ img {
 
 .mb20 {
   margin-bottom: 20px;
+}
+
+.errors {
+  display: none;
 }
 
 .text--white {
@@ -552,57 +562,31 @@ h4 {
   left: 20px;
   top: 30px;
   padding: 0;
-  width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 20px;
 }
 
-.menu-toggle .menu-toggle {
-  background: none;
-  border: none;
-  width: 30px;
-  height: 23px;
-  cursor: pointer;
-  display: block;
-  outline: none;
-  position: absolute;
-  right: 30px;
-  top: 32px;
-  padding: 0;
-}
-
-.menu-toggle .menu-toggle.menu-open span {
+.menu-toggle.menu-open span {
   background: transparent;
 }
 
-.menu-toggle .menu-toggle.menu-open span:before {
+.menu-toggle.menu-open span:before {
   top: 0;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.menu-toggle .menu-toggle.menu-open span:after {
+.menu-toggle.menu-open span:after {
   bottom: 0;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
 @media only screen and (min-width: 768px) {
-  .menu-toggle .menu-toggle {
+  .menu-toggle {
     display: none;
   }
 }
 
-.menu-toggle .menu-toggle span {
+.menu-toggle span {
   position: absolute;
   right: 0;
   top: 7px;
@@ -613,7 +597,7 @@ h4 {
   transition: 0.3s all ease-out;
 }
 
-.menu-toggle .menu-toggle span:before {
+.menu-toggle span:before {
   content: "";
   top: -7px;
   height: 3px;
@@ -625,7 +609,7 @@ h4 {
   transition: 0.3s all ease-out;
 }
 
-.menu-toggle .menu-toggle span:after {
+.menu-toggle span:after {
   content: "";
   bottom: -7px;
   height: 3px;
@@ -643,6 +627,18 @@ h4 {
 
 .menu-header__title {
   padding: 0 20px;
+}
+
+.menu-header {
+  margin-top: 30px;
+}
+
+.menu-header__title {
+  padding: 0 20px;
+}
+
+.logout-link {
+  display: none;
 }
 
 .hero {
@@ -699,52 +695,15 @@ main.modified {
   padding-top: 74px;
 }
 
-.footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: grey;
-  width: 100%;
-  height: 10vh;
-}
-
-.footer-logo .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.footer .footer-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.footer .footer-text p {
-  color: white;
+.main {
+  padding-bottom: 100px;
 }
 
 .page_footer {
   width: 100%;
   padding: 30px 0 20px;
   background-color: #000000;
+  margin-top: auto;
 }
 
 .page_footer #footerWrapper {
@@ -796,8 +755,6 @@ main.modified {
 .page_footer .copyright {
   font-size: 10px;
   font-size: 0.625rem;
-  position: relative;
-  top: -30%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -809,112 +766,6 @@ main.modified {
     font-size: 35px;
     font-size: 2.1875rem;
   }
-}
-
-.home-img-holder {
-  background-image: url("img/watches/Breitling-klockor-herr.jpeg");
-  width: 100%;
-}
-
-.home-img-holder .home-h1,
-.home-img-holder .home-h3 {
-  margin-bottom: 30px;
-}
-
-.home-img-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.home_show_btn {
-  z-index: 1;
-}
-
-.category-item {
-  color: white;
-  max-width: 500px;
-  margin: 0;
-}
-
-.category-item .home-text-container {
-  position: relative;
-  top: -20rem;
-  padding: 0 2rem;
-  text-align: center;
-}
-
-.category-item .home-text-container .home-title {
-  font-size: 30px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-
-.category-item:hover img {
-  -webkit-filter: brightness(22%);
-          filter: brightness(22%);
-  cursor: pointer;
-}
-
-.home-img-contain {
-  max-width: 500px;
-}
-
-.home-img-contain img {
-  max-height: 500px;
-  max-width: 500px;
-  -webkit-filter: brightness(47%);
-          filter: brightness(47%);
-  background-color: rgba(0, 0, 0, 0.03);
-  padding: 20px;
-  position: relative;
-  border-radius: 5px;
-}
-
-.home-text-container:hover {
-  cursor: pointer;
-}
-
-#categoriesHome {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.home-h3-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.home-h3-container .home-h3 {
-  margin-top: 70px;
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.home-link {
-  margin-left: 10px;
-  text-decoration: underline;
-  color: #000000;
 }
 
 .login_wrapper {
@@ -1035,6 +886,135 @@ main.modified {
   .login_body .login_wrapper .login_form .login_linksContainer #login_registerAccount {
     margin-left: 7em;
   }
+}
+
+.home-img-holder {
+  background-image: url("img/watches/Breitling-klockor-herr.jpeg");
+}
+
+.home-img-holder .home-h1,
+.home-img-holder .home-h3 {
+  margin-bottom: 30px;
+}
+
+.home-img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home_show_btn {
+  z-index: 1;
+}
+
+.category-item {
+  width: 100%;
+  margin: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .category-item {
+    width: 47%;
+  }
+}
+
+.category-item .home-text-container {
+  position: relative;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.category-item .home-text-container .home-title {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.category-item .home-text-container .home-title + p {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 30px;
+}
+
+.home-img-contain {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-img-contain::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  border-radius: 5px;
+}
+
+.home-img-contain img:hover {
+  -webkit-filter: brightness(22%);
+          filter: brightness(22%);
+  cursor: pointer;
+}
+
+#categoriesHome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-h3-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-h3-container .home-h3 {
+  margin-top: 70px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.category-link {
+  color: #ffffff;
+}
+
+.category-link:hover {
+  color: #FCCB1E;
 }
 
 .hidden {
@@ -1406,6 +1386,12 @@ main.modified {
   position: relative;
 }
 
+.products-list.error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media only screen and (min-width: 992px) {
   .products-list {
     -ms-grid-columns: (1fr)[2];
@@ -1547,9 +1533,11 @@ main.modified {
 
 @media only screen and (min-width: 768px) {
   .filter {
-    width: 70%;
+    width: 100%;
     display: block;
-    min-width: 250px;
+    min-width: 300px;
+    max-width: 300px;
+    padding-right: 20px;
   }
 }
 
@@ -1568,6 +1556,23 @@ main.modified {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 80px;
+}
+
+.filter__search form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
 }
 
 .filter__list div {
@@ -1813,126 +1818,124 @@ main.modified {
   font-weight: 600;
 }
 
-main {
+.search-field {
+  pointer-events: all;
+  visibility: hidden;
+  opacity: 0;
+  height: 40rem;
+  top: 74px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  background: #e7e2e2;
+  margin: 0 -50vw;
+  z-index: 999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100vw;
+}
+
+.search-field.search-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.search-field__wrap {
+  padding: 10rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 15vh;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
-main h1 {
-  font-size: 24px;
+.search-field form {
+  width: 100%;
 }
 
-main form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.search-field .form-field {
+  position: relative;
+  text-align: left;
+  max-width: 96rem;
+  padding: 0 2rem;
 }
 
-main form .div-inputs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-main form .div-inputs div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0 50px;
-}
-
-main form .div-inputs div input {
-  margin-top: 30px;
-  border: 0;
-  outline: 0;
-  border-bottom: 1px solid black;
-  font-size: 18px;
-  padding: 3px 7px;
-  width: 375px;
-}
-
-main form .btn {
-  font-size: 18px;
-  font-size: 1.125rem;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 10px 40px;
-  border-radius: 30px;
-  font-family: "Roboto", Verdana, sans-serif;
-  text-transform: capitalize;
-  font-weight: 500;
-  letter-spacing: 0.1px;
+.search-field input {
+  font-size: 9rem;
+  width: 100%;
+  padding-bottom: 2rem;
+  background: none;
+  border: none;
+  border-bottom: 0.2rem solid #CECECE;
   color: #000000;
-  -ms-flex-item-align: center;
-      align-self: center;
-  width: 20%;
-  background-color: #FCCB1E;
-  cursor: pointer;
-  margin-top: 25px;
-  height: 45px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  display: block;
+  font-weight: 600;
+  margin: 0 auto;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  white-space: nowrap;
 }
 
-main form .user-agreement {
+.search-close {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #CECECE;
+  border-radius: 5px;
+  position: absolute;
+  right: 5rem;
+  top: 3rem;
+}
+
+.result-count-container {
+  display: none;
+  margin-top: 20px;
+  padding: 0 35px;
+}
+
+.result-count-container b {
+  font-weight: 600;
+}
+
+.search-hero {
+  min-height: 300px;
+  padding-top: 74px;
+  background: rgba(0, 0, 0, 0.6);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 45px 0 5px 0;
 }
 
-main form .user-agreement input {
-  margin-left: 14px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-@media screen and (max-width: 768px) {
-  main form .div-inputs {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  main form .btn {
-    width: 40%;
-  }
+.search-hero p {
+  font-size: 22px;
+  font-size: 1.375rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .cart-body {
