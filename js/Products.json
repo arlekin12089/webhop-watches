@@ -7,7 +7,7 @@
     "brand": "Hublot",
     "material": "gold",
     "color": "yellow",
-    "price": "20.000 SEK",
+    "price": "20000",
     "categoryId": "man",
     "featured": true
   },
@@ -19,7 +19,7 @@
     "brand": "Cartier",
     "material": "silver",
     "color": "brown",
-    "price": "120.000 SEK",
+    "price": "120000",
     "categoryId": "woman",
     "featured": true
   },
@@ -31,7 +31,7 @@
     "brand": "Chopard",
     "material": "bronze",
     "color": "yellow",
-    "price": "150.000 SEK",
+    "price": "150000",
     "categoryId": "child",
     "featured": false
   },
@@ -43,7 +43,7 @@
     "brand": "Rolex",
     "material": "silver",
     "color": "silver",
-    "price": "45.000 SEK",
+    "price": "45000",
     "categoryId": "man",
     "featured": true
   },
@@ -55,7 +55,7 @@
     "brand": "Rolex",
     "material": "gold",
     "color": "silver",
-    "price": "200.000 SEK",
+    "price": "20000",
     "categoryId": "child",
     "featured": true
   },
@@ -67,7 +67,7 @@
     "brand": "Diesel",
     "material": "gold",
     "color": "pink",
-    "price": "40.400 SEK",
+    "price": "40400",
     "categoryId": "woman",
     "featured": false
   }

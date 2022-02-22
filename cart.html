@@ -8,13 +8,19 @@
 	<title>Document</title>
 </head>
 <body>
-	<div id="cart">
+	<section class="cart-wrap">
+		<header>
+          <h3>Your Cart</h3>
+        </header>
+		<p class="cart-message">You cart is empty now!</p>
+		<div id="cart">
+		</div>
         <!-- footer -->
         <footer>
-          <h3 class="cart-total text-slanted">Total :  </h3>
+          <h3 class=" text-slanted">Total : <span class="cart-total"></span> </h3>
           <button class="cart-checkout btn">checkout</button>
         </footer>
-      </div>
+      </section>
 <script type="module" src="js/components/CartList.js"></script>
 </body>
 </html>

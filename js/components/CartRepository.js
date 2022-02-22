@@ -63,21 +63,38 @@ export function removeProductFromCart ( productId ) {
 	saveCart( cart );
 }
 
+
 /**
- * Set products amount, check if quantity equals to 0, then remove from the cart
- * otherwise set new quantity
- * @param {String} productId
- * @param {String} quantity
+ * Increase product amount by one
+ * @returns {Number} new updated quantity
+
  */
-export function setProductsAmount ( productId, quantity ) {
+export function increaseProductQuantity ( productId ) {
 	let cart = loadCart();
-	if ( quantity === 0 ) {
+	let updatedQuantity = cart[productId] + 1;
+	cart[productId] = updatedQuantity;
+	saveCart( cart );
+	return updatedQuantity;
+}
+
+/**
+ * Decrease  product amount by one
+ * @returns {Number} new updated quantity
+ */
+
+export function decreaseProductQuantity ( productId ) {
+	let cart = loadCart();
+	let updatedQuantity = cart[productId] - 1;
+	if ( updatedQuantity <= 0 ) {
 		delete cart[productId];
 	} else {
-		cart[productId] = quantity;
+		cart[productId] = updatedQuantity;
 	}
 	saveCart( cart );
+	return updatedQuantity;
 }
+
+
 /**
  * @returns returns the cart as the list of cart items 
  * where cart item is an object {"product": (), "quantity":1122}
@@ -96,5 +113,24 @@ export async function getCart () {
 	return cartItems;
 }
 
-window.setProductsAmount = setProductsAmount;
+/** 
+ * Calculate total price of cart items
+ * @returns {Number} price of all products in the cart
+ */
+export async function calculateTotalPrice () {
+	let cart = loadCart();
+	let products = await ProductRepository.getAllProducts();
+	let productsIds = Object.keys( cart );
+	let cartItems = productsIds.map( productId => {
+		let quantity = cart[productId];
+		let product = products.find( product => product.id === productId );
+		let productPrice = product.price;
+		let cartItemTotal = productPrice * quantity;
+		return cartItemTotal;
+	} )
+	let totalPrice = cartItems.reduce( ( a, b ) => a + b, 0 );
+	return totalPrice;
+}
+
+
 window.getCart = getCart;

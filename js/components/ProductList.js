@@ -25,10 +25,7 @@ export function ProductList () {
     let productsList = await ProductRepository.getProductsByCategory( qsCategory );
 
     productsList.forEach((product) => {
-      let element = CreateProductView(product);
-      element.getElementsByClassName( "addToCart" )[0].addEventListener( "click", () => {
-        CartRepository.addProductToCart( product.id );
-      } );
+      let element = CreateProductView( product );
       productsWrap.appendChild(element);
     } );
   }

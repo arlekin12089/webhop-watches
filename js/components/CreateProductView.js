@@ -1,3 +1,4 @@
+import * as CartRepository from "./CartRepository.js";
 //pass single product
 function CreateProductView(product) {
   let elem = document.createElement("article");
@@ -19,9 +20,13 @@ function CreateProductView(product) {
               </div>
               <footer class="product__description center">
                 <h4 class="name">${product.name}</h4>
-                <p class="price">${product.price}</p>
+                <p class="price">${product.price} SEK</p>
               </footer>
 `;
+	elem.getElementsByClassName( "addToCart" )[0].addEventListener( "click", () => {
+		CartRepository.addProductToCart( product.id );
+	} );
+
   return elem;
 }
 
