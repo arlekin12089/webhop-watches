@@ -70,11 +70,24 @@ let fakeCart = [
     "price": "40.400 SEK",
     "categoryId": "woman",
     "featured": false
-  }
+  },
+  {
+    "id": "17170937",
+    "name": "Big Bang One Click 33mm",
+    "desc": "Classic Fusion Svart/Gummi Ø42 mm",
+    "image": "sass/img/watches/17381957_1.jpeg",
+    "brand": "Hublot",
+    "material": "gold",
+    "color": "yellow",
+    "price": "20.000 SEK",
+    "categoryId": "man",
+    "featured": true,
+  },
 ];
 
 localStorage.setItem("cart", JSON.stringify(fakeCart));
 const cartData = JSON.parse(localStorage.getItem("cart"));
+
 
 const cartList = document.querySelector(".cart-list");
 const cartTotalPrice = document.querySelector(".cart-price");
@@ -94,15 +107,17 @@ function drawCart (){
        <button class="order-delete-btn">Ta bort</button> 
       </div>
       `; 
-      cartList.appendChild(product)
+      cartList.appendChild(product);
     };
 }
   drawCart();
 
   //all inputfields
   let ordercounter = document.querySelectorAll(".counter");
+  
 
-  //Adds eventlistener 
+
+  //Adds eventlistener on inputfields 
   ordercounter.forEach(event => {
     event.addEventListener("input",() => {
     let data = event.getAttribute("data-id")
@@ -111,14 +126,15 @@ function drawCart (){
 
     const rightinput = currentCart.find(event => {
       return event.id == data;
-    })
+    }) 
+
     console.log(rightinput)
     }
   );
 })
   
-
-function checkPrice (){
+//sets the total price of the cart when the user gets on the page
+function Price (){
   let totalprice = 0;
   
   for(let i = 0; i < cartData.length; i++){
@@ -135,4 +151,4 @@ function checkPrice (){
   cartTotalPrice.appendChild(orderprice);
   }
 
-  checkPrice();
+  Price();
