@@ -82,13 +82,19 @@ export function setProductsAmount ( productId, quantity ) {
  * @returns returns the cart as the list of cart items 
  * where cart item is an object {"product": (), "quantity":1122}
  */
-export function getCart () {
+export async function getCart () {
 	let cart = loadCart();
 	let products = await ProductRepository.getAllProducts();
 	let productIds = Object.keys( cart );
-	productIds.map( productId => {
+	let cartItems = productIds.map( productId => {
+		let quantity = cart[productId];
+		let product = products.find( product => product.id === productId );
+		let productObj = { product, quantity };
+		return productObj;
+	} );
 
-	} )
+	return cartItems;
 }
 
 window.setProductsAmount = setProductsAmount;
+window.getCart = getCart;

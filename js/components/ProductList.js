@@ -63,4 +63,3 @@ export function ProductList () {
 
 export default ProductList();
 
-ProductList();
