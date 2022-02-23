@@ -23,7 +23,6 @@ let fakeCart = {
   "WSRN0022":6
 };
 
-console.log(fakeCart);
 
 localStorage.setItem("cart", JSON.stringify(fakeCart));
 const cartData = JSON.parse(localStorage.getItem("cart"));
@@ -43,7 +42,7 @@ function drawCart (){
       <div class="item-info">
         <p>${cartProductList[i].name}</p>
         <p>${cartProductList[i].price}</p>
-        <input class="counter" data-id="${cartProductList[i].id}" type="number" id="itemcounter" min="1" max="5" value="1">
+        <input class="counter" data-id="${cartProductList[i].id}" type="number" id="itemcounter" min="1" max="5" value="${cartProductList[i].amount}">
        <button class="order-delete-btn">Ta bort</button> 
       </div>
       `; 
@@ -67,12 +66,14 @@ function changeAmountEvents() {
       }) 
       console.log(data);
       console.log(event.value)
-        //se till så att antalet fråm storage i antalrutan, när använmdaren kommer in & räkna ut totalsumman. 
-      setProductsAmount(event.value, data); //kolla med jonas om jag är på rätt väg
-      }
+
+      // Räkna ut totalsumman. 
+      setProductsAmount(data,event.value);
+      Price();
+    }
     );
   })
-}
+};
 
 async function getProductData() {
   const productData = await ProductRepository.getAllProducts();
@@ -87,26 +88,32 @@ async function getProductData() {
 
   drawCart();
   changeAmountEvents();
-}
+  Price();
+};
 
 getProductData();
 
 //sets the total price of the cart when the user gets on the page
 function Price (){
   let totalprice = 0;
-  
-  for(let i = 0; i < cartData.length; i++){
-    let prodPrice = cartData[i].price.split(' ')[0];
+  //const cartData = JSON.parse(localStorage.getItem("cart"));
+  let ordercounter = document.querySelectorAll(".counter");
+
+  for(let i = 0; i < cartProductList.length; i++){
+    let prodPrice = cartProductList[i].price.split(' ')[0];
     prodPrice = prodPrice.replace('.', '');
     prodPrice = parseInt(prodPrice);
     totalprice += prodPrice*ordercounter[i].value;
   };
-  
+
+ let lastTitel = cartTotalPrice.children.length;
+
+ if(lastTitel !== 0){
+  cartTotalPrice.removeChild(cartTotalPrice.firstElementChild);
+  } 
   let orderprice = document.createElement("h3");
   orderprice.classList.add("cart-value");
   orderprice.innerHTML = 
   `Totalbelopp: ${totalprice} SEK`
   cartTotalPrice.appendChild(orderprice);
-  }
-
-  Price();
+}
