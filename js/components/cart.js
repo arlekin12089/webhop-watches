@@ -1,7 +1,7 @@
 import * as ProductRepository from "./ProductRepository.js";
 
 function loadCart () {
-	return JSON.parse( localStorage.getItem( "cart" ) );
+	return JSON.parse( localStorage.getItem("cart") );
 }
 
 function saveCart ( cart ) {
@@ -18,7 +18,12 @@ function setProductsAmount ( productId, quantity ) {
 	saveCart( cart );
 }
 
-let fakeCart = {"17170937":9,"WSRN0022":6};
+let fakeCart = {
+  "17170937":9,
+  "WSRN0022":6
+};
+
+console.log(fakeCart);
 
 localStorage.setItem("cart", JSON.stringify(fakeCart));
 const cartData = JSON.parse(localStorage.getItem("cart"));
@@ -47,23 +52,23 @@ function drawCart (){
 }
 
 function changeAmountEvents() {
-
-    //all inputfields
+    //Gets all inputfields
     let ordercounter = document.querySelectorAll(".counter");
   
     //Adds eventlistener on inputfields 
     ordercounter.forEach(event => {
       event.addEventListener("input",() => {
+      //gets the dataatribut from the item
       let data = event.getAttribute("data-id")
   
       const rightinput = cartProductList.find(event => {
         return event.id == data;
+      
       }) 
-
       console.log(data);
       console.log(event.value)
-  
-      // setProductsAmount();
+        //se till så att antalet fråm storage i antalrutan, när använmdaren kommer in & räkna ut totalsumman. 
+      setProductsAmount(event.value, data); //kolla med jonas om jag är på rätt väg
       }
     );
   })
