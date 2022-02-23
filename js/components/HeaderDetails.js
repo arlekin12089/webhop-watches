@@ -11,7 +11,31 @@ function SearchInput() {
     false
   );
 }
-function SetupUserName() {}
+function SetupUserName () {
+	const userWrap = document.querySelector( ".dropdown-users" );
+	const userNameElement = document.querySelector( ".userName" );
+	const registerLink = document.querySelector( ".register-link" );
+	const loginLink = document.querySelector( ".login-link" );
+	const logoutLink = document.querySelector( ".logout-link" );
+	let userName = UserRepository.getLoggedInUserName();
+	if ( userName ) {
+		userNameElement.innerHTML = UserRepository.getLoggedInUserName();
+		registerLink.style.display = "none";
+		loginLink.style.display = "none";
+		logoutLink.style.display = "block";
+	} else {
+		userNameElement.innerHTML = "";
+		registerLink.style.display = "block";
+		loginLink.style.display = "block";
+		logoutLink.style.display = "none";
+	}
+
+	logoutLink.addEventListener( "click", () => {
+		UserRepository.logOut();
+		window.location.href = "index.html";
+	} );
+}
+
 
 function Header() {
   SearchInput();
