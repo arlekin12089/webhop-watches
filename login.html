@@ -37,7 +37,7 @@
     <title>Logga in</title>
   </head>
   <body class="login_body">
-  <header class="header--transparent header--modified header">
+    <header class="header--transparent header--modified header">
       <div class="container">
         <div class="header__inner">
           <div class="header__logo">
@@ -79,7 +79,7 @@
                 >
               </li>
             </ul>
-             <ul class="main-menu--mobile">
+            <ul class="main-menu--mobile">
               <li>
                 <div class="header__search--mobile">
                   <input type="text" class="input_field" />
@@ -89,16 +89,32 @@
                 </div>
               </li>
               <li>
-                <a href="product-list.html?category=man" class="nav-link active primary">Herr</a>
+                <a
+                  href="product-list.html?category=man"
+                  class="nav-link active primary"
+                  >Herr</a
+                >
               </li>
               <li>
-                <a href="product-list.html?category=woman" class="nav-link primary">Dam</a>
+                <a
+                  href="product-list.html?category=woman"
+                  class="nav-link primary"
+                  >Dam</a
+                >
               </li>
               <li>
-                <a href="product-list.html?category=child" class="nav-link primary">Barn</a>
+                <a
+                  href="product-list.html?category=child"
+                  class="nav-link primary"
+                  >Barn</a
+                >
               </li>
               <li>
-                <a href="product-list.html?category=all" class="nav-link primary">Alla</a>
+                <a
+                  href="product-list.html?category=all"
+                  class="nav-link primary"
+                  >Alla</a
+                >
               </li>
               <li>
                 <a href="login.html" class="nav-link primary">Log In</a>
@@ -115,16 +131,20 @@
               </button>
               <div class="search-field">
                 <div class="search-field__wrap">
-                <form method="get" autocomplete="off" id="search-form">
-                  <div class="form-field">
+                  <form method="get" autocomplete="off" id="search-form">
+                    <div class="form-field">
                       <label for="search-header"></label>
-                      <input type="text" id="search-header" name="search-header">
-                  </div>
-                </form>
-                <button class="search-close">
-                  <i class="fa fa-close"></i>
-                </button>
-              </div>
+                      <input
+                        type="text"
+                        id="search-header"
+                        name="search-header"
+                      />
+                    </div>
+                  </form>
+                  <button class="search-close">
+                    <i class="fa fa-close"></i>
+                  </button>
+                </div>
               </div>
             </div>
             <div class="header__widgets">
@@ -132,12 +152,12 @@
                 <a href="">
                   <i class="fa fa-user"></i>
                 </a>
-                				<div class="dropdown-users">
-									<p class="userName"></p>
-					<a href="register.html" class="register-link">Register</a>
-					<a href="login.html" class="login-link">Log In</a>
-					<a href="#" class="logout-link">Log Out</a>
-				</div>
+                <div class="dropdown-users">
+                  <p class="userName"></p>
+                  <a href="register.html" class="register-link">Register</a>
+                  <a href="login.html" class="login-link">Log In</a>
+                  <a href="#" class="logout-link">Log Out</a>
+                </div>
               </div>
               <div class="header__card">
                 <a href="">
@@ -177,11 +197,7 @@
             <a href="#" id="login_forgotPassword">Glömt Lösenord</a>
             <a href="register.html" id="login_registerAccount">Skapa Konto</a>
           </div>
-          <input
-            type="submit"
-            value="Logga in"
-            class="btn btn--yellow"
-          />
+          <input type="submit" value="Logga in" class="btn btn--yellow" />
         </form>
       </section>
     </main>
@@ -205,8 +221,8 @@
       </div>
       <p class="copyright center text--white">© Stockholm, 2022</p>
     </footer>
-   <script type="module" src="js/components/UserRepository.js"></script>
+    <script type="module" src="js/components/UserRepository.js"></script>
     <script type="module" src="js/components/Login.js"></script>
-
+    <script type="module" src="js/index.js"></script>
   </body>
 </html>
