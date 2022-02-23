@@ -16,7 +16,7 @@
 .category-item {
   width: 100%;
   margin: 10px;
-@include breakpoint(small-max) {
+  @include breakpoint(small-max) {
     width: 47%;
   }
 
@@ -29,10 +29,10 @@
       margin-bottom: 15px;
       text-transform: uppercase;
 
-    + p{
-    @include font-size(18);
-    line-height: 30px;
-    }
+      + p {
+        @include font-size(18);
+        line-height: 30px;
+      }
     }
   }
 }
@@ -73,15 +73,16 @@
 
   .home-h3 {
     margin-top: 70px;
-    font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15%;
+    font-size: 30px;
+    margin-bottom: 50px;
   }
 }
 
 .category-link {
-color: $white;
+  color: $white;
 
-&:hover{
-color: $yellow;
-}
+  &:hover {
+    color: $yellow;
+  }
 }
