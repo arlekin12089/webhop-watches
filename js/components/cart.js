@@ -48,7 +48,24 @@ function drawCart (){
       `; 
       cartList.appendChild(product);
     };
-}
+
+    //Delete buttonn
+    let dbtn = document.querySelectorAll(".order-delete-btn");
+    console.log(dbtn);
+
+    dbtn.forEach (btn => {
+      console.log(btn.index)
+      btn.addEventListener("click",() => {
+        let parent = btn.parentElement;
+        let div = parent.parentElement
+        div.remove();
+
+      
+      });
+    });
+};
+
+
 
 function changeAmountEvents() {
     //Gets all inputfields
@@ -83,7 +100,7 @@ async function getProductData() {
     return {
       ...foundProduct,
       amount: cartData[key]
-    }
+    };
   });
 
   drawCart();
@@ -92,6 +109,8 @@ async function getProductData() {
 };
 
 getProductData();
+
+
 
 //sets the total price of the cart when the user gets on the page
 function Price (){
@@ -117,3 +136,4 @@ function Price (){
   `Totalbelopp: ${totalprice} SEK`
   cartTotalPrice.appendChild(orderprice);
 }
+

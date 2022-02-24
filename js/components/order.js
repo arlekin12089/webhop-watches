@@ -5,15 +5,16 @@ let fakeCart = {
   "WSRN0022":6
 };
 
-let user = {
-  name:"Axel Åhlin Andersson", 
-  streetadress:"Skogsvägen 32", 
-  zipCode:"19550",
-  location: "Märsta",
-  email: "axelaahlin@gmail.com",
-  phoneNumber: "072 233 53 43",
-  password: "axel"
-};
+// Uses this instead of local storage user
+// let user = {
+//   name:"Axel Åhlin Andersson", 
+//   streetadress:"Skogsvägen 32", 
+//   zipCode:"19550",
+//   location: "Märsta",
+//   email: "axelaahlin@gmail.com",
+//   phoneNumber: "072 233 53 43",
+//   password: "axel"
+// };
 
 let cartProductList = [];
 
@@ -33,7 +34,6 @@ function drawOrder (){
       </div>
       `;
 
-      console.log(cartProductList[0].amount)
       orderList.appendChild(product);
   
       let prodPrice = cartProductList[i].price.split(' ')[0];
@@ -106,20 +106,20 @@ const ordervalue = document.querySelector(".order-price")
 const orderReceipt = document.querySelector(".order-receipt")
 
 //for reading fake data
-localStorage.setItem("user", JSON.stringify(user));
+localStorage.setItem("user", JSON.stringify("user"));
 // localStorage.setItem("cart", JSON.stringify(fakeCart));
 
 const userData = JSON.parse(localStorage.getItem("user"));
 const cartData = JSON.parse(localStorage.getItem("cart"));
 
-//If u are logged in the inputs are already done
+//If u are logged in the inputs are already done (user with fake user)
 if (userData){
-  username.value = user.name;
-  streetadress.value = user.streetadress;
-  zip.value = user.zipCode;
-  userlocation.value = user.location;
-  email.value = user.email;
-  phone.value = user.phoneNumber;
+  username.value = userData.name;
+  streetadress.value = userData.streetadress;
+  zip.value = userData.zipCode;
+  userlocation.value = userData.location;
+  email.value = userData.email;
+  phone.value = userData.phoneNumber;
 };
 
 form.addEventListener("submit", (e) => {
@@ -149,24 +149,26 @@ ${phone.value}
 </div>
 `;
 const receiptList = document.querySelector(".receipt-list");
+
 let totalprice = 0;
-for (let i = 0; i < cartData.length; i++) {
+for (let i = 0; i < cartProductList.length; i++) {
   let product = document.createElement("li");
   product.innerHTML = 
   `<div class="receipt-item">
-      <img src="${cartData[i].image}" alt="bild på produkt">
+      <img src="${cartProductList[i].image}" alt="bild på produkt">
    </div>
   <div>
-    <p>${cartData[i].name}</p>
-    <p>${cartData[i].price}</p>
+    <p>${cartProductList[i].name}</p>
+    <p>${cartProductList[i].price}</p>
+    <p>${cartProductList[i].amount} st</p>
   </div>
   `
   receiptList.appendChild(product)
 
-  let prodPrice = cartData[i].price.split(' ')[0];
+  let prodPrice = cartProductList[i].price.split(' ')[0];
   prodPrice = prodPrice.replace('.', '');
   prodPrice = parseInt(prodPrice);
-  totalprice += prodPrice;
+  totalprice += prodPrice*cartProductList[i].amount;
 };
 let lastprice = document.createElement("h3");
 lastprice.innerText = 
