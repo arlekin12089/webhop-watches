@@ -2,10 +2,9 @@ import * as ProductRepository from "./ProductRepository.js";
 import { CreateProductView } from "./CreateProductView.js";
 
 const homeCategories = document.getElementById("categoriesHome");
-let featuredWrap = document.querySelector(".featured-products");
+const featuredWrap = document.querySelector(".featured-products");
 const shopBtn = document.querySelector(".home-btn");
 const catString = new URLSearchParams(location.search).get("category");
-const queryString = new URLSearchParams(location.search);
 
 function listCategoriesHome(list) {
   list.forEach((item) => {

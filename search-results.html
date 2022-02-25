@@ -113,34 +113,38 @@
               <button type="button" id="header-search">
                 <i class="fa fa-search"></i>
               </button>
-			  <div class="search-field">
-			  	<div class="search-field__wrap">
-				   <form method="get" autocomplete="off" id="search-form">
-						<div class="form-field">
-								<label for="search-header"></label>
-								<input type="text" id="search-header" name="search-header">
-						</div>
-				   </form>
-				   <button class="search-close">
-				   	<i class="fa fa-close"></i>
-				   </button>
-				</div>
-			  </div>
+              <div class="search-field">
+                <div class="search-field__wrap">
+                  <form method="get" autocomplete="off" id="search-form">
+                    <div class="form-field">
+                      <label for="search-header"></label>
+                      <input
+                        type="text"
+                        id="search-header"
+                        name="search-header"
+                      />
+                    </div>
+                  </form>
+                  <button class="search-close">
+                    <i class="fa fa-close"></i>
+                  </button>
+                </div>
+              </div>
             </div>
             <div class="header__widgets">
               <div class="header__user">
                 <a href="">
                   <i class="fa fa-user"></i>
                 </a>
-						<div class="dropdown-users">
-									<p class="userName"></p>
-					<a href="register.html" class="register-link">Register</a>
-					<a href="login.html" class="login-link">Log In</a>
-					<a href="#" class="logout-link">Log Out</a>
-				</div>
+                <div class="dropdown-users">
+                  <p class="userName"></p>
+                  <a href="register.html" class="register-link">Register</a>
+                  <a href="login.html" class="login-link">Log In</a>
+                  <a href="#" class="logout-link">Log Out</a>
+                </div>
               </div>
               <div class="header__card">
-                <a href="">
+                <a href="cart.html">
                   <i class="fa fa-shopping-cart"></i>
                   <span>1</span>
                 </a>
@@ -153,21 +157,23 @@
     <section class="search-hero" id="hero-wrap">
       <div class="container">
         <div class="hero--modified__intro">
-		<p>Your search results:</p>
-          <h1 class=" text--white" id="search-words">Dog</h1>
+          <p>Your search results:</p>
+          <h1 class="text--white" id="search-words">Dog</h1>
         </div>
       </div>
     </section>
     <main class="main">
-	    <section class="menu-header">
-			<div class="container">
-			<h4 class="menu-header__title">
-				<a href="/" class="primary">Home</a>
-			</h4>
-			</div>
+      <section class="menu-header">
+        <div class="container">
+          <h4 class="menu-header__title">
+            <a href="/" class="primary">Home</a>
+          </h4>
+        </div>
       </section>
       <div class="container">
-       <p class="result-count-container"><b class="amount-results"></b> found. </p>
+        <p class="result-count-container">
+          <b class="amount-results"></b> found.
+        </p>
         <section class="products__wrap">
           <div class="products-list" id="products-list"></div>
         </section>
@@ -194,6 +200,6 @@
       <p class="copyright center text--white">© Stockholm, 2022</p>
     </footer>
     <script type="module" src="js/index.js"></script>
-	<script type="module" src="js/components/SearchResults.js"></script>
+    <script type="module" src="js/components/SearchResults.js"></script>
   </body>
 </html>
