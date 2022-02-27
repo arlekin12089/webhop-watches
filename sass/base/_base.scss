@@ -20,6 +20,10 @@ body {
     &:hover {
     	color: $yellow;
     }
+
+	&-search{
+	@include font-size(23);
+	}
   }
 }
 
@@ -54,4 +58,7 @@ img {
 
 .errors{
 display: none;
+}
+.mb10{
+margin-bottom: 5px;
 }

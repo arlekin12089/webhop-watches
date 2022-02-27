@@ -37,7 +37,7 @@
   </head>
 
   <body>
-    <header class="header--transparent header--modified header">
+      <header class="header--transparent header--modified header">
       <div class="container">
         <div class="header__inner">
           <div class="header__logo">
@@ -51,106 +51,76 @@
           <nav class="header__nav" id="nav">
             <ul class="main-menu">
               <li>
-                <a
-                  href="product-list.html?category=man"
-                  class="nav-link active primary"
-                  >Herr</a
-                >
+                <a href="product-list.html?category=man" class="nav-link active primary">Herr</a>
               </li>
               <li>
-                <a
-                  href="product-list.html?category=woman"
-                  class="nav-link primary"
-                  >Dam</a
-                >
+                <a href="product-list.html?category=woman" class="nav-link primary">Dam</a>
               </li>
               <li>
-                <a
-                  href="product-list.html?category=child"
-                  class="nav-link primary"
-                  >Barn</a
-                >
+                <a href="product-list.html?category=child" class="nav-link primary">Barn</a>
               </li>
               <li>
-                <a
-                  href="product-list.html?category=all"
-                  class="nav-link primary"
-                  >Alla</a
-                >
+                <a href="product-list.html?category=all" class="nav-link primary">Alla</a>
               </li>
             </ul>
             <ul class="main-menu--mobile">
+			<p class="userName"></p>
               <li>
-                <div class="header__search--mobile">
-                  <input type="text" class="input_field" />
-                  <button type="button">
-                    <i class="fa fa-search"></i>
-                  </button>
-                </div>
+                <a href="product-list.html?category=man" class="nav-link active primary">Herr</a>
               </li>
               <li>
-                <a
-                  href="product-list.html?category=man"
-                  class="nav-link active primary"
-                  >Herr</a
-                >
+                <a href="product-list.html?category=woman" class="nav-link primary">Dam</a>
               </li>
               <li>
-                <a
-                  href="product-list.html?category=woman"
-                  class="nav-link primary"
-                  >Dam</a
-                >
+                <a href="product-list.html?category=child" class="nav-link primary">Barn</a>
               </li>
               <li>
-                <a
-                  href="product-list.html?category=child"
-                  class="nav-link primary"
-                  >Barn</a
-                >
+                <a href="product-list.html?category=all" class="nav-link primary">Alla</a>
               </li>
               <li>
-                <a
-                  href="product-list.html?category=all"
-                  class="nav-link primary"
-                  >Alla</a
-                >
+                <a href="login.html" class="nav-link primary login-link">Log In</a>
+              </li>
+				<li>
+                <a href="login.html" class="nav-link primary logout-link">Log Out</a>
               </li>
               <li>
-                <a href="login.html" class="nav-link primary">Log In</a>
-              </li>
-              <li>
-                <a href="register.html" class="nav-link primary"
-                  >Register</a
-                >
+                <a href="register.html" class="nav-link primary register-link">Register</a>
               </li>
             </ul>
           </nav>
           <div class="actions">
             <div class="header__search">
-              <input type="text" class="input_field" />
-              <button type="button">
-                <i class="fa fa-search icon"></i>
+              <button type="button" id="header-search">
+                <i class="fa fa-search"></i>
               </button>
+              <div class="search-field">
+                <div class="search-field__wrap">
+                  <form method="get" autocomplete="off" id="search-form">
+                    <div class="form-field">
+                      <label for="search-header"></label>
+                      <input type="text" id="search-header" name="search-header" />
+                    </div>
+                  </form>
+                  <button class="search-close">
+                    <i class="fa fa-close"></i>
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="header__widgets">
-              <div class="header__user">
-                <a href="">
-                  <i class="fa fa-user"></i>
-                </a>
-					<div class="dropdown-users">
-									<p class="userName"></p>
-					<a href="register.html" class="register-link">Register</a>
-					<a href="login.html" class="login-link">Log In</a>
-					<a href="#" class="logout-link">Log Out</a>
-				</div>
+            <div class="header__dropdown">
+              <button class="dropbtn"><i class="fa fa-user iconMenu"></i></button>
+              <div class="dropdown-content">
+                <p class="userName"></p>
+                <a href="register.html" class="register-link">Register</a>
+                <a href="login.html" class="login-link">Log In</a>
+                <a href="#" class="logout-link">Log Out</a>
               </div>
-              <div class="header__card">
-                <a href="">
-                  <i class="fa fa-shopping-cart"></i>
-                  <span>1</span>
-                </a>
-              </div>
+            </div>
+            <div class="header__card">
+              <a href="cart.html">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="cart-num">0</span>
+              </a>
             </div>
           </div>
         </div>

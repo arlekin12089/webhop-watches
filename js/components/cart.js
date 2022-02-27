@@ -34,16 +34,22 @@ const cartTotalPrice = document.querySelector(".cart-price");
 //draws the items
 function drawCart (){
     for (let i = 0; i < cartProductList.length; i++) {
-      let product = document.createElement("li");
+      let product = document.createElement( "article" );
+      product.classList.add( "cart-item" );
       product.innerHTML = 
-      `<div class="cart-item">
+      `<div class="cart-photo">
           <img src="${cartProductList[i].image}" alt="bild på produkt">
        </div>
       <div class="item-info">
-        <p>${cartProductList[i].name}</p>
-        <p>${cartProductList[i].price}</p>
-        <input class="counter" data-id="${cartProductList[i].id}" type="number" id="itemcounter" min="1" max="5" value="${cartProductList[i].amount}">
-       <button class="order-delete-btn">Ta bort</button> 
+        <h4>${cartProductList[i].name}</h4>
+        <p class="cart-item-price">${cartProductList[i].price}</p>
+        <div class="item-amount mobile-view">
+          <input class="counter" data-id="${cartProductList[i].id}" type="number" id="itemcounter" min="1" max="5" value="${cartProductList[i].amount}">
+        </div>
+       <button class="btn btn--yellow order-delete-btn">Ta bort</button>
+      </div>
+      <div class="item-amount desktop-view">
+          <input class="counter" data-id="${cartProductList[i].id}" type="number" id="itemcounter" min="1" max="5" value="${cartProductList[i].amount}">
       </div>
       `; 
       cartList.appendChild(product);
@@ -114,6 +120,6 @@ function Price (){
   let orderprice = document.createElement("h3");
   orderprice.classList.add("cart-value");
   orderprice.innerHTML = 
-  `Totalbelopp: ${totalprice} SEK`
+    `Totalbelopp: <span>${totalprice} SEK</span>`
   cartTotalPrice.appendChild(orderprice);
 }

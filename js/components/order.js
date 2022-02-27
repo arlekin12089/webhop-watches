@@ -27,7 +27,7 @@ function drawOrder (){
           <img src="${cartProductList[i].image}" alt="bild på produkt">
        </div>
       <div>
-        <p>${cartProductList[i].name}</p>
+        <h4 class="name">${cartProductList[i].name}</h4>
         <p>${cartProductList[i].price}</p>
         <p>${cartProductList[i].amount}st</p>
       </div>
@@ -135,16 +135,15 @@ orderReceipt.innerHTML =
 </div>
 <div class="receipt-cart">
 <ul class="receipt-list">
-  
 </ul>
 </div>
 <div class="receipt-info">
-<h3>Paketet kommer att skickas till: </h3>
+<p class="mb10">Paketet kommer att skickas till: </p>
 <p>
-${username.value} <br>
-${streetadress.value} ${zip.value},${userlocation.value} <br>
-${email.value} <br>
-${phone.value}
+<span>${username.value} </span>
+<span>${streetadress.value} ${zip.value},${userlocation.value} </span>
+<span>${email.value} </span>
+<span>${phone.value}</span>
 </p>
 </div>
 `;
@@ -168,10 +167,8 @@ for (let i = 0; i < cartData.length; i++) {
   prodPrice = parseInt(prodPrice);
   totalprice += prodPrice;
 };
-let lastprice = document.createElement("h3");
+  let lastprice = document.createElement( "h4" );
 lastprice.innerText = 
-`
-Totalbelopp: ${totalprice} SEK
-`;
+  `Totalbelopp: ${totalprice} SEK`;
 receiptList.appendChild(lastprice);
 });

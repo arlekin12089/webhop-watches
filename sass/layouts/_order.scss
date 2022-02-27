@@ -1,119 +1,112 @@
-.hidden{
+.hidden {
   display: none !important;
 }
 
-.b-body{
+.b-body {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: auto;
   width: 100%;
 
-  .b-main{
+  .b-main {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: auto;
     width: 100%;
 
-    .order-wrapper{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      align-items: center;
-    }
-
-    h1{
+    h1 {
       margin-top: 20px;
       font-size: 50px;
     }
-    
-    .order-view{
+
+    .order-view {
       display: flex;
       justify-content: center;
       align-items: center;
-    
+
       flex-direction: column;
       width: 75%;
       height: auto;
       margin-top: 10px;
       border-top: solid black 1px;
       border-bottom: solid black 1px;
-  
-      .order-items{
+
+      .order-items {
         display: flex;
         flex-direction: column;
         margin-bottom: auto;
         width: 100%;
-  
-        .order-list{
+
+        .order-list {
           width: 100%;
           display: flex;
           flex-direction: column;
 
-          li{
+          li {
             display: flex;
             justify-content: flex-start;
             align-items: center;
             margin: 20px 0px;
-  
-            img{
+
+            img {
               height: 60px;
               width: 60px;
             }
 
-            p{
+            p {
               margin-right: 40px;
             }
 
-            .delete-btn{
+            .delete-btn {
               background-color: grey;
               padding: 3px;
             }
           }
         }
       }
-      .order-price{
+      .order-price {
         display: flex;
         justify-content: center;
-  
-        h3{
+
+        h3 {
           margin-top: 20px;
         }
       }
     }
-    .order-input{
+    .order-input {
       width: 60%;
       margin-top: 50px;
       display: flex;
       align-items: center;
       flex-direction: column;
 
-      h3{
-      font-size: 20px;
+      h3 {
+        font-size: 20px;
       }
-  
-      input{
+
+      input {
         margin: 20px 0px;
         border-bottom: 20px;
         width: 100%;
         border: none;
         border-bottom: solid black 1px;
       }
-     
-      textarea{
+
+      textarea {
         margin-bottom: 20px;
       }
 
-      .order-form{
-        .order-btn{
+      .order-form {
+        .order-btn {
           width: 75%;
         }
       }
     }
   }
-  
-  .order-receipt{
+
+  .order-receipt {
     margin: 20px 0px 100px 0px;
     border: solid black 1px;
     width: 80%;
@@ -123,9 +116,7 @@
     align-items: center;
     padding: 50px 20px;
 
-  
-  
-    .receipt-titel{
+    .receipt-titel {
       width: 100%;
       height: auto;
       display: flex;
@@ -133,113 +124,190 @@
       justify-content: center;
       margin: 20px 0px 20px 0px;
     }
-  
-    .receipt-cart{
-      width: 80%; 
-      height: auto;  
+
+    .receipt-cart {
+      width: 80%;
+      height: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
       border-bottom: solid black 1px;
       border-top: solid black 1px;
-  
-      .receipt-list{
+
+      .receipt-list {
         width: 100%;
         display: flex;
         flex-direction: column;
-        
-        .receipt-item{
-          img{
-            height: 60px;
-            width: 60px;
-          }
-        }
       }
     }
-  
-    .receipt-info{
+
+    .receipt-info {
       margin-top: 20px;
       width: 100%;
 
-      h3{
+      h3 {
         font-size: 18px;
         margin-left: 5px;
       }
     }
   }
 
-
-  li{
+  li {
     display: flex;
     flex-direction: row;
     margin-top: 20px;
 
-    img{
+    img {
       margin-right: 20px;
     }
   }
 }
 
-
-
 @include breakpoint(small-max) {
-  body{
-    .b-main{
+  body {
+    .b-main {
       flex-direction: row;
       width: 100%;
       align-items: flex-start;
       justify-content: flex-end;
       margin-top: 25px;
 
-     .order-wrapper{
-       width: 45%;
- 
-      .order-list{
-       justify-content: flex-start;
-      
-      }
-     }
-     .order-input{
-      width: 45%;
-      align-items: flex-start;
-    } 
-    
-     .order-form{
-       display: flex;
-       flex-direction: column;
-       width: 100%;
+      .order-wrapper {
+        width: 45%;
 
-      input{
-        width: 60%;
+        .order-list {
+          justify-content: flex-start;
+        }
+      }
+      .order-input {
+        width: 45%;
+        align-items: flex-start;
       }
 
-      textarea{
-        width: 60%;
+      .order-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        input {
+          width: 60%;
+        }
+
+        textarea {
+          width: 60%;
+        }
+
+        label {
+          margin: 10px 0px;
+        }
+
+        .order-btn {
+          width: 20%;
+        }
       }
 
-       label{
-         margin: 10px 0px;
-       }
-
-       .order-btn {
-         width: 20%;
-       }
-     }
-
-     .order-view{
-       .order-items{
-         .order-list{
-          li{
-            p{
-              margin-right: 240px;
+      .order-view {
+        .order-items {
+          .order-list {
+            li {
+              p {
+                margin-right: 240px;
+              }
             }
           }
-         }
-       }
-     }
-    } 
-    .order-receipt{
-      width: 50%;
+        }
+      }
     }
+    // .order-receipt {
+    //   width: 50%;
+    // }
   }
- }
+}
+
+.order-wrap {
+  @include flexBox(center, start, space-between);
+  margin: 20px 0;
+  padding: 0 20px;
+  flex-direction: column;
+    @include breakpoint(small-max) {
+	flex-direction: row;
+	  margin: 50px 0;
+	}
+}
+.order-form {
+  margin-top: 30px;
+}
+.order-input {
+
+width: 100%;
+@include breakpoint(small-max) {
+width: 40%;
+}
+
+}
+.receipt-item {
+  filter: brightness(97%);
+  background-color: rgba($black, 0.03);
+  padding: 5px;
+  position: relative;
+  border-radius: 5px;
+  margin-right: 20px;
+  img {
+    height: 60px;
+    width: 60px;
+  }
+}
+.order-wrapper {
+  width: 100%;
+  @include breakpoint(small-max) {
+    width: 60%;
+  }
+  h3 {
+    margin-bottom: 30px;
+  }
+}
+
+.order-view {
+  @include flexBox(center, start, space-between);
+  flex-direction: column;
+}
+.order-list {
+  li {
+    @include flexBox(center, start, space-between);
+    margin-bottom: 20px;
+  }
+}
+.order-price {
+  margin-top: 30px;
+  border-top: 1px solid $black;
+}
+.order-title {
+  padding-top: 0px;
+    @include breakpoint(small-max) {
+	padding-top: 30px;
+	}
+}
+.order-receipt {
+  max-width: 300px;
+  margin: 50px auto;
+  border: 1px solid $grey;
+  background: $light-white;
+  padding: 20px;
+
+  @include breakpoint(small-max) {
+  max-width: 500px;
+  
+  }
+}
+.receipt-info {
+  span {
+    @include font-size(14);
+    font-weight: 300;
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+
+.receipt-list {
+  margin: 10px 0;
+}

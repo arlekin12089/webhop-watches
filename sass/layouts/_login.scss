@@ -1,10 +1,10 @@
 .login_wrapper {
-  padding: 40px;
+    @include flexBox(center, center, center);
+    flex-direction: column;
 }
 .login_text {
   text-align: center;
-  margin-top: 20%;
-  @include font-size(24);
+  @include font-size(34);
 }
 
 .login_form {
@@ -12,18 +12,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  #login_email_field,
-  #login_password_field {
-    width: 90%;
-    max-width: 450px;
-    margin: 6px 0;
-    padding: 7px;
-    border: none;
-    border-bottom: 1.3px solid;
+  max-width: 300px;
+  min-width: 300px;
+  margin: 0 auto;
+  @include breakpoint(small-max) {
+    max-width: 350px;
+    min-width: 350px;
   }
+
+
   .login_linksContainer {
-    margin-bottom: 2em;
 
     a {
       display: block;
@@ -74,7 +72,7 @@
       margin-bottom: 4em;
 
       .login_form {
-        max-width: 500px;
+        max-width: 300px;
         #login_email_field,
         #login_password_field {
           @include font-size(15);
@@ -95,3 +93,20 @@
     }
   }
 }
+
+.form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.form-footer {
+  @include flexBox(center, center, space-between);
+  width:100%;
+  margin: 20px 0;
+}
+
+  .input_field{
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 1.3px solid;
+  }

@@ -2,27 +2,38 @@
     pointer-events: all;
     visibility: hidden;
 	opacity: 0;
-    height: 40rem;
-    top: 74px;
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    background: $light-white;
-	margin: 0 -50vw;
+    height: 7rem;
+    top: 50px;
+    position: absolute; 
+    background: $light-white;	
 	z-index: 999;
 	display: flex;
     justify-content: space-between;
+	left: 100%;
+  	transform: translate(20px, 0);
+	  margin: 0 -100vw;
+	  width: 100vw;
+	@include breakpoint(small-max) {
+    height: 40rem;
+	top: 74px;
+  	left: 50%;
+	right: 50%;
 	width: 100vw;
+  	margin: 0 -50vw;
+	  transform: inherit;
+  }
 
 	&.search-open {
 		visibility: visible;
 		opacity: 1;	
 	}
 	&__wrap {
-		padding:10rem;
+		padding:20px;
 		width: 100%;
 		@include flexBox(column, center, start);
-
+		@include breakpoint(small-max) {
+		padding:10rem;
+	}
 	}
 
 	form {
@@ -36,9 +47,9 @@
 	}
 
 	input {
-	font-size: 9rem;
+	font-size: 1rem;
     width: 100%;
-    padding-bottom: 2rem;
+    padding-bottom: 15px;
 	background: none;
     border: none;
     border-bottom: 0.2rem solid $grey;
@@ -50,18 +61,28 @@
     text-transform: uppercase;
     transition: all .2s ease;
     white-space: nowrap;
+		@include breakpoint(small-max) {
+		font-size: 9rem;
+		 padding-bottom: 2rem;
+		}
 	}
 }
 
 .search-close {
-	width: 40px;
-	height: 40px;
-	border: 2px solid $grey;
+	width: 30px;
+	height: 30px;
+	border: 1px solid $grey;
 	border-radius: 5px;
 	position: absolute;
+	right: 1rem;
+	top: 1rem;
+	@include breakpoint(small-max) {
 	right: 5rem;
 	top: 3rem;
-	
+		width: 40px;
+	height: 40px;
+	border: 2px solid $grey;
+	}
 }
 
 .result-count-container {
