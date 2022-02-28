@@ -1617,6 +1617,7 @@ main.modified {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 20px;
+  margin-top: 30px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1694,7 +1695,7 @@ main.modified {
 }
 
 .product__photo:hover:before {
-  content: '';
+  content: "";
   background: rgba(0, 0, 0, 0.5);
   display: block;
   width: 100%;
@@ -1766,6 +1767,10 @@ main.modified {
   display: none;
 }
 
+.filter__title {
+  margin-bottom: 20px;
+}
+
 .filter.open {
   display: block;
 }
@@ -1814,11 +1819,24 @@ main.modified {
   border-top: 1px solid #CECECE;
 }
 
+.filter__option li {
+  margin-bottom: 10px;
+}
+
+.filter__option li.active button {
+  font-weight: 700;
+  color: #FCCB1E;
+}
+
+.filter__option button:hover {
+  color: #FCCB1E;
+}
+
 .filter__search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 }
 
 .filter__search form {
@@ -1838,38 +1856,9 @@ main.modified {
   width: 100%;
 }
 
-.filter__list div {
-  margin: 15px 0;
-  padding-left: 30px;
-}
-
-.filter__list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-}
-
-.filter input[type="text"] {
+.filter__search form input {
   width: 100%;
-}
-
-.filter input[type="checkbox"] {
-  position: absolute;
-  width: 17px;
-  height: 17px;
-  cursor: pointer;
-  border: 1px solid #CECECE;
-  cursor: pointer;
-}
-
-.filter .fa {
-  font-size: 18px;
-  font-size: 1.125rem;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 #products-amount {

@@ -141,82 +141,40 @@
         </div>
       </section>
       <div class="container">
-        <p id="products-amount"><span>9</span>&nbsp;Items have displayed.</p>
         <section class="products__wrap">
           <div class="filter-mobile">
             <a href="#" class="btn btn--white filter-toggle">Filter</a>
           </div>
+
           <div class="filter">
-            <div class="filter__search">
+             <div class="filter__search">
 				<form class="input-form">
 					<i class="fa fa-search"></i>
 					<input type="text" class="input__field" placeholder="Search"  id="search-input"/>
 				</form>
             </div>
-            <div class="filter__options">
-              <a href="#" id="all_watches" class="text--xs primary"
-                >Alla klockor</a
-              >
+			 <div class="filter__options">
+              <div id="all_watches" class="text--xs primary"
+                >Alla klockor</div>
               <div class="filter__option">
                 <p class="filter__title text--xs">MARKEN</p>
-                <ul class="filter__list">
-                  <li>
-                    <input type="checkbox" />
-                    <div>Omega <span>2</span></div>
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-                    <div>Cartier <span>2</span></div>
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-                    <div>Rolex<span>2</span></div>
-                  </li>
+                <ul class="filter__list-brands">
                 </ul>
               </div>
               <div class="filter__option">
                 <p class="filter__title text--xs">MATERIAL</p>
-                <ul class="filter__list">
-                  <li>
-                    <input type="checkbox" />
-                    <div>Guld <span>2</span></div>
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-                    <div>Silver<span>2</span></div>
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-                    <div>Bronze<span>2</span></div>
-                  </li>
+                <ul class="filter__list-materials">
                 </ul>
               </div>
               <div class="filter__option">
                 <p class="filter__title text--xs">FARGEN</p>
-                <ul class="filter__list">
-                  <li>
-                    <input type="checkbox" />
-                    <div>Gul<span>2</span></div>
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-                    <div>Silver <span>2</span></div>
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-                    <div>Vit<span>2</span></div>
-                  </li>
+                <ul class="filter__list-colors">
                 </ul>
               </div>
             </div>
-            <div class="mb20">
-              <a href="#" class="primary"
-                ><i class="fa fa-close"></i> Rensa filter</a
-              >
-            </div>
-            <a href="#" class="btn btn--yellow">Apply filter</a>
           </div>
           <div class="products-list" id="products-list"></div>
+		  <div class="error-list"></div>
         </section>
       </div>
     </main>
