@@ -36,10 +36,25 @@ export async function getFeaturedProduct() {
 }
 
 
+async function getProductByBrand () {
+	let products = await getAllProducts();
 
-export async function searchProducts(searchText) {
+}
+
+async function getProductByColor () {
+	let products = await getAllProducts();
+}
+
+
+async function getProductByMaterial () {
+	let products = await getAllProducts();
+}
+
+
+export async function searchProducts ( searchText ) {
   let products = await getAllProducts();
   let lowerCaseText = searchText.toLowerCase();
+
   return products.filter(
     (product) =>
       product.name.toLowerCase().includes(lowerCaseText) ||
