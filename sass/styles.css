@@ -1741,6 +1741,7 @@ main.modified {
   height: 36px;
   border-radius: 100%;
   background: #FCCB1E;
+  margin: 0 3px;
 }
 
 .product__link:hover .fa {
@@ -2252,6 +2253,7 @@ main.modified {
   font-size: 2.125rem;
   margin-bottom: 20px;
   margin-top: 50px;
+  padding-top: 74px;
 }
 
 .cart-list {

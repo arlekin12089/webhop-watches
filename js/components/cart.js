@@ -79,6 +79,7 @@ function drawCart (){
         let dataId = btn.getAttribute( "data-id" )
         CartRepository.removeProductFromCart( dataId );
         cartCounter();
+        Price();
       });
     });
 };
