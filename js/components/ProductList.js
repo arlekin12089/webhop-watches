@@ -47,6 +47,9 @@ let productsColor = function filterProductsColor ( color ) {
 //Show all watches
 allWatches.addEventListener( 'click', () => {
   showProducts( productsList );
+  if ( lastActiveButton ) {
+    lastActiveButton.classList.remove( 'active' );
+  }
 } )
 
 //Materials
