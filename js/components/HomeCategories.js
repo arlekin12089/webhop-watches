@@ -11,7 +11,7 @@ function listCategoriesHome(list) {
     let elem = document.createElement("div");
     elem.classList.add("category-item");
     elem.innerHTML = `
-<a href="product-list.html?category=${item.id}" class="category-link">
+        <a href="product-list.html?category=${item.id}" class="category-link">
             <div class="home-img-contain" style = "background-image: url(sass/${item.image})">
               <div class ="home-text-container">
                 <h2 class="home-title">${item.name}</h2>

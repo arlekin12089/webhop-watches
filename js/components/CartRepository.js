@@ -1,5 +1,4 @@
 
-import * as ProductRepository from "./ProductRepository.js";
 /*
 	Shopping Cart Structure(keys for JSON are id of product)
 	productId: quantityOfProduct

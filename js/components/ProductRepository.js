@@ -35,22 +35,6 @@ export async function getFeaturedProduct() {
   return products.filter((product) => product.featured === true).slice(0, 3);
 }
 
-
-async function getProductByBrand () {
-	let products = await getAllProducts();
-
-}
-
-async function getProductByColor () {
-	let products = await getAllProducts();
-}
-
-
-async function getProductByMaterial () {
-	let products = await getAllProducts();
-}
-
-
 export async function searchProducts ( searchText ) {
   let products = await getAllProducts();
   let lowerCaseText = searchText.toLowerCase();
