@@ -12,9 +12,9 @@ function CreateProductView(product) {
                   <a href="product-view.html?productId=${product.id}" class="product__link">
                     <i class="fa fa-search"></i>
                   </a>
-                  <button class="addToCard product__link">
+                  <div class="addToCart product__link">
                     <i class="fa fa-shopping-cart"></i>
-                  </button>
+                  </div>
                 </div>
               </div>
               <footer class="product__description center">
@@ -22,6 +22,9 @@ function CreateProductView(product) {
                 <p class="price">${product.price}</p>
               </footer>
 `;
+	elem.getElementsByClassName( "addToCart" )[0].addEventListener( "click", () => {
+		addProductToCart( product.id );
+	} );
   return elem;
 }
 

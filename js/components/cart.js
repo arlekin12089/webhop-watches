@@ -1,7 +1,12 @@
 import * as ProductRepository from "./ProductRepository.js";
 
 function loadCart () {
-	return JSON.parse( localStorage.getItem("cart") );
+  let cart = JSON.parse( localStorage.getItem( "cart" ) );
+  if ( cart !== null ) {
+    return cart;
+  } else {
+    return {};
+  }
 }
 
 function saveCart ( cart ) {
@@ -17,7 +22,7 @@ function setProductsAmount ( productId, quantity ) {
 	}
 	saveCart( cart );
 }
-function addProductToCart ( productId ) {
+export function addProductToCart ( productId ) {
   let cart = loadCart();
   //compare with undefined if there is no product in cart
   if ( cart[productId] === undefined ) {
@@ -36,7 +41,7 @@ function addProductToCart ( productId ) {
 // localStorage.setItem("cart", JSON.stringify(fakeCart));
 
 
-const cartData = JSON.parse(localStorage.getItem("cart"));
+// const cartData = JSON.parse(localStorage.getItem("cart"));
 let cartProductList = [];
 
 const cartList = document.querySelector(".cart-list");
@@ -108,7 +113,7 @@ function changeAmountEvents() {
 
 async function getProductData() {
 const productData = await ProductRepository.getAllProducts();
-
+  let cartData = loadCart();
 cartProductList = Object.keys(cartData).map((key) => {
   const foundProduct = productData.find((prod) => prod.id === key)
   return {
