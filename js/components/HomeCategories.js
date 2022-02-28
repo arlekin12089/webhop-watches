@@ -1,15 +1,15 @@
 import * as ProductRepository from "./ProductRepository.js";
 import { CreateProductView } from "./CreateProductView.js";
 
-const homeCategories = document.getElementById( "categoriesHome" );
-let featuredWrap = document.querySelector( ".featured-products" );
-const shopBtn = document.querySelector( ".home-btn" );
-const catString = new URLSearchParams( location.search ).get( "category" );
+const homeCategories = document.getElementById("categoriesHome");
+const featuredWrap = document.querySelector(".featured-products");
+const shopBtn = document.querySelector(".home-btn");
+const catString = new URLSearchParams(location.search).get("category");
 
-function listCategoriesHome ( list ) {
-  list.forEach( ( item ) => {
-    let elem = document.createElement( "div" );
-    elem.classList.add( "category-item" );
+function listCategoriesHome(list) {
+  list.forEach((item) => {
+    let elem = document.createElement("div");
+    elem.classList.add("category-item");
     elem.innerHTML = `
 <a href="product-list.html?category=${item.id}" class="category-link">
             <div class="home-img-contain" style = "background-image: url(sass/${item.image})">
@@ -20,18 +20,15 @@ function listCategoriesHome ( list ) {
             </div>
             </a>
       `;
-    homeCategories.appendChild( elem );
-  } );
+    homeCategories.appendChild(elem);
+  });
 }
 
-listCategoriesHome( await ProductRepository.getAllCategories() );
-
-
+listCategoriesHome(await ProductRepository.getAllCategories());
 
 //Show Featured products
 let productsFeatured = await ProductRepository.getFeaturedProduct();
-productsFeatured.forEach( ( product ) => {
-  let element = CreateProductView( product );
-  featuredWrap.appendChild( element );
-} );
-
+productsFeatured.forEach((product) => {
+  let element = CreateProductView(product);
+  featuredWrap.appendChild(element);
+});

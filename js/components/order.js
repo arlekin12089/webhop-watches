@@ -28,7 +28,7 @@ function drawOrder (){
           <img src="${cartProductList[i].image}" alt="bild på produkt">
        </div>
       <div>
-        <p>${cartProductList[i].name}</p>
+        <h4 class="name">${cartProductList[i].name}</h4>
         <p>${cartProductList[i].price}</p>
         <p>${cartProductList[i].amount}st</p>
       </div>
@@ -51,6 +51,7 @@ function drawOrder (){
 async function getProductData() {
   const productData = await ProductRepository.getAllProducts();
 
+
   cartProductList = Object.keys(cartData).map((key) => {
     const foundProduct = productData.find((prod) => prod.id === key)
     return {
@@ -67,7 +68,7 @@ getProductData();
 
 function Price (){
   let totalprice = 0;
-  //const cartData = JSON.parse(localStorage.getItem("cart"));
+  const cartData = JSON.parse(localStorage.getItem("cart"));
   let ordercounter = document.querySelectorAll(".counter");
 
   for(let i = 0; i < cartProductList.length; i++){
@@ -106,16 +107,17 @@ const ordervalue = document.querySelector(".order-price")
 const orderReceipt = document.querySelector(".order-receipt")
 
 //for reading fake data
-localStorage.setItem("user", JSON.stringify("user"));
-// localStorage.setItem("cart", JSON.stringify(fakeCart));
+localStorage.setItem("cart", JSON.stringify(fakeCart));
 
-const userData = JSON.parse(localStorage.getItem("user"));
+let userData = JSON.parse(localStorage.getItem("users"));
+const loggedInUser = localStorage.getItem("loggedInUser");
 const cartData = JSON.parse(localStorage.getItem("cart"));
+userData = userData[loggedInUser];
 
 //If u are logged in the inputs are already done (user with fake user)
 if (userData){
   username.value = userData.name;
-  streetadress.value = userData.streetadress;
+  streetadress.value = userData.streetAdress;
   zip.value = userData.zipCode;
   userlocation.value = userData.location;
   email.value = userData.email;
@@ -135,16 +137,15 @@ orderReceipt.innerHTML =
 </div>
 <div class="receipt-cart">
 <ul class="receipt-list">
-  
 </ul>
 </div>
 <div class="receipt-info">
-<h3>Paketet kommer att skickas till: </h3>
+<p class="mb10">Paketet kommer att skickas till: </p>
 <p>
-${username.value} <br>
-${streetadress.value} ${zip.value},${userlocation.value} <br>
-${email.value} <br>
-${phone.value}
+<span>${username.value} </span>
+<span>${streetadress.value} ${zip.value},${userlocation.value} </span>
+<span>${email.value} </span>
+<span>${phone.value}</span>
 </p>
 </div>
 `;
@@ -170,10 +171,8 @@ for (let i = 0; i < cartProductList.length; i++) {
   prodPrice = parseInt(prodPrice);
   totalprice += prodPrice*cartProductList[i].amount;
 };
-let lastprice = document.createElement("h3");
+  let lastprice = document.createElement( "h4" );
 lastprice.innerText = 
-`
-Totalbelopp: ${totalprice} SEK
-`;
+  `Totalbelopp: ${totalprice} SEK`;
 receiptList.appendChild(lastprice);
 });

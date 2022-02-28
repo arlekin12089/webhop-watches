@@ -10,34 +10,34 @@
       type="image/png"
       href="sass/img/icons/favicon-16x16.png"
       sizes="16x16"
-    />
+      />
     <link
       rel="icon"
       type="image/png"
       href="sass/img/icons/favicon-32x32.png"
       sizes="32x32"
-    />
+      />
     <link
       rel="apple-touch-icon"
       href="sass/img/icons/apple-touch-icon.png"
       sizes="144x144"
-    />
+      />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+      />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
       rel="stylesheet"
-    />
+      />
 
     <link rel="stylesheet" href="sass/styles.css" />
     <title>Logga in</title>
   </head>
-  <body class="login_body">
-  <header class="header--transparent header--modified header">
+  <body>
+      <header class="header--transparent header--modified header">
       <div class="container">
         <div class="header__inner">
           <div class="header__logo">
@@ -51,43 +51,20 @@
           <nav class="header__nav" id="nav">
             <ul class="main-menu">
               <li>
-                <a
-                  href="product-list.html?category=man"
-                  class="nav-link active primary"
-                  >Herr</a
-                >
+                <a href="product-list.html?category=man" class="nav-link active primary">Herr</a>
               </li>
               <li>
-                <a
-                  href="product-list.html?category=woman"
-                  class="nav-link primary"
-                  >Dam</a
-                >
+                <a href="product-list.html?category=woman" class="nav-link primary">Dam</a>
               </li>
               <li>
-                <a
-                  href="product-list.html?category=child"
-                  class="nav-link primary"
-                  >Barn</a
-                >
+                <a href="product-list.html?category=child" class="nav-link primary">Barn</a>
               </li>
               <li>
-                <a
-                  href="product-list.html?category=all"
-                  class="nav-link primary"
-                  >Alla</a
-                >
+                <a href="product-list.html?category=all" class="nav-link primary">Alla</a>
               </li>
             </ul>
-             <ul class="main-menu--mobile">
-              <li>
-                <div class="header__search--mobile">
-                  <input type="text" class="input_field" />
-                  <button type="button">
-                    <i class="fa fa-search"></i>
-                  </button>
-                </div>
-              </li>
+            <ul class="main-menu--mobile">
+			<p class="userName"></p>
               <li>
                 <a href="product-list.html?category=man" class="nav-link active primary">Herr</a>
               </li>
@@ -101,10 +78,13 @@
                 <a href="product-list.html?category=all" class="nav-link primary">Alla</a>
               </li>
               <li>
-                <a href="login.html" class="nav-link primary">Log In</a>
+                <a href="login.html" class="nav-link primary login-link">Log In</a>
+              </li>
+				<li>
+                <a href="login.html" class="nav-link primary logout-link">Log Out</a>
               </li>
               <li>
-                <a href="register.html" class="nav-link primary">Register</a>
+                <a href="register.html" class="nav-link primary register-link">Register</a>
               </li>
             </ul>
           </nav>
@@ -115,98 +95,93 @@
               </button>
               <div class="search-field">
                 <div class="search-field__wrap">
-                <form method="get" autocomplete="off" id="search-form">
-                  <div class="form-field">
+                  <form method="get" autocomplete="off" id="search-form">
+                    <div class="form-field">
                       <label for="search-header"></label>
-                      <input type="text" id="search-header" name="search-header">
-                  </div>
-                </form>
-                <button class="search-close">
-                  <i class="fa fa-close"></i>
-                </button>
-              </div>
+                      <input type="text" id="search-header" name="search-header" />
+                    </div>
+                  </form>
+                  <button class="search-close">
+                    <i class="fa fa-close"></i>
+                  </button>
+                </div>
               </div>
             </div>
-            <div class="header__widgets">
-              <div class="header__user">
-                <a href="">
-                  <i class="fa fa-user"></i>
-                </a>
-                				<div class="dropdown-users">
-									<p class="userName"></p>
-					<a href="register.html" class="register-link">Register</a>
-					<a href="login.html" class="login-link">Log In</a>
-					<a href="#" class="logout-link">Log Out</a>
-				</div>
+            <div class="header__dropdown">
+              <button class="dropbtn"><i class="fa fa-user iconMenu"></i></button>
+              <div class="dropdown-content">
+                <p class="userName"></p>
+                <a href="register.html" class="register-link">Register</a>
+                <a href="login.html" class="login-link">Log In</a>
+                <a href="#" class="logout-link">Log Out</a>
               </div>
-              <div class="header__card">
-                <a href="">
-                  <i class="fa fa-shopping-cart"></i>
-                  <span>1</span>
-                </a>
-              </div>
+            </div>
+            <div class="header__card">
+              <a href="cart.html">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="cart-num"></span>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </header>
     <!--Formuläret-->
-    <main class="login_wrapper">
+    <main class="main main--modified">
       <section class="login_wrapper">
         <h1 class="login_text">Logga in</h1>
         <form class="login_form">
-          <label for="login_email_field" hidden>E-mail</label>
-          <input
-            type="email"
-            name="email"
-            id="login_email_field"
-            class="input_field"
-            placeholder="E-mail"
-            autocomplete="email"
-          />
-          <label for="login_email_field" hidden>Lösenord</label>
-          <input
-            type="password"
-            name="password"
-            id="login_password_field"
-            class="input_field"
-            placeholder="Lösenord"
-          />
-
-          <div class="login_linksContainer">
-            <a href="#" id="login_forgotPassword">Glömt Lösenord</a>
-            <a href="register.html" id="login_registerAccount">Skapa Konto</a>
+          <div class="form-field">
+            <label for="login_email_field" hidden>E-mail</label>
+            <input
+              type="email"
+              name="email"
+              id="login_email_field"
+              class="input_field"
+              placeholder="E-mail"
+              autocomplete="email"
+              />
           </div>
-          <input
-            type="submit"
-            value="Logga in"
-            class="btn btn--yellow"
-          />
+          <div class="form-field">
+            <label for="login_email_field" hidden>Lösenord</label>
+            <input
+              type="password"
+              name="password"
+              id="login_password_field"
+              class="input_field"
+              placeholder="Lösenord"
+              />
+          </div>
+          <div class="form-footer">
+            <input type="submit" value="Logga in" class="btn btn--yellow" />
+            <div class="login_linksContainer">
+              <a href="register.html">Skapa Konto</a>
+            </div>
+          </div>
         </form>
       </section>
     </main>
-    <footer class="page_footer">
-      <div id="footerWrapper">
-        <a id="footerLogo" href="#"
-          ><img src="sass/img/FEND_Time.svg" alt="FEND Time logo"
-        /></a>
-
-        <div class="iconContainer">
-          <a href="https://www.instagram.com/"
-            ><i class="fa-brands fa-instagram fa"></i
-          ></a>
-          <a href="https://sv-se.facebook.com/"
-            ><i class="fa-brands fa-facebook-square fa"></i
-          ></a>
-          <a href="https://twitter.com/?lang=sv"
-            ><i class="fa-brands fa-twitter-square fa"></i
-          ></a>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a class="footerLogo" href="/"><img src="sass/img/FEND_Time.svg"
+              alt="FEND Time logo" /></a>
+          <div class="iconContainer">
+            <a href="https://www.instagram.com/"><i class="fa-brands
+                fa-instagram fa"></i></a>
+            <a href="https://sv-se.facebook.com/"><i class="fa-brands
+                fa-facebook-square fa"></i></a>
+            <a href="https://twitter.com/?lang=sv"><i class="fa-brands
+                fa-twitter-square fa"></i></a>
+          </div>
         </div>
       </div>
-      <p class="copyright center text--white">© Stockholm, 2022</p>
+      <div class="container">
+        <p class="copyright center text--white">© Stockholm, 2022</p>
+      </div>
     </footer>
-   <script type="module" src="js/components/UserRepository.js"></script>
+    <script type="module" src="js/components/UserRepository.js"></script>
     <script type="module" src="js/components/Login.js"></script>
-
+    <script type="module" src="js/index.js"></script>
   </body>
 </html>

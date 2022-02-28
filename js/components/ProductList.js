@@ -1,5 +1,7 @@
 import * as ProductRepository from "./ProductRepository.js";
 import { CreateProductView } from "./CreateProductView.js";
+import * as saveCart from "./cart.js";
+
 
 export function ProductList () {
   const queryString = new URLSearchParams(location.search);
@@ -30,9 +32,18 @@ export function ProductList () {
       // } );
       productsWrap.appendChild(element);
     } );
-  }
-  getProducts();
+    let addButtons = document.querySelectorAll(".addToCard")
+    console.log(addButtons);
 
+    addButtons.forEach(button => {
+      button.addEventListener("click", () => {
+
+      })
+    })
+  }
+
+  getProducts();
+  
   //Search inside category
   inputForm.addEventListener( "submit", e => {
       e.preventDefault();
@@ -61,3 +72,4 @@ export function ProductList () {
 }
 
 export default ProductList();
+

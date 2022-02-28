@@ -36,51 +36,173 @@
       rel="stylesheet"
     />
 </head>
-<body class="b-body">
+<body >
 
 <!--Header starts here-->
-
+   <header class="header--transparent header--modified header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__logo">
+            <a href="/">
+              <img src="sass/img/FENDTime.svg" alt="FEND Time" />
+            </a>
+          </div>
+          <button class="menu-toggle">
+            <span></span>
+          </button>
+          <nav class="header__nav" id="nav">
+            <ul class="main-menu">
+              <li>
+                <a href="product-list.html?category=man" class="nav-link active primary">Herr</a>
+              </li>
+              <li>
+                <a href="product-list.html?category=woman" class="nav-link primary">Dam</a>
+              </li>
+              <li>
+                <a href="product-list.html?category=child" class="nav-link primary">Barn</a>
+              </li>
+              <li>
+                <a href="product-list.html?category=all" class="nav-link primary">Alla</a>
+              </li>
+            </ul>
+            <ul class="main-menu--mobile">
+			<p class="userName"></p>
+              <li>
+                <a href="product-list.html?category=man" class="nav-link active primary">Herr</a>
+              </li>
+              <li>
+                <a href="product-list.html?category=woman" class="nav-link primary">Dam</a>
+              </li>
+              <li>
+                <a href="product-list.html?category=child" class="nav-link primary">Barn</a>
+              </li>
+              <li>
+                <a href="product-list.html?category=all" class="nav-link primary">Alla</a>
+              </li>
+              <li>
+                <a href="login.html" class="nav-link primary login-link">Log In</a>
+              </li>
+				<li>
+                <a href="login.html" class="nav-link primary logout-link">Log Out</a>
+              </li>
+              <li>
+                <a href="register.html" class="nav-link primary register-link">Register</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="actions">
+            <div class="header__search">
+              <button type="button" id="header-search">
+                <i class="fa fa-search"></i>
+              </button>
+              <div class="search-field">
+                <div class="search-field__wrap">
+                  <form method="get" autocomplete="off" id="search-form">
+                    <div class="form-field">
+                      <label for="search-header"></label>
+                      <input type="text" id="search-header" name="search-header" />
+                    </div>
+                  </form>
+                  <button class="search-close">
+                    <i class="fa fa-close"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="header__dropdown">
+              <button class="dropbtn"><i class="fa fa-user iconMenu"></i></button>
+              <div class="dropdown-content">
+                <p class="userName"></p>
+                <a href="register.html" class="register-link">Register</a>
+                <a href="login.html" class="login-link">Log In</a>
+                <a href="#" class="logout-link">Log Out</a>
+              </div>
+            </div>
+            <div class="header__card">
+              <a href="cart.html">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="cart-num"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
   <!-- Main content -->
-  <main class="b-main">
+  <main class="main main--modified">
+    <div class="container">
+          <h1 class="center order-title">Kassa</h1>
+
+  <!--Receipt starts here -->
+      <section class="order-receipt hidden">
+      </section>
+    <div class="order-wrap">
+    
+   
     <section class="order-wrapper">
-      <h1>Kassa</h1>
+    <h3 class="center">Orderöversikt</h3>
     <section class="order-view">
-    <br>
-    <h3>Orderöversikt</h3>
+
       <article class="order-items">
         <ul class="order-list">
           
         </ul>
       </article>
-      <article class="order-price">
-      </article>
+      <div class="order-price">
+      </div>
     </section>
   </section>
     
-    <section class="order-input">
+    <aside class="order-input">
       <h3>Beställningsuppgifter</h3>
       <form class="order-form">
-        <input type="text" placeholder="För- och efternamn" id="name-input" required>
-        <input type="text" placeholder="Gatuadress" id="adress-input" required>
-        <input type="number" placeholder="Postnummer" id="zip-input" required>
-        <input type="text" placeholder="Ort" id="ort-input" required>
-        <input type="email" placeholder="Email" id="email-input" required>
-        <input type="tel" placeholder="Telefonnummer" id="phone-input">
-        <label for="comment">Övriga kommentarer</label>
-        <textarea name="" id="comment" cols="30" rows="3"></textarea>
-        <button class="btn order-btn">Skicka beställning</button>
+        <div class="form-field">
+          <input type="text" placeholder="För- och efternamn" id="name-input" required class="input_field">
+        </div>
+        <div class="form-field">
+          <input type="text" placeholder="Gatuadress" id="adress-input" required class="input_field">
+        </div>
+       <div class="form-field">
+        <input type="number" placeholder="Postnummer" id="zip-input" required class="input_field">
+      </div>
+       <div class="form-field">
+        <input type="text" placeholder="Ort" id="ort-input" required class="input_field">
+       </div>
+       <div class="form-field">
+        <input type="email" placeholder="Email" id="email-input" required class="input_field">
+       </div>
+        <div class="form-field">
+          <input type="tel" placeholder="Telefonnummer" id="phone-input" class="input_field">
+        </div>
+        <div class="form-field">
+          <label for="comment">Övriga kommentarer</label>
+          <textarea name="" id="comment" cols="30" rows="3" class="input_field"></textarea>
+        </div>
+        <div class="form-buttons">
+          <button class="btn order-btn btn--yellow">Skicka beställning</button>
+        </div>
       </form>
-    </section>
+    </aside>
+     </div>
+    </div>
   </main>
 
-  <!--Receipt starts here -->
-      <section class="order-receipt hidden">
-     
-        
-
-      </section>
 <!-- Footer starts here-->
-     
+         <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a class="footerLogo" href="/"><img src="sass/img/FEND_Time.svg" alt="FEND Time logo" /></a>
+          <div class="iconContainer">
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa"></i></a>
+            <a href="https://sv-se.facebook.com/"><i class="fa-brands fa-facebook-square fa"></i></a>
+            <a href="https://twitter.com/?lang=sv"><i class="fa-brands fa-twitter-square fa"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <p class="copyright center text--white">© Stockholm, 2022</p>
+      </div>
+    </footer>
   <script type="module" src="js/components/order.js"></script>
 </body>
 </html>

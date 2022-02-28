@@ -17,7 +17,9 @@ function SetupUserName () {
 	const registerLink = document.querySelector( ".register-link" );
 	const loginLink = document.querySelector( ".login-link" );
 	const logoutLink = document.querySelector( ".logout-link" );
+
 	let userName = UserRepository.getLoggedInUserName();
+	
 	if ( userName ) {
 		userNameElement.innerHTML = UserRepository.getLoggedInUserName();
 		registerLink.style.display = "none";

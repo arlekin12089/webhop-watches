@@ -38,6 +38,8 @@ export const ERROR_PASSWORD_IS_EMPTY = 2;
 export const ERROR_EMAIL_IS_EMPTY = 3;
 export const ERROR_STREET_ADRESS_IS_EMPTY = 4;
 export const ERROR_PHONE_NUMBER_IS_EMPTY = 5;
+export const ERROR_ZIP_CODE_IS_EMPTY = 6;
+export const ERROR_LOCATION_IS_EMPTY = 7;
 export const NO_ERROR = 0;
 
 let users = {};
@@ -54,7 +56,7 @@ function saveUsers() {
   localStorage.setItem(KEY_USERS, JSON.stringify(users));
 }
 
-export function register(name, email, password, streetAdress, phoneNumber) {
+export function register(name, email, password, streetAdress, phoneNumber, zipCode, location) {
   //add user to users
   if (email.length === 0) {
     return ERROR_EMAIL_IS_EMPTY;
@@ -71,15 +73,26 @@ export function register(name, email, password, streetAdress, phoneNumber) {
   if (phoneNumber.length === 0) {
     return ERROR_PHONE_NUMBER_IS_EMPTY;
   }
+  if (zipCode.length === 0) {
+    return ERROR_ZIP_CODE_IS_EMPTY;
+  }
+  if (location.length === 0) {
+    return ERROR_LOCATION_IS_EMPTY;
+  }
+
   users[email] = {
     email,
     password,
     name,
     streetAdress,
-    phoneNumber
+    phoneNumber,
+    zipCode,
+    location
   };
   saveUsers();
   localStorage.setItem(KEY_LOGGED_IN_USER, email);
   return NO_ERROR;
 }
 users = loadUsers();
+
+

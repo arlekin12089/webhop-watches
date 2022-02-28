@@ -15,7 +15,7 @@
 
   &--modified {
     border-bottom: 1px solid $grey;
-    background: #fff;
+    background: $white;
     height: 74px;
   }
 
@@ -27,7 +27,8 @@
   }
 
   &__search {
-    display: none;
+    display: inline-block;
+    margin-right: 10px;
     @include breakpoint(small-max) {
       display: inline-block;
       margin-right: 20px;
@@ -35,6 +36,11 @@
   }
   .actions {
     @include flexBox(row, center, space-between);
+    position: absolute;
+    right: 20px;
+    @include breakpoint(small-max) {
+      position: static;
+    }
   }
 
   &__nav {
@@ -187,7 +193,61 @@
   }
 }
 
-//Dropdown users
-  .logout-link {
+
+
+/* Dropdown Content (Hidden by Default) */
+.header__dropdown {
+  padding-right: 20px;
+  display: none;
+   @include breakpoint(small-max) {
+    display: inline-block;
+  }
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 150px;
+  background-color: $white;
+  min-width: 260px;
+  box-shadow: 0px 8px 16px 0px rgba($black,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: $black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: $grey;}
+
+/* Show the dropdown menu on hover */
+.header__dropdown:hover .dropdown-content {display: block;}
+
+.dropdown-content  .logout-link {
     display: none;
+}
+.userName {
+margin: 10px 16px;
+font-weight: 700;
+text-transform: capitalize;
+}
+
+//Cart
+
+.header__card {
+width: 30px;
+height: 25px;
+position: relative;
+}
+.cart-num {
+  position: absolute;
+  font-weight: 700;
+  color: $yellow;
+  right: 0px;
+  font-size: 20px;
+  top: -5px;
 }

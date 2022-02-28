@@ -17,14 +17,25 @@ function setProductsAmount ( productId, quantity ) {
 	}
 	saveCart( cart );
 }
+function addProductToCart ( productId ) {
+  let cart = loadCart();
+  //compare with undefined if there is no product in cart
+  if ( cart[productId] === undefined ) {
+    cart[productId] = 1;
+  } else {
+    cart[productId]++;
+  }
+  saveCart( cart );
+}
 
-let fakeCart = {
-  "17170937":9,
-  "WSRN0022":6
-};
+//
+// let fakeCart = {
+//   "17170937":9,
+//   "WSRN0022":6
+// };
+// localStorage.setItem("cart", JSON.stringify(fakeCart));
 
 
-localStorage.setItem("cart", JSON.stringify(fakeCart));
 const cartData = JSON.parse(localStorage.getItem("cart"));
 let cartProductList = [];
 
@@ -34,16 +45,19 @@ const cartTotalPrice = document.querySelector(".cart-price");
 //draws the items
 function drawCart (){
     for (let i = 0; i < cartProductList.length; i++) {
-      let product = document.createElement("li");
+      let product = document.createElement( "article" );
+      product.classList.add( "cart-item" );
       product.innerHTML = 
-      `<div class="cart-item">
+      `<div class="cart-photo">
           <img src="${cartProductList[i].image}" alt="bild på produkt">
        </div>
       <div class="item-info">
-        <p>${cartProductList[i].name}</p>
-        <p>${cartProductList[i].price}</p>
-        <input class="counter" data-id="${cartProductList[i].id}" type="number" id="itemcounter" min="1" max="5" value="${cartProductList[i].amount}">
-       <button class="order-delete-btn">Ta bort</button> 
+        <h4>${cartProductList[i].name}</h4>
+        <p class="cart-item-price">${cartProductList[i].price}</p>
+        <div class="item-amount mobile-view">
+          <input class="counter" data-id="${cartProductList[i].id}" type="number" id="itemcounter" min="1" max="5" value="${cartProductList[i].amount}">
+        </div>
+       <button class="btn btn--yellow order-delete-btn" data-id="${cartProductList[i].id}">Ta bort</button>
       </div>
       `; 
       cartList.appendChild(product);
@@ -51,10 +65,10 @@ function drawCart (){
 
     //Delete buttonn
     let dbtn = document.querySelectorAll(".order-delete-btn");
-    console.log(dbtn);
+
+    let newCart = [];
 
     dbtn.forEach (btn => {
-      console.log(btn.index)
       btn.addEventListener("click",() => {
         let parent = btn.parentElement;
         let div = parent.parentElement
@@ -71,7 +85,7 @@ function changeAmountEvents() {
     //Gets all inputfields
     let ordercounter = document.querySelectorAll(".counter");
   
-    //Adds eventlistener on inputfields 
+    //Adds eventlistener on inputfields -- inputfeild = event
     ordercounter.forEach(event => {
       event.addEventListener("input",() => {
       //gets the dataatribut from the item
@@ -115,12 +129,15 @@ getProductData();
 //sets the total price of the cart when the user gets on the page
 function Price (){
   let totalprice = 0;
-  //const cartData = JSON.parse(localStorage.getItem("cart"));
-  let ordercounter = document.querySelectorAll(".counter");
+
+  let ordercounter = cartList.querySelectorAll(".counter");
 
   for(let i = 0; i < cartProductList.length; i++){
+   
+
     let prodPrice = cartProductList[i].price.split(' ')[0];
     prodPrice = prodPrice.replace('.', '');
+
     prodPrice = parseInt(prodPrice);
     totalprice += prodPrice*ordercounter[i].value;
   };
@@ -130,10 +147,12 @@ function Price (){
  if(lastTitel !== 0){
   cartTotalPrice.removeChild(cartTotalPrice.firstElementChild);
   } 
+
   let orderprice = document.createElement("h3");
   orderprice.classList.add("cart-value");
   orderprice.innerHTML = 
-  `Totalbelopp: ${totalprice} SEK`
+    `Totalbelopp: <span>${totalprice} SEK</span>`
   cartTotalPrice.appendChild(orderprice);
 }
+
 
