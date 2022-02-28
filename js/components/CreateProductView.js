@@ -1,3 +1,5 @@
+import { addProductToCart } from "./cart.js";
+
 //pass single product
 function CreateProductView(product) {
   let elem = document.createElement("article");
