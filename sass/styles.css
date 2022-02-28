@@ -2074,31 +2074,146 @@ main.modified {
   font-weight: 600;
 }
 
-.registration-form {
-  padding-top: 74px;
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 15vh;
 }
 
-.registration-form form {
-  max-width: 300px;
-  min-width: 300px;
-  margin: 0 auto 100px;
+main #registration-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 100px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 0px;
 }
 
-@media only screen and (min-width: 768px) {
-  .registration-form form {
-    max-width: 350px;
-    min-width: 350px;
-  }
-}
-
-.registartion-title {
-  font-size: 34px;
-  font-size: 2.125rem;
+main #registration-form h1 {
+  font-size: 24px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   margin-bottom: 20px;
 }
 
-.form-buttons {
-  text-align: center;
+main #registration-form .input-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main #registration-form .input-div .form-group-1, main #registration-form .input-div .form-group-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px 20px 0 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main #registration-form .input-div .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main #registration-form .input-div .form-group input {
+  margin-top: 30px;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid black;
+  font-size: 18px;
+  padding: 3px 7px;
+  width: 375px;
+}
+
+main #registration-form .input-div .form-group label {
+  display: none;
+}
+
+main #registration-form .btn {
+  font-size: 18px;
+  font-size: 1.125rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-family: "Roboto", Verdana, sans-serif;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  color: #000000;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 55%;
+  background-color: #FCCB1E;
+  cursor: pointer;
+  margin-top: 35px;
+  height: 45px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+main #registration-form .user-agreement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 45px 0 5px 0;
+}
+
+main #registration-form .user-agreement input {
+  margin-left: 14px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  main #registration-form .input-div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main #registration-form .btn {
+    width: 40%;
+  }
 }
 
 .cart-wrap {

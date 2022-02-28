@@ -1,4 +1,3 @@
-
 import * as UserRepository from "./UserRepository.js";
 
 const form = document.getElementById("registration-form");
@@ -8,6 +7,8 @@ const password1 = document.getElementById("password1");
 const password2 = document.getElementById("password2");
 const streetAdress = document.getElementById("street-adress");
 const phoneNumber = document.getElementById("phone-number");
+const zipCode = document.getElementById("zip-code");
+const location = document.querySelector("#location");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -22,7 +23,9 @@ form.addEventListener("submit", (e) => {
     userMail.value,
     password1.value,
     streetAdress.value,
-    phoneNumber.value
+    phoneNumber.value,
+    zipCode.value,
+    location.value
   );
   if (errorCode === UserRepository.ERROR_USER_ALREADY_EXISTS) {
     alert("user exists");
@@ -34,5 +37,3 @@ form.addEventListener("submit", (e) => {
     window.location.href = "index.html";
   }
 });
-
-

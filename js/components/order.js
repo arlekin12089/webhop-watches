@@ -51,6 +51,7 @@ function drawOrder (){
 async function getProductData() {
   const productData = await ProductRepository.getAllProducts();
 
+
   cartProductList = Object.keys(cartData).map((key) => {
     const foundProduct = productData.find((prod) => prod.id === key)
     return {
@@ -67,7 +68,7 @@ getProductData();
 
 function Price (){
   let totalprice = 0;
-  //const cartData = JSON.parse(localStorage.getItem("cart"));
+  const cartData = JSON.parse(localStorage.getItem("cart"));
   let ordercounter = document.querySelectorAll(".counter");
 
   for(let i = 0; i < cartProductList.length; i++){
@@ -106,16 +107,17 @@ const ordervalue = document.querySelector(".order-price")
 const orderReceipt = document.querySelector(".order-receipt")
 
 //for reading fake data
-localStorage.setItem("user", JSON.stringify("user"));
-// localStorage.setItem("cart", JSON.stringify(fakeCart));
+localStorage.setItem("cart", JSON.stringify(fakeCart));
 
-const userData = JSON.parse(localStorage.getItem("user"));
+let userData = JSON.parse(localStorage.getItem("users"));
+const loggedInUser = localStorage.getItem("loggedInUser");
 const cartData = JSON.parse(localStorage.getItem("cart"));
+userData = userData[loggedInUser];
 
 //If u are logged in the inputs are already done (user with fake user)
 if (userData){
   username.value = userData.name;
-  streetadress.value = userData.streetadress;
+  streetadress.value = userData.streetAdress;
   zip.value = userData.zipCode;
   userlocation.value = userData.location;
   email.value = userData.email;
