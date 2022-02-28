@@ -1,5 +1,7 @@
 import * as ProductRepository from "./ProductRepository.js";
 import { CreateProductView } from "./CreateProductView.js";
+import * as CartRepository from "./CartRepository.js";
+
 
 const productBrand = document.querySelector(".brand");
 const productName = document.querySelector(".name");
@@ -12,6 +14,9 @@ let html = document.getElementsByTagName("html")[0];
 const productMenuItem = document.getElementById("productMenuItem");
 const queryString = new URLSearchParams(location.search);
 const productId = queryString.get("productId");
+let addToCart = document.querySelector( '.addToCart' );
+
+
 if (productId === "" || productId === undefined || productId === null) {
   html.innerHTML = "Sorry";
 }
@@ -26,6 +31,11 @@ specColor.innerHTML = `${product.color}`;
 productPrice.innerHTML = `${product.price}`;
 productImage.src = `${product.image}`;
 productMenuItem.innerHTML = `${product.name}`;
+
+addToCart.addEventListener( 'click', () => {
+	CartRepository.addProductToCart( product.id );
+} )
+
 //Featured
 let productsFeatured = await ProductRepository.getFeaturedProduct();
 productsFeatured.forEach((product) => {

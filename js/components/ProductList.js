@@ -1,6 +1,7 @@
 import * as ProductRepository from "./ProductRepository.js";
 import { CreateProductView } from "./CreateProductView.js";
 
+
 const queryString = new URLSearchParams( location.search );
 const qsCategory = queryString.get( "category" );
 const categoryName = document.getElementById( "category-name" );
