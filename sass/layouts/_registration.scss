@@ -1,14 +1,18 @@
-main {
+.registration {
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-top: 15vh;
+  padding-bottom: 15vh;
  
   #registration-form {
       display: flex;
-      padding: 20px 100px;
+      padding: 20px;
       flex-direction: column;
       margin-top: 0px;
+	   @include breakpoint(small-max) {
+          padding: 20px 100px;
+    }
       h1 {
         font-size: 24px;
         align-self: center;
@@ -17,7 +21,10 @@ main {
       }
       .input-div{
         display: flex;
+        flex-direction: column;
+		  @include breakpoint(small-max) {
         flex-direction: row;
+    }
       .form-group-1, .form-group-2{
         display: flex;
         margin: 0px 20px 0 20px;
@@ -34,7 +41,10 @@ main {
           border-bottom: 1px solid black;
           font-size: 18px;
           padding: 3px 7px;
-          width: 375px;
+          width: 300px;
+		   @include breakpoint(small-max) {
+		   width: 375px;
+		   }
         }
         label{
   display: none
