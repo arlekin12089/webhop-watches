@@ -1,7 +1,7 @@
 import * as ProductRepository from "./ProductRepository.js";
 import { CreateProductView } from "./CreateProductView.js";
 import * as CartRepository from "./CartRepository.js";
-
+import { cartCounter } from './HeaderDetails.js';
 
 const productBrand = document.querySelector(".brand");
 const productName = document.querySelector(".name");
@@ -34,6 +34,7 @@ productMenuItem.innerHTML = `${product.name}`;
 
 addToCart.addEventListener( 'click', () => {
 	CartRepository.addProductToCart( product.id );
+	cartCounter();
 } )
 
 //Featured

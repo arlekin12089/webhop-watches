@@ -62,13 +62,19 @@ function SetupUserName () {
 
 }
 
-function cartCounter () {
+export function cartCounter () {
 	let cartNum = document.querySelector( '.cart-num' );
 	let cart = CartRepository.loadCart();
 	if ( cart.length === 0 ) {
 		cartNum.innerHTML = 0;
 	} else {
-		cartNum.innerHTML = Object.keys( cart ).length;
+		let productsIds = Object.keys( cart );
+		let sum = 0;
+		for ( let i = 0; i < productsIds.length; i++ ) {
+			sum += cart[productsIds[i]];
+		}
+
+		cartNum.innerHTML = sum;
 	}
 }
 

@@ -32,6 +32,7 @@
 
 import * as ProductRepository from "./ProductRepository.js";
 import * as CartRepository from "./CartRepository.js";
+import { cartCounter } from './HeaderDetails.js';
 // const cartData = JSON.parse(localStorage.getItem("cart"));
 export async function CartList () {
 
@@ -77,7 +78,7 @@ function drawCart (){
         div.remove();
         let dataId = btn.getAttribute( "data-id" )
         CartRepository.removeProductFromCart( dataId );
-      
+        cartCounter();
       });
     });
 };
@@ -108,6 +109,7 @@ function changeAmountEvents() {
           div.remove();
         }
         CartRepository.setProductsAmount( data, +event.value );
+        cartCounter();
       Price();
     }
     );

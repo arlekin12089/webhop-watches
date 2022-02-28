@@ -1,5 +1,5 @@
 import * as CartRepository from "./CartRepository.js";
-
+import { cartCounter } from './HeaderDetails.js';
 //pass single product
 function CreateProductView(product) {
   let elem = document.createElement("article");
@@ -26,6 +26,7 @@ function CreateProductView(product) {
 `;
 	elem.getElementsByClassName( "addToCart" )[0].addEventListener( "click", () => {
 		CartRepository.addProductToCart( product.id );
+		cartCounter();
 	} );
   return elem;
 }
