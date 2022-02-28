@@ -2081,6 +2081,33 @@ main.modified {
   font-weight: 600;
 }
 
+.registration-form {
+  padding-top: 74px;
+}
+
+.registration-form form {
+  max-width: 300px;
+  min-width: 300px;
+  margin: 0 auto 100px;
+}
+
+@media only screen and (min-width: 768px) {
+  .registration-form form {
+    max-width: 350px;
+    min-width: 350px;
+  }
+}
+
+.registartion-title {
+  font-size: 34px;
+  font-size: 2.125rem;
+  margin-bottom: 20px;
+}
+
+.form-buttons {
+  text-align: center;
+}
+
 .cart-wrap {
   padding-top: 74px;
 }
