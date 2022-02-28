@@ -13,29 +13,51 @@ function SearchInput() {
 }
 function SetupUserName () {
 	const userWrap = document.querySelector( ".dropdown-users" );
-	const userNameElement = document.querySelector( ".userName" );
-	const registerLink = document.querySelector( ".register-link" );
-	const loginLink = document.querySelector( ".login-link" );
-	const logoutLink = document.querySelector( ".logout-link" );
+	const userNameElement = document.querySelectorAll( ".userName" );
+	const registerLink = document.querySelectorAll( ".register-link" );
+	const loginLink = document.querySelectorAll( ".login-link" );
+	const logoutLink = document.querySelectorAll( ".logout-link" );
 
 	let userName = UserRepository.getLoggedInUserName();
 	
 	if ( userName ) {
-		userNameElement.innerHTML = UserRepository.getLoggedInUserName();
-		registerLink.style.display = "none";
-		loginLink.style.display = "none";
-		logoutLink.style.display = "block";
+		userNameElement.forEach( elem => {
+			elem.innerHTML = UserRepository.getLoggedInUserName();
+		} )
+		registerLink.forEach( elem => {
+			elem.style.display = "none";
+		} )
+		loginLink.forEach( elem => {
+			elem.style.display = "none";
+		} )
+		logoutLink.forEach( elem => {
+			elem.style.display = "block";
+		} )
 	} else {
-		userNameElement.innerHTML = "";
-		registerLink.style.display = "block";
-		loginLink.style.display = "block";
-		logoutLink.style.display = "none";
+		// userNameElement.innerHTML = "";
+		// registerLink.style.display = "block";
+		// loginLink.style.display = "block";
+		// logoutLink.style.display = "none";
+		userNameElement.forEach( elem => {
+			elem.innerHTML = "";
+		} )
+		registerLink.forEach( elem => {
+			elem.style.display = "block";
+		} )
+		loginLink.forEach( elem => {
+			elem.style.display = "block";
+		} )
+		logoutLink.forEach( elem => {
+			elem.style.display = "none";
+		} )
 	}
+	logoutLink.forEach( elem => {
+		elem.addEventListener( 'click', () => {
+			UserRepository.logOut();
+			window.location.href = "index.html";
+		} )
+		} )
 
-	logoutLink.addEventListener( "click", () => {
-		UserRepository.logOut();
-		window.location.href = "index.html";
-	} );
 }
 
 

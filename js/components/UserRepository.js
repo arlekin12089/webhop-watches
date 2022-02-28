@@ -132,5 +132,6 @@ export function logOut () {
 
 
 users = loadUsers();
+window.login = login;
 
 

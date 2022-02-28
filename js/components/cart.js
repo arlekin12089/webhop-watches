@@ -22,16 +22,6 @@ function setProductsAmount ( productId, quantity ) {
 	}
 	saveCart( cart );
 }
-export function addProductToCart ( productId ) {
-  let cart = loadCart();
-  //compare with undefined if there is no product in cart
-  if ( cart[productId] === undefined ) {
-    cart[productId] = 1;
-  } else {
-    cart[productId]++;
-  }
-  saveCart( cart );
-}
 
 //
 // let fakeCart = {

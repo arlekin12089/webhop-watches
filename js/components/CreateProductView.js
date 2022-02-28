@@ -1,4 +1,4 @@
-import { addProductToCart } from "./cart.js";
+import * as CartRepository from "./CartRepository.js";
 
 //pass single product
 function CreateProductView(product) {
@@ -25,7 +25,7 @@ function CreateProductView(product) {
               </footer>
 `;
 	elem.getElementsByClassName( "addToCart" )[0].addEventListener( "click", () => {
-		addProductToCart( product.id );
+		CartRepository.addProductToCart( product.id );
 	} );
   return elem;
 }
