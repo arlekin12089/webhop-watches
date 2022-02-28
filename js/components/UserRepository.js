@@ -93,6 +93,44 @@ export function register(name, email, password, streetAdress, phoneNumber, zipCo
   localStorage.setItem(KEY_LOGGED_IN_USER, email);
   return NO_ERROR;
 }
+
+/**
+ * Check if user's email exists in Local Storage and password matches with user's password.
+ * If all checks are successful, then we set this user as logged in.
+ * @param {String} email
+ * @param {String} password
+ * @returns {Boolean} True if login is successful and false if mail or password don't match
+ */
+export function login ( email, password ) {
+  if ( users[email] === undefined ) {
+    return false;
+  }
+
+  if ( password !== users[email].password ) {
+    return false;
+  }
+  localStorage.setItem( KEY_LOGGED_IN_USER, email );
+  return true;
+}
+
+
+
+/**
+ * @returns {String} Name of currently logged in user, otherwise undefined
+ */
+export function getLoggedInUserName () {
+  let email = localStorage.getItem( KEY_LOGGED_IN_USER );
+  if ( email === undefined || email === null ) {
+    return undefined;
+  }
+  return users[email].name;
+}
+
+export function logOut () {
+  localStorage.removeItem( KEY_LOGGED_IN_USER );
+}
+
+
 users = loadUsers();
 
 
