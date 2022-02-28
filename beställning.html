@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="sv">
-  <head>
+<html lang="en">
+    <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="sass/styles.css" />
     <title>FEND Time</title>
   </head>
-
-  <body class="home-body">
-    <header class="header--transparent header--modified header">
+  <body class="b-body">
+    <!--Header starts here-->
+      <header class="header--transparent header--modified header">
       <div class="container">
         <div class="header__inner">
           <div class="header__logo">
@@ -109,32 +109,107 @@
         </div>
       </div>
     </header>
-    <section class="home-img-holder hero--modified">
-      <div class="home-img-container hero--modified__intro">
-        <h1 class="home-h1 text--white">Lyxiga Klockor</h1>
-        <h3 class="home-h3 text--white">Välkommen till</h3>
-        <h3 class="home-h3 text--white">Bra design och fantastiska priser</h3>
-        <a href="product-list.html?category=all" class="btn btn--yellow btn--large">Handla nu</a>
+    <!-- Main content -->
+    <main class="b-main">
+      <section class="order-wrapper">
+        <h1>Kassa</h1>
+        <section class="order-view">
+          <h3 class="center">Orderöversikt</h3>
+          <article class="order-items">
+            <ul class="order-list">
+              <li>
+                <div class="receipt-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <p>Namn på produkt</p>
+                  <p>Pris</p>
+                </div>
+                <button class="delete-btn">Ta bort</button>
+              </li>
+            </ul>
+          </article>
+          <article class="order-price">
+            <h3 class="order-value">Totalbelopp SEK:</h3>
+          </article>
+        </section>
+      </section>
+
+      <section class="order-input">
+        <h3>Beställningsuppgifter</h3>
+        <form class="order-form">
+          <input
+            type="text"
+            placeholder="För- och efternamn"
+            id="name-input"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Gatuadress"
+            id="adress-input"
+            required
+          />
+          <input
+            type="number"
+            placeholder="Postnummer"
+            id="zip-input"
+            required
+          />
+          <input type="text" placeholder="Ort" id="ort-input" required />
+          <input type="email" placeholder="Email" id="email-input" required />
+          <input type="tel" placeholder="Telefonnummer" id="phone-input" />
+          <label for="comment">Övriga kommentarer</label>
+          <textarea name="" id="comment" cols="30" rows="3"></textarea>
+          <button class="btn order-btn">Skicka beställning</button>
+        </form>
+      </section>
+    </main>
+
+    <!--Receipt starts here -->
+    <section class="order-receipt">
+      <div class="receipt-titel">
+        <h3>Tack för din beställning</h3>
+      </div>
+      <div class="receipt-cart">
+        <ul class="receipt-list">
+          <li>
+            <div class="receipt-item">
+              <img
+                src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+                alt=""
+              />
+            </div>
+            <div>
+              <p>Namn på produkt</p>
+              <p>Pris</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="receipt-item">
+              <img
+                src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+                alt=""
+              />
+            </div>
+            <div>
+              <p>Namn på produkt</p>
+              <p>Pris</p>
+            </div>
+          </li>
+        </ul>
+        <h3>Totalbelopp SEK:</h3>
+      </div>
+      <div class="receipt-info">
+        <h3>Paketet kommer att skickas till:</h3>
       </div>
     </section>
 
-    <div class="home-h3-container">
-      <h3 class="home-h3">Handla efter kategori</h3>
-    </div>
-    <main class="main">
-      <div class="container">
-        <div id="categoriesHome"></div>
-      </div>
-      <section class="products--feature">
-        <div class="container">
-          <h2 class="center mb20">Våra favoriter</h2>
-          <div class="products-list featured-products"></div>
-          <div class="center">
-            <a href="product-list.html?category=all" class="btn btn--yellow">Visa mer</a>
-          </div>
-        </div>
-      </section>
-    </main>
+    <!-- Footer starts here-->
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
@@ -151,7 +226,6 @@
       </div>
     </footer>
     <script type="module" src="js/index.js"></script>
-    <script type="module" src="js/components/HomeCategories.js"></script>
-	<script type="module" src="js/components/CartRepository.js"></script>
+    <script src="js/components/order.js"></script>
   </body>
 </html>

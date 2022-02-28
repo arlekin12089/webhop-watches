@@ -1,4 +1,6 @@
 import * as UserRepository from "./UserRepository.js";
+import * as CartRepository from "./CartRepository.js";
+
 function SearchInput() {
   let formSearch = document.getElementById("search-form");
   formSearch.addEventListener(
@@ -60,10 +62,20 @@ function SetupUserName () {
 
 }
 
+function cartCounter () {
+	let cartNum = document.querySelector( '.cart-num' );
+	let cart = CartRepository.loadCart();
+	if ( cart.length === 0 ) {
+		cartNum.innerHTML = 0;
+	} else {
+		cartNum.innerHTML = Object.keys( cart ).length;
+	}
+}
 
 function Header() {
   SearchInput();
   SetupUserName();
+	cartCounter();
 }
 
 export default Header();

@@ -1,9 +1,9 @@
 import * as ProductRepository from "./ProductRepository.js";
-
-let fakeCart = {
-  "17170937":9,
-  "WSRN0022":6
-};
+import * as CartRepository from "./CartRepository.js";
+// let fakeCart = {
+//   "17170937":9,
+//   "WSRN0022":6
+// };
 
 // Uses this instead of local storage user
 // let user = {
@@ -48,34 +48,58 @@ function drawOrder (){
     ordervalue.appendChild(orderprice);
   }
 
-async function getProductData() {
+// async function getProductData() {
+//   const productData = await ProductRepository.getAllProducts();
+
+
+//   cartProductList = Object.keys(cartData).map((key) => {
+//     const foundProduct = productData.find((prod) => prod.id === key)
+//     return {
+//       ...foundProduct,
+//       amount: cartData[key]
+//     }
+//   });
+
+//   drawOrder();
+//   Price();
+// };
+
+// getProductData();
+
+async function getProductData () {
   const productData = await ProductRepository.getAllProducts();
-
-
-  cartProductList = Object.keys(cartData).map((key) => {
-    const foundProduct = productData.find((prod) => prod.id === key)
+  let cartData = CartRepository.loadCart();
+  cartProductList = Object.keys( cartData ).map( ( key ) => {
+    const foundProduct = productData.find( ( prod ) => prod.id === key )
     return {
       ...foundProduct,
       amount: cartData[key]
-    }
-  });
-
-  drawOrder();
-  Price();
+    };
+  } );
+  return cartProductList;
 };
 
-getProductData();
+async function showProducts () {
+  cartProductList = await getProductData();
+  drawOrder();
+  Price();
+}
+showProducts();
 
-function Price (){
+
+async function Price () {
   let totalprice = 0;
-  const cartData = JSON.parse(localStorage.getItem("cart"));
-  let ordercounter = document.querySelectorAll(".counter");
+  // const cartData = JSON.parse(localStorage.getItem("cart"));
+  // let ordercounter = document.querySelectorAll(".counter");
+  let cart = await getProductData();
 
-  for(let i = 0; i < cartProductList.length; i++){
-    let prodPrice = cartProductList[i].price.split(' ')[0];
+  // for(let i = 0; i < cartProductList.length; i++){
+  for ( let i = 0; i < cart.length; i++ ) {
+    let prodPrice = cart[i].price.split( ' ' )[0];
     prodPrice = prodPrice.replace('.', '');
     prodPrice = parseInt(prodPrice);
-    totalprice += prodPrice*cartProductList[i].amount;
+    // totalprice += prodPrice*cartProductList[i].amount;
+    totalprice += prodPrice * cart[i].amount;
   };
 
   
@@ -92,6 +116,8 @@ function Price (){
   ordervalue.appendChild(orderprice);
 
 }
+
+
 //All the elements 
 const username = document.getElementById("name-input");
 const streetadress = document.getElementById("adress-input");
@@ -107,7 +133,7 @@ const ordervalue = document.querySelector(".order-price")
 const orderReceipt = document.querySelector(".order-receipt")
 
 //for reading fake data
-localStorage.setItem("cart", JSON.stringify(fakeCart));
+// localStorage.setItem("cart", JSON.stringify(fakeCart));
 
 let userData = JSON.parse(localStorage.getItem("users"));
 const loggedInUser = localStorage.getItem("loggedInUser");

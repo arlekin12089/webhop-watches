@@ -273,7 +273,7 @@ width: 40%;
 }
 .order-list {
   li {
-    @include flexBox(center, start, space-between);
+    @include flexBox(center, start, start);
     margin-bottom: 20px;
   }
 }
@@ -310,4 +310,9 @@ width: 40%;
 
 .receipt-list {
   margin: 10px 0;
+  li{
+  display: flex;
+  align-items: center;
+  }
 }
+
