@@ -1,4 +1,3 @@
-
 import * as UserRepository from "./UserRepository.js";
 
 const form = document.getElementById("registration-form");
@@ -34,5 +33,3 @@ form.addEventListener("submit", (e) => {
     window.location.href = "index.html";
   }
 });
-
-
