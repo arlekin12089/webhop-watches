@@ -93,15 +93,15 @@ function changeAmountEvents() {
 };
 
 async function getProductData() {
-  const productData = await ProductRepository.getAllProducts();
+const productData = await ProductRepository.getAllProducts();
 
-  cartProductList = Object.keys(cartData).map((key) => {
-    const foundProduct = productData.find((prod) => prod.id === key)
-    return {
-      ...foundProduct,
-      amount: cartData[key]
-    };
-  });
+cartProductList = Object.keys(cartData).map((key) => {
+  const foundProduct = productData.find((prod) => prod.id === key)
+  return {
+    ...foundProduct,
+    amount: cartData[key]
+  };
+});
 
   drawCart();
   changeAmountEvents();
