@@ -54,7 +54,24 @@ function drawCart (){
       `; 
       cartList.appendChild(product);
     };
-}
+
+    //Delete buttonn
+    let dbtn = document.querySelectorAll(".order-delete-btn");
+    console.log(dbtn);
+
+    dbtn.forEach (btn => {
+      console.log(btn.index)
+      btn.addEventListener("click",() => {
+        let parent = btn.parentElement;
+        let div = parent.parentElement
+        div.remove();
+
+      
+      });
+    });
+};
+
+
 
 function changeAmountEvents() {
     //Gets all inputfields
@@ -82,15 +99,15 @@ function changeAmountEvents() {
 };
 
 async function getProductData() {
-  const productData = await ProductRepository.getAllProducts();
+const productData = await ProductRepository.getAllProducts();
 
-  cartProductList = Object.keys(cartData).map((key) => {
-    const foundProduct = productData.find((prod) => prod.id === key)
-    return {
-      ...foundProduct,
-      amount: cartData[key]
-    }
-  });
+cartProductList = Object.keys(cartData).map((key) => {
+  const foundProduct = productData.find((prod) => prod.id === key)
+  return {
+    ...foundProduct,
+    amount: cartData[key]
+  };
+});
 
   drawCart();
   changeAmountEvents();
@@ -98,6 +115,8 @@ async function getProductData() {
 };
 
 getProductData();
+
+
 
 //sets the total price of the cart when the user gets on the page
 function Price (){
@@ -123,3 +142,4 @@ function Price (){
     `Totalbelopp: <span>${totalprice} SEK</span>`
   cartTotalPrice.appendChild(orderprice);
 }
+
