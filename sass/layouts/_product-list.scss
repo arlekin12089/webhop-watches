@@ -123,6 +123,11 @@
   &__title {
     margin-bottom: 20px;
   }
+  &__options{
+  div.active{
+  color: $yellow;
+  }
+  }
 
   &.open {
     display: block;
@@ -150,7 +155,7 @@
     margin-bottom: 20px;
     display: block;
   }
-
+ 
   &__option {
     padding: 20px 0;
     border-top: 1px solid $grey;

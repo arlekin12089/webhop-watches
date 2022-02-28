@@ -1771,6 +1771,10 @@ main.modified {
   margin-bottom: 20px;
 }
 
+.filter__options div.active {
+  color: #FCCB1E;
+}
+
 .filter.open {
   display: block;
 }

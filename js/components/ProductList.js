@@ -50,6 +50,8 @@ allWatches.addEventListener( 'click', () => {
   if ( lastActiveButton ) {
     lastActiveButton.classList.remove( 'active' );
   }
+  lastActiveButton = allWatches;
+  allWatches.classList.add( 'active' );
 } )
 
 //Materials
