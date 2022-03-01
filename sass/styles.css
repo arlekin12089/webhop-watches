@@ -2084,6 +2084,10 @@ main.modified {
   font-weight: 600;
 }
 
+.addToCart {
+  cursor: pointer;
+}
+
 .registration {
   display: -webkit-box;
   display: -ms-flexbox;
