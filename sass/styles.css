@@ -1030,9 +1030,19 @@ main.modified {
   margin-bottom: 30px;
 }
 
+.home-img-holder::before {
+  max-height: 337px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-img-holder::before {
+    max-height: 525px;
+  }
+}
+
 .home-img-container {
   text-align: center;
-  padding: 0 20px;
+  padding: 30px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1046,6 +1056,12 @@ main.modified {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-img-container {
+    padding: 0 20px;
+  }
 }
 
 .home_show_btn {

@@ -4,11 +4,21 @@
   .home-h3 {
     margin-bottom: 30px;
   }
+
+  &::before{ max-height: 337px;
+      @include breakpoint(small-max) {
+  max-height: 525px;
+  }
+  }
 }
 .home-img-container {
 text-align: center;
-padding: 0 20px;
+padding: 30px 20px;
   @include flexBox(column, center, center);
+    @include breakpoint(small-max) {
+    padding: 0 20px;
+  }
+
 }
 
 .home_show_btn {
